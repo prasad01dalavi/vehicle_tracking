@@ -1,0 +1,1 @@
+pip install django django-cors-headers djangorestframework python-dateutil requests 
