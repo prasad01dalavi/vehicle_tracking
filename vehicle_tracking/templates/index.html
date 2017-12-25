@@ -1,0 +1,42 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Azimuth - Angular 4 Admin Template</title>
+	<meta name="description" content="Admin template based on Angular 4 and Bootstrap 4">
+    <base href="/">	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>  
+    <az-root></az-root>
+
+    <div class="spin-outer" id="preloader">
+        <div class="spin-container">
+            <div class="spin-inner">
+                <div class="spin-cube-grid">
+                    <div class="spin-cube spin-cube1" style="background: url('{% static "assets/img/logo/cube-1.jpg" %}');  background-size: cover;"></div>
+                    <div class="spin-cube spin-cube2" style="background: url('{% static "assets/img/logo/cube-2.jpg" %}');  background-size: cover;"></div>
+                    <div class="spin-cube spin-cube3" style="background: url('{% static "assets/img/logo/cube-3.jpg" %}');  background-size: cover;"></div>
+                    <div class="spin-cube spin-cube4" style="background: url('{% static "assets/img/logo/cube-4.jpg" %}');  background-size: cover;"></div>
+                    <div class="spin-cube spin-cube5" style="background: url('{% static "assets/img/logo/cube-5.jpg" %}'); background-size: cover;"></div>
+                    <div class="spin-cube spin-cube6" style="background: url('{% static "assets/img/logo/cube-6.jpg" %}'); background-size: cover;"></div>
+                    <div class="spin-cube spin-cube7" style="background: url('{% static "assets/img/logo/cube-7.jpg" %}'); background-size: cover;"></div>
+                    <div class="spin-cube spin-cube8" style="background: url('{% static "assets/img/logo/cube-8.jpg" %}'); background-size: cover;"></div>
+                    <div class="spin-cube spin-cube9" style="background: url('{% static "assets/img/logo/cube-9.jpg" %}'); background-size: cover;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script data-pace-options='{ "target": ".main-wrapper", "ghostTime": 1000 }'></script>
+    <script src="https://cdn.ckeditor.com/4.6.1/full-all/ckeditor.js"></script>
+<script type="text/javascript" src="{% static "inline.bundle.js" %}"></script>
+<script type="text/javascript" src="{% static "polyfills.bundle.js" %}"></script>
+<script type="text/javascript" src="{% static "scripts.bundle.js" %}"></script>
+<script type="text/javascript" src="{% static "styles.bundle.js" %}"></script>
+<script type="text/javascript" src="{% static "vendor.bundle.js" %}"></script>
+<script type="text/javascript" src="{% static "main.bundle.js" %}"></script></body>
+</html>
