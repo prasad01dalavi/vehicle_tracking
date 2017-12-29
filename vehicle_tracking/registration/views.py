@@ -16,6 +16,8 @@ from .serializers import DeviceActivationSerializer, TaskAssignmentSerializer
 
 import json
 import requests
+from datetime import datetime   # Using for building logic which will find free vehicles before or after tasks
+import time
 
 
 class FleetStatus(APIView):                               # /dashboard/vehicle
@@ -288,6 +290,7 @@ class TaskRegister(APIView):                           # dashboard/createtask
             return Response(task_response)
 
 
+# This api services information about tasks e.g. its source, destination, time, status etc
 class DisplayTask(APIView):                  # dashboard/displaytask
     def get(self, request):                  # Gives all task related data + assigned vehicle
         tasks = Task.objects.all()
@@ -329,9 +332,9 @@ class TaskAssignmentRegister(APIView):      # /dashboard/assigntask
             print 'Task Status has been updated to Assigned!'
 
             # Now updating the Trip Status to Assigned
-            # Filter task in Trip by using task_id
+            # get the trip data using task id
             trip = Trip.objects.get(task=int((serializer.data['select_task'])))
-            trip.status = 1     # Trip Status = 1 -> Assigned
+            trip.status = 1     # Trip Status = 1 --> Assigned
             trip.save
 
             # Now assign the vehicle (and driver if it is not assigned already)
@@ -372,27 +375,66 @@ class UnassignedTask(APIView):              # /dashboard/unassignedtask
     # No need of POST Method
 
 
+# This api services unassigned vehicles while assigning vehicle to task
 class UnassignedVehicle(APIView):                       # /dashboard/unassignedvehicle
     def get(self, request):
-        assigned_tasks = TaskAssignment.objects.all()
-        assigned_vehicle = []
-        for task in assigned_tasks:
-            # List of assigned vehicles to the task
-            assigned_vehicle.append(task.assign_vehicle_id)
-        try:                                                        # To find whether there are any unassigned tasks
-            unassigned_vehicles = DeviceActivation.objects.filter(
-                id__gte=1).exclude(id__in=assigned_vehicle)
-            serializer = DeviceActivationSerializer(unassigned_vehicles, many=True)
-            if len(serializer.data) == 0:         # If there are no Unassigned Vehicles available
-                # Response saying that there are no more vehicles for tasks assignment
-                vehicle_response = {'flag': 0}
-                return Response(vehicle_response)
-            return Response(serializer.data)
-        except:
-            vehicle_response = {'flag': 0}
-            return Response(vehicle_response)
+        # assigned_tasks = TaskAssignment.objects.all()
+        # assigned_vehicle = []
+        # for task in assigned_tasks:
+        #     # List of assigned vehicles to the task
+        #     assigned_vehicle.append(task.assign_vehicle_id)
+        # try:                                                        # To find whether there are any unassigned tasks
+        #     unassigned_vehicles = DeviceActivation.objects.filter(
+        #         id__gte=1).exclude(id__in=assigned_vehicle)
+        #     serializer = DeviceActivationSerializer(unassigned_vehicles, many=True)
+        #     if len(serializer.data) == 0:         # If there are no Unassigned Vehicles available
+        #         # Response saying that there are no more vehicles for tasks assignment
+        #         vehicle_response = {'flag': 0}
+        #         return Response(vehicle_response)
+        #     return Response(serializer.data)
+        # except:
+        #     vehicle_response = {'flag': 0}
+        # return Response(vehicle_response)
+        vehicles = DeviceActivation.objects.all()
+        available_vehicles = []     # for task assignment
+
+        for veh in vehicles:
+            try:
+                assigned_vehicle = TaskAssignment.objects.get(assign_vehicle=veh.id)
+                assigned_task = Task.objects.get(id=assigned_vehicle.select_task_id)
+                vehicle_task_start = assigned_task.planned_start_time
+                vehicle_task_end = assigned_task.planned_end_time
+                # vehicle will be on task in between vehicle_task_start and vehicle_task_end
+
+                selected_task = Task.objects.get(id=2)
+                selected_task_start = selected_task.planned_start_time  # can be after vehicle_task_end
+                selected_task_end = selected_task.planned_end_time      # must be before vehicle_task_start
+
+                # selected task wish the below time slot for the tasks
+                task_start_time = time.strftime(selected_task_start)
+                task_end_time = time.strftime(selected_task_end)
+
+                # vehicle busy slots are as follows:
+                vehicle_task_start_time = time.strftime(vehicle_task_start)
+                vehicle_task_end_time = time.strftime(vehicle_task_end)
+
+                # I can start the selected task after the vehicle_task_end_time or before the vehicle_task_start_time
+                if (task_start_time > vehicle_task_end_time) or (task_end_time < vehicle_task_start_time):
+                    print 'I can use', veh.vehicle_registration_number
+                    available_vehicles.append({
+                        'vehicle_id': veh.id,
+                        'vehicle_registration_number': veh.vehicle_registration_number
+                    })
+            except:
+                print 'Vehicle is not assigned means it is available!!!!!'
+                available_vehicles.append({
+                    'vehicle_id': veh.id,
+                    'vehicle_registration_number': veh.vehicle_registration_number
+                })
+        return Response(available_vehicles)
 
 
+# This api is used to delete the task
 class DeleteTask(APIView):                   # /dashboard/deletetask
     def post(self, request):
         task_id = request.data['task_id']
@@ -407,6 +449,7 @@ class DeleteTask(APIView):                   # /dashboard/deletetask
             return Response({'flag': 0})
 
 
+# This api is used during task assignment to show drivers on that vehicle
 class TaskAssignmentDetail(APIView):                    # /dashbaord/taskassignmentdetail
     def get(self, request):                             # Gives all the information related to task assignment
         all_assigned_tasks = TaskAssignment.objects.all()
