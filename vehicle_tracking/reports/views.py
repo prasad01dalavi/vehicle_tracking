@@ -113,6 +113,7 @@ class RealTimeReport(APIView):                  # dashboard/realtimereport
                 source = 'N.A'
                 destination = 'N.A'
                 distance = 'N.A'
+                planned_end_time = ''
                 actual_start_time = ''
                 km_covered = 'N.A'
                 current_location = 'N.A'

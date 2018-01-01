@@ -10010,7 +10010,7 @@ var UrlUtility = (function () {
     return UrlUtility;
 }());
 
-UrlUtility.Domain = 'http://13.127.59.62:8000/';
+UrlUtility.Domain = 'http://127.0.0.1:8000/';
 UrlUtility.success = 'Success';
 UrlUtility.errMsg = 'Something is Wrong Please Try Again';
 /** Vehicle */
