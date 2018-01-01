@@ -9,9 +9,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_ckeditor__ = __webpack_require__(840);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_ckeditor__ = __webpack_require__(841);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_ckeditor___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_ng2_ckeditor__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_froala_wysiwyg__ = __webpack_require__(793);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_froala_wysiwyg__ = __webpack_require__(794);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ckeditor_ckeditor_component__ = __webpack_require__(716);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__froala_froala_component__ = __webpack_require__(717);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
@@ -6675,7 +6675,7 @@ var FroalaEditorDirective = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__editor_directive__ = __webpack_require__(690);
 /* unused harmony reexport FroalaEditorDirective */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__editor_module__ = __webpack_require__(792);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__editor_module__ = __webpack_require__(793);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__editor_module__["a"]; });
 
 
@@ -6689,7 +6689,7 @@ var FroalaEditorDirective = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__view_directive__ = __webpack_require__(693);
 /* unused harmony reexport FroalaViewDirective */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__view_module__ = __webpack_require__(794);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__view_module__ = __webpack_require__(795);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__view_module__["a"]; });
 
 
@@ -6990,7 +6990,7 @@ CkeditorComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-ckeditor',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(855)
+        template: __webpack_require__(856)
     }),
     __metadata("design:paramtypes", [])
 ], CkeditorComponent);
@@ -7021,7 +7021,7 @@ FroalaComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-froala',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(856)
+        template: __webpack_require__(857)
     })
 ], FroalaComponent);
 
@@ -7029,7 +7029,7 @@ FroalaComponent = __decorate([
 
 /***/ }),
 
-/***/ 792:
+/***/ 793:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7058,7 +7058,7 @@ var FroalaEditorModule = (function () {
 
 /***/ }),
 
-/***/ 793:
+/***/ 794:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7099,7 +7099,7 @@ var FERootModule = (function () {
 
 /***/ }),
 
-/***/ 794:
+/***/ 795:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7128,7 +7128,7 @@ var FroalaViewModule = (function () {
 
 /***/ }),
 
-/***/ 839:
+/***/ 840:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7174,12 +7174,12 @@ exports.CKEditorModule = CKEditorModule;
 
 /***/ }),
 
-/***/ 840:
+/***/ 841:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ckeditor_module_1 = __webpack_require__(839);
+var ckeditor_module_1 = __webpack_require__(840);
 exports.CKEditorModule = ckeditor_module_1.CKEditorModule;
 var ckeditor_component_1 = __webpack_require__(694);
 exports.CKEditorComponent = ckeditor_component_1.CKEditorComponent;
@@ -7191,14 +7191,14 @@ exports.CKGroupDirective = ckgroup_directive_1.CKGroupDirective;
 
 /***/ }),
 
-/***/ 855:
+/***/ 856:
 /***/ (function(module, exports) {
 
 module.exports = " <ckeditor\n    [(ngModel)]=\"ckeditorContent\"\n    [config]=\"config\"\n    (change)=\"onChange($event)\"\n    (ready)=\"onReady($event)\"\n    (focus)=\"onFocus($event)\"\n    (blur)=\"onBlur($event)\"\n    debounce=\"500\">\n  </ckeditor>"
 
 /***/ }),
 
-/***/ 856:
+/***/ 857:
 /***/ (function(module, exports) {
 
 module.exports = "<div [froalaEditor]>Hey we are testing Froala Editor</div>"

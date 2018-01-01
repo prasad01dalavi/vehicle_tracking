@@ -19,6 +19,7 @@ import time
 import urllib2      # This import is for distance_covered etc. calculation in Realtime Report
 
 
+# This api gives real time report of all vehicles
 class RealTimeReport(APIView):                  # dashboard/realtimereport
     value = 0       # This variable will be used to store remaining_time value returned by google api
 
@@ -26,11 +27,7 @@ class RealTimeReport(APIView):                  # dashboard/realtimereport
     def update_trip(self, vehicle_id, vehicle_number):
         try:    # Try to check whether that vehicle_id is assigned to any task
             task_assignment = TaskAssignment.objects.get(assign_vehicle=vehicle_id)
-        except:
-            print 'Vehicle is not assigned for any Task'
-
-        if task_assignment.select_task.task_status == '2':  # Check for running task for that particular vehicle_id
-            try:
+            if task_assignment.select_task.task_status == '2':  # Check for running task for that particular vehicle_id
                 imei = DeviceActivation.objects.get(
                     vehicle_registration_number=vehicle_number).device_IMEI
                 latitude = DeviceData.objects.filter(Device_ID=imei).order_by(
@@ -58,11 +55,9 @@ class RealTimeReport(APIView):                  # dashboard/realtimereport
 
                 self.value = json.loads(distance_time_data)[
                     'rows'][0]['elements'][0]['duration']['value']   # This value is required for frontend who calculates the estimated reach time
-                print 'Time Remaining:', duration, self.value
 
                 location_url = 'http://maps.googleapis.com/maps/api/geocode/json?latlng=' + current_lat_long + '&sensor=true'
                 location_data = urllib2.urlopen(location_url).read()
-                print location_data
                 current_location = json.loads(location_data)['results'][0]['formatted_address']
                 print 'Current Location:', current_location
 
@@ -71,12 +66,12 @@ class RealTimeReport(APIView):                  # dashboard/realtimereport
                 trip_update.km_covered = distance
                 trip_update.current_location = current_location
                 trip_update.remaining_time = duration
-                trip_update.save()
+                trip_update.save()  # estimated_reach_time and time lag is calculated by frontend
                 print 'Trip updated!'
-            except:
-                print 'There is an Google API error.'
-        else:       # Vehicle is not running on any Task
-            self.value = 0      # Making value = 0 for estimated_reach_time calculation
+            else:       # Vehicle is not running on any Task
+                self.value = 0      # Making value = 0 for estimated_reach_time calculation
+        except:
+            print 'Vehicle is not assigned for any Task'
 
     def get(self, request):
         vehicles = DeviceActivation.objects.all()
@@ -110,6 +105,7 @@ class RealTimeReport(APIView):                  # dashboard/realtimereport
                     task_id=vehicle.taskassignment.select_task_id).remaining_time
                 estimated_reach_time = Trip.objects.get(task_id=vehicle.
                                                         taskassignment.select_task_id).estimated_reach_time
+                # don't have this data, frontend is calculating estimated_reach_time and time_lag
                 time_lag = Trip.objects.get(task_id=vehicle.taskassignment.select_task_id).time_lag
 
             except:
@@ -121,8 +117,8 @@ class RealTimeReport(APIView):                  # dashboard/realtimereport
                 km_covered = 'N.A'
                 current_location = 'N.A'
                 remaining_time = ''
-                estimated_reach_time = 'N.A'
-                time_lag = 'N.A'
+                estimated_reach_time = 'N.A'  # not required but just passing it if frontend is using it
+                time_lag = 'N.A'  # not required but just passing it if frontend is using it
 
             try:
                 speed = DeviceData.objects.filter(
@@ -387,7 +383,7 @@ class VehicleUtilization(APIView):                       # /dashboard/vehicleuti
                 except:
                     vehicle_hour_efficiency = 'N.A'
                 delay_percentage = delayed_tasks / total_tasks_of_vehicle * 100
-                task_count = vehicle_tasks.count()
+                task_count = vehicle_tasks.count()   # total task completed by that vehicle
 
             except:
                 task_count = 0

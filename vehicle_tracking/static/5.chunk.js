@@ -10018,22 +10018,21 @@ UrlUtility.getAllVehicle = UrlUtility.Domain + 'dashboard/vehicle/?format=json';
 UrlUtility.getGps = UrlUtility.Domain + 'dashboard/gps/';
 UrlUtility.getVehicleById = UrlUtility.Domain + 'dashboard/getvehiclebyid/';
 UrlUtility.saveVehicle = UrlUtility.Domain + 'dashboard/vehicle/';
-UrlUtility.getVehicleRegNo = UrlUtility.Domain + 'dashboard/getregvehicle/';
+UrlUtility.getVehicleRegNo = UrlUtility.Domain + 'dashboard/vehicleforregistration/';
 /** Driver */
 UrlUtility.saveDriver = UrlUtility.Domain + 'dashboard/driver/';
-UrlUtility.getAllDriver = UrlUtility.Domain + 'dashboard/driver/?format=json';
+UrlUtility.getAllDriver = UrlUtility.Domain + 'dashboard/driver/';
 UrlUtility.getDriverById = UrlUtility.Domain + 'dashboard/getdriverbyid/';
 UrlUtility.assignDriverVehicle = UrlUtility.Domain + 'dashboard/assignment/';
-UrlUtility.allDriver = UrlUtility.Domain + 'dashboard/alldriver/';
+UrlUtility.allDriver = UrlUtility.Domain + 'dashboard/driver/';
 UrlUtility.unassignedDriver = UrlUtility.Domain + 'dashboard/unassigneddrivers/';
 /** History */
 UrlUtility.getHistory = UrlUtility.Domain + 'dashboard/gethistory/';
 /** Task */
 UrlUtility.createTask = UrlUtility.Domain + 'dashboard/createtask/';
-UrlUtility.unassignTask = UrlUtility.Domain + 'dashboard/unassignedtask/';
-UrlUtility.unassignVehicle = UrlUtility.Domain + 'dashboard/unassignedvehicle/';
 UrlUtility.assignTask = UrlUtility.Domain + 'dashboard/assigntask/';
-UrlUtility.getAssignTask = UrlUtility.Domain + 'dashboard/getassignedtask/';
+UrlUtility.getAssignTask = UrlUtility.Domain + 'dashboard/taskassignmentdetail/';
+UrlUtility.VehicleforTask = UrlUtility.Domain + 'dashboard/vehiclefortaskassignment/';
 UrlUtility.displayTask = UrlUtility.Domain + 'dashboard/displaytask/';
 UrlUtility.deleteTask = UrlUtility.Domain + 'dashboard/deletetask/';
 /** Reports */
@@ -47632,7 +47631,7 @@ FleetComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'fleetstatus',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(858),
+        template: __webpack_require__(859),
         providers: [__WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* FleetService */], __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */], __WEBPACK_IMPORTED_MODULE_5__pages_mapservice__["a" /* MapService */]]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* FleetService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* FleetService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__pages_mapservice__["a" /* MapService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__pages_mapservice__["a" /* MapService */]) === "function" && _e || Object])
@@ -47862,7 +47861,8 @@ var _a;
 /* 855 */,
 /* 856 */,
 /* 857 */,
-/* 858 */
+/* 858 */,
+/* 859 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\">\r\n\t<div class=\"col-xl-12 col-lg-6 col-12 bottom-30\">\r\n\t\t<div widget class=\"card bottom-30\">\r\n\t\t\t<div class=\"card-header\">\r\n\t\t\t\t<span>Fleet status</span>\r\n\t\t\t\t<div class=\"widget-controls\">\r\n\t\t\t\t\t<a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i\r\n\t\t\t\t\t\tclass=\"fa fa-chevron-down\"></i></a> <a data-widgster=\"collapse\"\r\n\t\t\t\t\t\thref=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"card-block widget-body\">\r\n\t\t\t\r\n\t\t\t  <div class=\"w-200 pull-right bottom-15\">\r\n                    <div class=\"input-group input-group-sm\">\r\n                        <span class=\"input-group-addon\"><i class=\"fa fa-search\"></i></span>\r\n                        <input class=\"form-control\" id=\"table-search-input\" [(ngModel)]=\"searchText\" type=\"text\" placeholder=\"Search Vehicle...\">\r\n                    </div>\r\n                 </div>\r\n\t\t\t\t<div class=\"table-responsive datatable\">\r\n\t\t\t\t\t<table class=\"table table-striped table-hover table-sm\" [mfData]=\"vehicleJson  | SearchPipe : searchText\" #mf=\"mfDataTable\" [mfRowsOnPage]=\"10\">\r\n\t\t\t\t\t\t<thead>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"sr_no\"><b>Sr No.</b></mfDefaultSorter></th>\r\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle\"><b>Vehicle</b></mfDefaultSorter></th>\r\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle_make\"><b>Vehicle Make</b></mfDefaultSorter></th>\r\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle_type\"><b>Vehicle Type</b></mfDefaultSorter></th>\r\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle_tonnage\"><b>Vehicle Tonnage</b></mfDefaultSorter></th>\r\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"first_name\"><b>Driver</b></mfDefaultSorter></th>\r\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"status\"><b>Status</b></mfDefaultSorter></th>\r\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"speed\"><b>Speed</b></mfDefaultSorter></th>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t</thead>\r\n\t\t\t\t\t\t<tbody>\r\n\t\t\t\t\t\t\t<tr *ngFor=\"let key of mf.data;let i=index\">\r\n\t\t\t\t\t\t\t\t<td>{{i+1}}</td>\r\n\t\t\t\t\t\t\t\t<td><a href=\"javascript:void(0)\"\r\n\t\t\t\t\t\t\t\t\t(click)=\"getFleetStatus(key?.device_imei)\">{{key?.vehicle}}</a></td>\r\n\t\t\t\t\t\t\t\t<td>{{key?.vehicle_make}}</td>\r\n\t\t\t\t\t\t\t\t<td>{{key?.vehicle_type}}</td>\r\n\t\t\t\t\t\t\t\t<td>{{key?.vehicle_tonnage}}</td>\r\n\t\t\t\t\t\t\t\t<td>{{key?.first_name}}</td>\r\n\t\t\t\t\t\t\t\t<td><div *ngIf=\"key?.status=='0'\"><font color=\"red\" style=\"font-weight: bold;\">Idle</font></div>\r\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"key?.status=='1'\"><font color=\"green\" style=\"font-weight: bold;\">Running</font></div></td>\r\n\t\t\t\t\t\t\t\t<td>{{key?.speed}} KMPH</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t<tr *ngIf=\"(mf.data | SearchPipe : searchText).length === 0\">\r\n                                  <td colspan=\"100\">\r\n                                    No matches\r\n                                  </td>\r\n                               </tr> \r\n\t\t\t\t\t\t</tbody>\r\n\t\t\t\t\t\t<tfoot>\r\n                              <tr>\r\n                                <td colspan=\"12\">\r\n                                    <mfBootstrapPaginator [rowsOnPageSet]=\"[10, 25, 50, 100]\"></mfBootstrapPaginator>\r\n                                </td>\r\n                            </tr>\r\n                        </tfoot>\r\n\t\t\t\t\t</table>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>"

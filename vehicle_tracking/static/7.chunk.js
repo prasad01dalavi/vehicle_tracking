@@ -11,12 +11,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_perfect_scrollbar__ = __webpack_require__(668);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_perfect_scrollbar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ngx_perfect_scrollbar__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_dragula__ = __webpack_require__(842);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_dragula__ = __webpack_require__(843);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_dragula___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ng2_dragula__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular_resizable_element__ = __webpack_require__(790);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__resizable_resizable_component__ = __webpack_require__(762);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__drag_drop_drag_drop_component__ = __webpack_require__(761);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__toaster_toaster_component__ = __webpack_require__(763);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular_resizable_element__ = __webpack_require__(791);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__resizable_resizable_component__ = __webpack_require__(763);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__drag_drop_drag_drop_component__ = __webpack_require__(762);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__toaster_toaster_component__ = __webpack_require__(764);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToolsModule", function() { return ToolsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -9310,7 +9310,7 @@ ResizeHandle.propDecorators = {
 
 "use strict";
 
-var dragulaExpt = __webpack_require__(802);
+var dragulaExpt = __webpack_require__(803);
 exports.dragula = dragulaExpt.default || dragulaExpt;
 
 
@@ -11266,7 +11266,7 @@ exports.DragulaDirective = DragulaDirective;
 
 /***/ }),
 
-/***/ 761:
+/***/ 762:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11293,8 +11293,8 @@ DragDropComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-drag-drop',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(886),
-        styles: [__webpack_require__(822)]
+        template: __webpack_require__(887),
+        styles: [__webpack_require__(823)]
     }),
     __metadata("design:paramtypes", [])
 ], DragDropComponent);
@@ -11303,7 +11303,7 @@ DragDropComponent = __decorate([
 
 /***/ }),
 
-/***/ 762:
+/***/ 763:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11347,8 +11347,8 @@ ResizableComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-resizable',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(887),
-        styles: [__webpack_require__(823)]
+        template: __webpack_require__(888),
+        styles: [__webpack_require__(824)]
     }),
     __metadata("design:paramtypes", [])
 ], ResizableComponent);
@@ -11357,7 +11357,7 @@ ResizableComponent = __decorate([
 
 /***/ }),
 
-/***/ 763:
+/***/ 764:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11442,8 +11442,8 @@ ToasterComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-toaster',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(888),
-        styles: [__webpack_require__(824)]
+        template: __webpack_require__(889),
+        styles: [__webpack_require__(825)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ngx_toastr__["b" /* ToastrService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ngx_toastr__["b" /* ToastrService */]) === "function" && _a || Object])
 ], ToasterComponent);
@@ -11453,11 +11453,11 @@ var _a;
 
 /***/ }),
 
-/***/ 790:
+/***/ 791:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__resizable_module__ = __webpack_require__(791);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__resizable_module__ = __webpack_require__(792);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__resizable_module__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__resizable_directive__ = __webpack_require__(689);
 /* unused harmony reexport Resizable */
@@ -11470,7 +11470,7 @@ var _a;
 
 /***/ }),
 
-/***/ 791:
+/***/ 792:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11499,7 +11499,7 @@ ResizableModule.ctorParameters = function () { return []; };
 
 /***/ }),
 
-/***/ 795:
+/***/ 796:
 /***/ (function(module, exports) {
 
 module.exports = function atoa (a, n) { return Array.prototype.slice.call(a, n); }
@@ -11507,13 +11507,13 @@ module.exports = function atoa (a, n) { return Array.prototype.slice.call(a, n);
 
 /***/ }),
 
-/***/ 796:
+/***/ 797:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var ticky = __webpack_require__(907);
+var ticky = __webpack_require__(908);
 
 module.exports = function debounce (fn, args, ctx) {
   if (!fn) { return; }
@@ -11525,14 +11525,14 @@ module.exports = function debounce (fn, args, ctx) {
 
 /***/ }),
 
-/***/ 797:
+/***/ 798:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var atoa = __webpack_require__(795);
-var debounce = __webpack_require__(796);
+var atoa = __webpack_require__(796);
+var debounce = __webpack_require__(797);
 
 module.exports = function emitter (thing, options) {
   var opts = options || {};
@@ -11587,14 +11587,14 @@ module.exports = function emitter (thing, options) {
 
 /***/ }),
 
-/***/ 798:
+/***/ 799:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {
 
-var customEvent = __webpack_require__(800);
-var eventmap = __webpack_require__(799);
+var customEvent = __webpack_require__(801);
+var eventmap = __webpack_require__(800);
 var doc = global.document;
 var addEvent = addEventEasy;
 var removeEvent = removeEventEasy;
@@ -11697,7 +11697,7 @@ function find (el, type, fn) {
 
 /***/ }),
 
-/***/ 799:
+/***/ 800:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11719,7 +11719,7 @@ module.exports = eventmap;
 
 /***/ }),
 
-/***/ 800:
+/***/ 801:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {
@@ -11775,7 +11775,7 @@ function CustomEvent (type, params) {
 
 /***/ }),
 
-/***/ 801:
+/***/ 802:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11816,15 +11816,15 @@ module.exports = {
 
 /***/ }),
 
-/***/ 802:
+/***/ 803:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {
 
-var emitter = __webpack_require__(797);
-var crossvent = __webpack_require__(798);
-var classes = __webpack_require__(801);
+var emitter = __webpack_require__(798);
+var crossvent = __webpack_require__(799);
+var classes = __webpack_require__(802);
 var doc = document;
 var documentElement = doc.documentElement;
 
@@ -12433,7 +12433,7 @@ module.exports = dragula;
 
 /***/ }),
 
-/***/ 822:
+/***/ 823:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -12451,7 +12451,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 823:
+/***/ 824:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -12469,7 +12469,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 824:
+/***/ 825:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -12487,7 +12487,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 841:
+/***/ 842:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12518,7 +12518,7 @@ exports.DragulaModule = DragulaModule;
 
 /***/ }),
 
-/***/ 842:
+/***/ 843:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12529,34 +12529,34 @@ var dragula_directive_1 = __webpack_require__(695);
 exports.DragulaDirective = dragula_directive_1.DragulaDirective;
 var dragula_provider_1 = __webpack_require__(667);
 exports.DragulaService = dragula_provider_1.DragulaService;
-var dragular_module_1 = __webpack_require__(841);
+var dragular_module_1 = __webpack_require__(842);
 exports.DragulaModule = dragular_module_1.DragulaModule;
 
-
-/***/ }),
-
-/***/ 886:
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row bottom-30\">\n    <div class=\"col\">\n        <div class=\"card\">\n            <div class=\"card-header\">\n                <span>Draggable elements around in the same container</span>       \n            </div>\n            <div class=\"card-block\">\n               <p>Ng2 Dragula - Drag and drop so simple it hurts. Built with <a href=\"https://github.com/valor-software/ng2-dragula\" target=\"_blank\">ng2-dragula</a></p>\n             \n                <div class=\"row mbm-20\" [dragula]=\"'bag-container'\">\n                    <div class=\"col-xl-4 col-lg-4 col-md-6 col-sm-12 bottom-30 draggable\">              \n                        <div class=\"card\">\n                            <div class=\"card-header\">\n                                Drag me\n                            </div>\n                            <div class=\"card-block\">\n                                <p class=\"card-text\">There's also the possibility of moving elements around in the same container, changing their position.</p>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-xl-4 col-lg-4 col-md-6 col-sm-12 bottom-30 draggable\">       \n                        <div class=\"card card-primary\">\n                            <div class=\"card-header\">\n                               Drag me\n                            </div>\n                            <div class=\"card-block\">\n                                <p class=\"card-text\">There's also the possibility of moving elements around in the same container, changing their position.</p>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-xl-4 col-lg-4 col-md-6 col-sm-12 bottom-30 draggable\">       \n                        <div class=\"card card-success\">\n                            <div class=\"card-header\">\n                                Drag me\n                            </div>\n                            <div class=\"card-block\">\n                                <p class=\"card-text\">There's also the possibility of moving elements around in the same container, changing their position.</p>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-xl-4 col-lg-4 col-md-6 col-sm-12 bottom-30 draggable\">              \n                        <div class=\"card card-info\">\n                            <div class=\"card-header\">\n                                Drag me\n                            </div>\n                            <div class=\"card-block\">\n                                <p class=\"card-text\">There's also the possibility of moving elements around in the same container, changing their position.</p>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-xl-4 col-lg-4 col-md-6 col-sm-12 bottom-30 draggable\">              \n                        <div class=\"card card-warning\">\n                            <div class=\"card-header\">\n                               Drag me\n                            </div>\n                            <div class=\"card-block\">\n                                <p class=\"card-text\">There's also the possibility of moving elements around in the same container, changing their position.</p>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-xl-4 col-lg-4 col-md-6 col-sm-12 bottom-30 draggable\">              \n                        <div class=\"card card-danger\">\n                            <div class=\"card-header\">\n                                Drag me\n                            </div>\n                            <div class=\"card-block\">\n                                <p class=\"card-text\">There's also the possibility of moving elements around in the same container, changing their position.</p>\n                            </div>\n                        </div>\n                    </div> \n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n\n<div class=\"row text-center\">\n    <div class=\"col-6\"  [dragula]=\"'bag-1'\">\n        <h4>First Container</h4>\n        <div class=\"card card-success draggable\">\n            <div class=\"card-block\">\n                <h4 class=\"card-title\">Move me!</h4>\n                <p class=\"card-text\">You can move these elements between these two containers.</p>\n            </div>\n        </div>\n        <div class=\"card card-primary draggable\">\n            <div class=\"card-block\">\n                <h4 class=\"card-title\">Move me!</h4>\n                <p class=\"card-text\">You can move these elements between these two containers.</p>\n            </div>\n        </div>\n        <div class=\"card card-danger draggable\">\n            <div class=\"card-block\">\n                <h4 class=\"card-title\">Move me!</h4>\n                <p class=\"card-text\">You can move these elements between these two containers.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-6\"  [dragula]=\"'bag-1'\">\n       <h4>Second Container</h4>\n       <div class=\"card card-warning draggable\">\n          <div class=\"card-block\">\n              <h4 class=\"card-title\">Move me!</h4>\n              <p class=\"card-text\">You can move these elements between these two containers.</p>\n          </div>\n      </div>\n      <div class=\"card card-info draggable\">\n          <div class=\"card-block\">\n              <h4 class=\"card-title\">Move me!</h4>\n              <p class=\"card-text\">You can move these elements between these two containers.</p>\n          </div>\n      </div>\n      <div class=\"card card-success draggable\">\n          <div class=\"card-block\">\n              <h4 class=\"card-title\">Move me!</h4>\n              <p class=\"card-text\">You can move these elements between these two containers.</p>\n          </div>\n      </div>\n    </div>\n</div>"
 
 /***/ }),
 
 /***/ 887:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"col\">\n        <div class=\"card resizable-card\" [ngStyle]=\"style\" \n                          mwlResizable\n                          [validateResize]=\"validate\"\n                          [resizeEdges]=\"{bottom: true, right: true, top: true, left: true}\"\n                          [enableGhostResize]=\"true\"\n                          [resizeSnapGrid]=\"{left: 50, right: 50}\"\n                          (resizeEnd)=\"onResizeEnd($event)\">\n            <div class=\"card-header\">\n                <span>Resize me! <i class=\"fa fa-arrows-h ml-2 mr-2\"></i> <i class=\"fa fa-arrows-v\"></i></span>      \n            </div>\n            <div class=\"card-block h-100\" perfect-scrollbar>\n\n                <p>Angular resizable element - An angular 4.0+ directive that allows an element to be resized. Built with <a href=\"https://github.com/mattlewis92/angular-resizable-element\" target=\"_blank\">angular-resizable-element</a></p>\n             \n                <img src=\"assets/img/profile/adam.jpg\" alt=\"adam\" class=\"mr-4 mb-4\">\n                <img src=\"assets/img/profile/ashley.jpg\" alt=\"ashley\" class=\"mr-4 mb-4\">\n                <img src=\"assets/img/profile/bruno.jpg\" alt=\"bruno\" class=\"mr-4 mb-4\">\n                <img src=\"assets/img/profile/julia.jpg\" alt=\"julia\" class=\"mr-4 mb-4\">\n              \n            </div>\n        </div>\n    </div>\n</div> "
+module.exports = "<div class=\"row bottom-30\">\n    <div class=\"col\">\n        <div class=\"card\">\n            <div class=\"card-header\">\n                <span>Draggable elements around in the same container</span>       \n            </div>\n            <div class=\"card-block\">\n               <p>Ng2 Dragula - Drag and drop so simple it hurts. Built with <a href=\"https://github.com/valor-software/ng2-dragula\" target=\"_blank\">ng2-dragula</a></p>\n             \n                <div class=\"row mbm-20\" [dragula]=\"'bag-container'\">\n                    <div class=\"col-xl-4 col-lg-4 col-md-6 col-sm-12 bottom-30 draggable\">              \n                        <div class=\"card\">\n                            <div class=\"card-header\">\n                                Drag me\n                            </div>\n                            <div class=\"card-block\">\n                                <p class=\"card-text\">There's also the possibility of moving elements around in the same container, changing their position.</p>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-xl-4 col-lg-4 col-md-6 col-sm-12 bottom-30 draggable\">       \n                        <div class=\"card card-primary\">\n                            <div class=\"card-header\">\n                               Drag me\n                            </div>\n                            <div class=\"card-block\">\n                                <p class=\"card-text\">There's also the possibility of moving elements around in the same container, changing their position.</p>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-xl-4 col-lg-4 col-md-6 col-sm-12 bottom-30 draggable\">       \n                        <div class=\"card card-success\">\n                            <div class=\"card-header\">\n                                Drag me\n                            </div>\n                            <div class=\"card-block\">\n                                <p class=\"card-text\">There's also the possibility of moving elements around in the same container, changing their position.</p>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-xl-4 col-lg-4 col-md-6 col-sm-12 bottom-30 draggable\">              \n                        <div class=\"card card-info\">\n                            <div class=\"card-header\">\n                                Drag me\n                            </div>\n                            <div class=\"card-block\">\n                                <p class=\"card-text\">There's also the possibility of moving elements around in the same container, changing their position.</p>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-xl-4 col-lg-4 col-md-6 col-sm-12 bottom-30 draggable\">              \n                        <div class=\"card card-warning\">\n                            <div class=\"card-header\">\n                               Drag me\n                            </div>\n                            <div class=\"card-block\">\n                                <p class=\"card-text\">There's also the possibility of moving elements around in the same container, changing their position.</p>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-xl-4 col-lg-4 col-md-6 col-sm-12 bottom-30 draggable\">              \n                        <div class=\"card card-danger\">\n                            <div class=\"card-header\">\n                                Drag me\n                            </div>\n                            <div class=\"card-block\">\n                                <p class=\"card-text\">There's also the possibility of moving elements around in the same container, changing their position.</p>\n                            </div>\n                        </div>\n                    </div> \n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n\n<div class=\"row text-center\">\n    <div class=\"col-6\"  [dragula]=\"'bag-1'\">\n        <h4>First Container</h4>\n        <div class=\"card card-success draggable\">\n            <div class=\"card-block\">\n                <h4 class=\"card-title\">Move me!</h4>\n                <p class=\"card-text\">You can move these elements between these two containers.</p>\n            </div>\n        </div>\n        <div class=\"card card-primary draggable\">\n            <div class=\"card-block\">\n                <h4 class=\"card-title\">Move me!</h4>\n                <p class=\"card-text\">You can move these elements between these two containers.</p>\n            </div>\n        </div>\n        <div class=\"card card-danger draggable\">\n            <div class=\"card-block\">\n                <h4 class=\"card-title\">Move me!</h4>\n                <p class=\"card-text\">You can move these elements between these two containers.</p>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-6\"  [dragula]=\"'bag-1'\">\n       <h4>Second Container</h4>\n       <div class=\"card card-warning draggable\">\n          <div class=\"card-block\">\n              <h4 class=\"card-title\">Move me!</h4>\n              <p class=\"card-text\">You can move these elements between these two containers.</p>\n          </div>\n      </div>\n      <div class=\"card card-info draggable\">\n          <div class=\"card-block\">\n              <h4 class=\"card-title\">Move me!</h4>\n              <p class=\"card-text\">You can move these elements between these two containers.</p>\n          </div>\n      </div>\n      <div class=\"card card-success draggable\">\n          <div class=\"card-block\">\n              <h4 class=\"card-title\">Move me!</h4>\n              <p class=\"card-text\">You can move these elements between these two containers.</p>\n          </div>\n      </div>\n    </div>\n</div>"
 
 /***/ }),
 
 /***/ 888:
 /***/ (function(module, exports) {
 
+module.exports = "<div class=\"row\">\n    <div class=\"col\">\n        <div class=\"card resizable-card\" [ngStyle]=\"style\" \n                          mwlResizable\n                          [validateResize]=\"validate\"\n                          [resizeEdges]=\"{bottom: true, right: true, top: true, left: true}\"\n                          [enableGhostResize]=\"true\"\n                          [resizeSnapGrid]=\"{left: 50, right: 50}\"\n                          (resizeEnd)=\"onResizeEnd($event)\">\n            <div class=\"card-header\">\n                <span>Resize me! <i class=\"fa fa-arrows-h ml-2 mr-2\"></i> <i class=\"fa fa-arrows-v\"></i></span>      \n            </div>\n            <div class=\"card-block h-100\" perfect-scrollbar>\n\n                <p>Angular resizable element - An angular 4.0+ directive that allows an element to be resized. Built with <a href=\"https://github.com/mattlewis92/angular-resizable-element\" target=\"_blank\">angular-resizable-element</a></p>\n             \n                <img src=\"assets/img/profile/adam.jpg\" alt=\"adam\" class=\"mr-4 mb-4\">\n                <img src=\"assets/img/profile/ashley.jpg\" alt=\"ashley\" class=\"mr-4 mb-4\">\n                <img src=\"assets/img/profile/bruno.jpg\" alt=\"bruno\" class=\"mr-4 mb-4\">\n                <img src=\"assets/img/profile/julia.jpg\" alt=\"julia\" class=\"mr-4 mb-4\">\n              \n            </div>\n        </div>\n    </div>\n</div> "
+
+/***/ }),
+
+/***/ 889:
+/***/ (function(module, exports) {
+
 module.exports = "<p>Angular Toaster - built with <a href=\"https://github.com/scttcper/ngx-toastr\" target=\"_blank\">ngx-toastr</a></p>\n    \n<div class=\"row justify-content-center\">            \n  <div class=\"col\">\n    <div class=\"card\">\n      <div class=\"card-block\">\n        <div class=\"row\">\n          <div class=\"col-md-5\">\n            <div class=\"form-group\">\n              <label for=\"toastTitle\">Title</label>\n              <input [(ngModel)]=\"title\" type=\"text\" class=\"form-control\" id=\"toastTitle\" placeholder=\"Toast title\">\n            </div>\n            <div class=\"form-group\">\n              <label for=\"toastMessage\">Message</label>\n              <textarea [(ngModel)]=\"message\" rows=\"3\" class=\"form-control\" id=\"toastMessage\" placeholder=\"Toast message\"></textarea>\n            </div>\n\n            <div class=\"form-group\">\n                <div class=\"custom-controls-stacked\">                    \n                    <label class=\"custom-control custom-checkbox\">\n                        <input type=\"checkbox\" [(ngModel)]=\"options.enableHtml\" class=\"custom-control-input checkbox-main\">\n                        <span class=\"custom-control-indicator\"></span>\n                        <span class=\"custom-control-description\">Enable Html</span>\n                    </label>\n                    <label class=\"custom-control custom-checkbox\">\n                        <input type=\"checkbox\" [(ngModel)]=\"options.tapToDismiss\" class=\"custom-control-input checkbox-main\">\n                        <span class=\"custom-control-indicator\"></span>\n                        <span class=\"custom-control-description\">Tap to dismiss</span>\n                    </label>\n                    <label class=\"custom-control custom-checkbox\">\n                        <input type=\"checkbox\" [(ngModel)]=\"options.closeButton\" class=\"custom-control-input checkbox-main\">\n                        <span class=\"custom-control-indicator\"></span>\n                        <span class=\"custom-control-description\">Close button</span>\n                    </label>\n                    <label class=\"custom-control custom-checkbox\">\n                        <input type=\"checkbox\" [(ngModel)]=\"options.preventDuplicates\" class=\"custom-control-input checkbox-main\">\n                        <span class=\"custom-control-indicator\"></span>\n                        <span class=\"custom-control-description\">Prevent duplicates</span>\n                    </label>\n                    <label class=\"custom-control custom-checkbox\">\n                        <input type=\"checkbox\" [(ngModel)]=\"options.newestOnTop\" class=\"custom-control-input checkbox-main\">\n                        <span class=\"custom-control-indicator\"></span>\n                        <span class=\"custom-control-description\">New toasts on top</span>\n                    </label>\n                    <label class=\"custom-control custom-checkbox\">\n                        <input type=\"checkbox\" [(ngModel)]=\"options.progressBar\" class=\"custom-control-input checkbox-main\">\n                        <span class=\"custom-control-indicator\"></span>\n                        <span class=\"custom-control-description\">Progress bar</span>\n                    </label>\n                </div>\n            </div>\n          </div>\n          <div class=\"col-md-4\">\n            <div class=\"form-group\">\n              <label for=\"toastTimeout\">Timeout</label>\n              <input [(ngModel)]=\"options.timeOut\" type=\"text\" class=\"form-control\" id=\"toastTimeout\" aria-describedby=\"toastTimeoutHelp\">\n              <small id=\"toastTimeoutHelp\" class=\"form-text text-muted\">0 never expires</small>\n            </div>\n            <div class=\"form-group\">\n              <label for=\"maxNumberToasts\">Maximum Toasts</label>\n              <input [(ngModel)]=\"toastrService.toastrConfig.maxOpened\" type=\"text\" class=\"form-control\" id=\"maxNumberToasts\" aria-describedby=\"maxNumberToastsHelp\">\n              <small id=\"maxNumberToastsHelp\" class=\"form-text text-muted\">0 is no limit</small>\n            </div>\n            <div class=\"form-group\">\n              <label for=\"toastExtendedTimeout\">Extended Timeout</label>\n              <input type=\"text\" [(ngModel)]=\"toastrService.toastrConfig.extendedTimeOut\" class=\"form-control\" id=\"toastExtendedTimeout\">\n            </div>\n            <label class=\"custom-control custom-checkbox\">\n                <input type=\"checkbox\" [(ngModel)]=\"toastrService.toastrConfig.autoDismiss\" class=\"custom-control-input checkbox-main\">\n                <span class=\"custom-control-indicator\"></span>\n                <span class=\"custom-control-description\">Auto dismiss on max</span>\n            </label>\n          </div>\n          <div class=\"col-md-3\">\n            <fieldset class=\"form-group\">\n              <label>Toast type</label>\n              <div class=\"custom-controls-stacked\">\n                  <label class=\"custom-control custom-radio\">\n                      <input type=\"radio\" name=\"typeRadios\" [(ngModel)]=\"type\" value=\"success\" class=\"custom-control-input radio-success\">\n                      <span class=\"custom-control-indicator\"></span>\n                      <span class=\"custom-control-description\">Success</span>\n                  </label>\n                  <label class=\"custom-control custom-radio\">\n                      <input type=\"radio\" name=\"typeRadios\" [(ngModel)]=\"type\" value=\"info\" class=\"custom-control-input radio-info\">\n                      <span class=\"custom-control-indicator\"></span>\n                      <span class=\"custom-control-description\">Info</span>\n                  </label>\n                  <label class=\"custom-control custom-radio\">\n                      <input type=\"radio\" name=\"typeRadios\" [(ngModel)]=\"type\" value=\"warning\" class=\"custom-control-input radio-warning\">\n                      <span class=\"custom-control-indicator\"></span>\n                      <span class=\"custom-control-description\">Warning</span>\n                  </label>\n                  <label class=\"custom-control custom-radio\">\n                      <input type=\"radio\" name=\"typeRadios\" [(ngModel)]=\"type\" value=\"error\" class=\"custom-control-input radio-danger\">\n                      <span class=\"custom-control-indicator\"></span>\n                      <span class=\"custom-control-description\">Error</span>\n                  </label>\n              </div>\n            </fieldset>\n            <fieldset class=\"form-group\">\n              <label>Toast position</label>\n                <div class=\"custom-controls-stacked\">\n                    <label class=\"custom-control custom-radio\">\n                        <input type=\"radio\" name=\"positionRadio\" [(ngModel)]=\"options.positionClass\" value=\"toast-top-right\" class=\"custom-control-input radio-main\">\n                        <span class=\"custom-control-indicator\"></span>\n                        <span class=\"custom-control-description\">Top Right</span>\n                    </label>\n                    <label class=\"custom-control custom-radio\">\n                        <input type=\"radio\" name=\"positionRadio\" [(ngModel)]=\"options.positionClass\" value=\"toast-bottom-right\" class=\"custom-control-input radio-main\">\n                        <span class=\"custom-control-indicator\"></span>\n                        <span class=\"custom-control-description\">Bottom Right</span>\n                    </label>\n                    <label class=\"custom-control custom-radio\">\n                        <input type=\"radio\" name=\"positionRadio\" [(ngModel)]=\"options.positionClass\" value=\"toast-bottom-left\" class=\"custom-control-input radio-main\">\n                        <span class=\"custom-control-indicator\"></span>\n                        <span class=\"custom-control-description\">Bottom Left</span>\n                    </label>\n                    <label class=\"custom-control custom-radio\">\n                        <input type=\"radio\" name=\"positionRadio\" [(ngModel)]=\"options.positionClass\" value=\"toast-top-left\" class=\"custom-control-input radio-main\">\n                        <span class=\"custom-control-indicator\"></span>\n                        <span class=\"custom-control-description\">Top Left</span>\n                    </label>\n                    <label class=\"custom-control custom-radio\">\n                        <input type=\"radio\" name=\"positionRadio\" [(ngModel)]=\"options.positionClass\" value=\"toast-top-full-width\" class=\"custom-control-input radio-main\">\n                        <span class=\"custom-control-indicator\"></span>\n                        <span class=\"custom-control-description\">Top Full Width</span>\n                    </label>\n                    <label class=\"custom-control custom-radio\">\n                        <input type=\"radio\" name=\"positionRadio\" [(ngModel)]=\"options.positionClass\" value=\"toast-bottom-full-width\" class=\"custom-control-input radio-main\">\n                        <span class=\"custom-control-indicator\"></span>\n                        <span class=\"custom-control-description\">Top Bottom Width</span>\n                    </label>\n                    <label class=\"custom-control custom-radio\">\n                        <input type=\"radio\" name=\"positionRadio\" [(ngModel)]=\"options.positionClass\" value=\"toast-top-center\" class=\"custom-control-input radio-main\">\n                        <span class=\"custom-control-indicator\"></span>\n                        <span class=\"custom-control-description\">Top Center</span>\n                    </label>\n                    <label class=\"custom-control custom-radio\">\n                        <input type=\"radio\" name=\"positionRadio\" [(ngModel)]=\"options.positionClass\" value=\"toast-bottom-center\" class=\"custom-control-input radio-main\">\n                        <span class=\"custom-control-indicator\"></span>\n                        <span class=\"custom-control-description\">Bottom Center</span>\n                    </label>\n                </div>\n            </fieldset>\n          </div>\n        </div>\n\n        <div class=\"row\">\n          <div class=\"col text-center\">\n            <p class=\"mb-0 mt-1\">Toast Controls:</p>\n            <button (click)=\"openToast()\" type=\"button\" role=\"button\" class=\"btn btn-primary\">Open Toast</button>\n            <button (click)=\"clearLastToast()\" type=\"button\" role=\"button\" class=\"btn btn-secondary\">Clear Last Toast</button>\n            <button (click)=\"clearToasts()\" type=\"button\" role=\"button\" class=\"btn btn-secondary\">Clear All Toasts</button>\n          </div>\n        </div>\n        \n      </div>\n    </div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
-/***/ 907:
+/***/ 908:
 /***/ (function(module, exports) {
 
 var si = typeof setImmediate === 'function', tick;

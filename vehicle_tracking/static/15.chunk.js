@@ -11225,7 +11225,7 @@ $.fn.metrojs.MetroModernizr = function (stgs) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_config__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_style_loader_fullcalendar_dist_fullcalendar_min_css__ = __webpack_require__(905);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_style_loader_fullcalendar_dist_fullcalendar_min_css__ = __webpack_require__(906);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_style_loader_fullcalendar_dist_fullcalendar_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_style_loader_fullcalendar_dist_fullcalendar_min_css__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -11395,7 +11395,7 @@ CalendarComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-calendar',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(844)
+        template: __webpack_require__(845)
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__app_config__["a" /* AppConfig */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__app_config__["a" /* AppConfig */]) === "function" && _a || Object])
 ], CalendarComponent);
@@ -11405,7 +11405,7 @@ var _a;
 
 /***/ }),
 
-/***/ 835:
+/***/ 836:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -11423,20 +11423,20 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 844:
+/***/ 845:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\">\n    <div class=\"col\">\n\n        <div widget class=\"card\">\n            <div class=\"card-header\">\n                <span>CALENDAR with Draggable Events</span>\n                <div class=\"widget-controls\"> \n                    <a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i class=\"fa fa-chevron-down\"></i></a>\n                    <a data-widgster=\"collapse\" href=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>\n                    <a data-widgster=\"fullscreen\" href=\"#\" class=\"transition\"><i class=\"fa fa-expand\"></i></a>\n                    <a data-widgster=\"restore\" href=\"#\" class=\"transition\"><i class=\"fa fa-compress\"></i></a>                          \n                    <a data-widgster=\"close\" href=\"#\" class=\"transition\"><i class=\"fa fa-times\"></i></a>\n                </div>        \n            </div>\n            <div class=\"card-block widget-body row\"> \n\n                <div class=\"col-xl-4 col-lg-3 col-12\">                  \n                    <div class=\"card-block\">\n\n                        <h4>Draggable <span class=\"fw-semi-bold\">Events</span></h4>\n                        <p>Just drap and drop events from there directly into the calendar.</p>\n\n                        <div class=\"btn btn-primary btn-block btn-sm text-left draggable text-truncate\" data-event-class=\"bg-primary text-white\">\n                            Client Meeting \n                        </div>\n                        <div class=\"btn btn-success btn-block btn-sm text-left draggable text-truncate\" data-event-class=\"bg-success text-white\">\n                            Repeating Event\n                        </div>\n                        <div class=\"btn btn-dark btn-block btn-sm text-left draggable text-truncate\" data-event-class=\"bg-dark text-white\">\n                            Anniversary of the death of Adam \n                        </div>\n                        <div class=\"btn btn-info btn-block btn-sm text-left draggable text-truncate\" data-event-class=\"bg-info text-white\">\n                            Product Seminar\n                        </div>\n                        <div class=\"btn btn-warning btn-block btn-sm text-left draggable text-truncate\" data-event-class=\"bg-warning text-white\">\n                            Anniversary Celebrations\n                        </div>\n                        <div class=\"btn btn-danger btn-block btn-sm text-left draggable text-truncate\" data-event-class=\"bg-danger text-white\">\n                            Search for a job\n                        </div>\n                        <div class=\"btn btn-main btn-block btn-sm text-left draggable text-truncate\" data-event-class=\"bg-main text-white\">\n                            Pay internet bills online\n                        </div>                           \n                            \n                    </div>\n                </div>\n\n                <div class=\"col-xl-8 col-lg-9 col-12\">\n                   \n                    <div class=\"card-block\">\n                        \n                            <div id=\"calendar\"></div>  \n                    \n                            <div class=\"modal fade\" id=\"show-event-modal\">\n                                <div class=\"modal-dialog modal-sm\">\n                                    <div class=\"modal-content\">\n                                        <div class=\"modal-header modal-info\">                                            \n                                            <h5 *ngIf=\"event.title\" class=\"modal-title\">{{ event.title }}</h5>\n                                            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">×</button>\n                                        </div>\n                                        <div class=\"modal-body\">\n                                            <p><i class=\"fa fa-calendar\"></i> &nbsp; {{ event.start | date: 'EEE MMM d y hh:mm a' }}</p>\n                                            <p *ngIf=\"event.end\"><i class=\"fa fa-clock-o\"></i> &nbsp; {{ event.end | date: 'EEE MMM d y hh:mm a' }}</p>\n                                            <p *ngIf=\"event.description\">{{ event.description }}</p>\n                                        </div>\n                                        <div class=\"modal-footer\">\n                                        <button type=\"button\" class=\"btn btn-info btn-sm\" data-dismiss=\"modal\">OK</button>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                            \n                            <div class=\"modal fade\" id=\"create-event-modal\">\n                                <div class=\"modal-dialog modal-sm\">\n                                    <div class=\"modal-content\">\n                                        <div class=\"modal-header modal-success d-block\">\n                                            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">×</button>                                       \n                                            <h5 class=\"modal-title\">New Event</h5>\n                                            <p class=\"text-muted no-margin\"> Just enter event name to create a new one </p>                                            \n                                        </div>\n                                        <div class=\"modal-body\">\n                                            <div class=\"form-group\">\n                                                <input class=\"form-control\" [(ngModel)]=\"event.title\" type=\"text\" placeholder=\"Enter event here...\">                                                \n                                            </div>\n                                        </div>\n                                        <div class=\"modal-footer\">\n                                            <button data-dismiss=\"modal\" class=\"btn btn-default\">Cancel</button>\n                                            <button (click)=\"createEvent()\" class=\"btn btn-success\">OK</button>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                                        \n                    </div>                 \n                  \n                </div>\n\n            </div>\n        </div>\n      \n    </div>\n</div>\n\n"
 
 /***/ }),
 
-/***/ 905:
+/***/ 906:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(835);
+var content = __webpack_require__(836);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(13)(content, {});

@@ -18,12 +18,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_routing__ = __webpack_require__(742);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_component__ = __webpack_require__(686);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__blank_blank_component__ = __webpack_require__(685);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__theme_components_menu_menu_component__ = __webpack_require__(781);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__theme_components_sidebar_sidebar_component__ = __webpack_require__(789);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__theme_components_navbar_navbar_component__ = __webpack_require__(786);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__theme_components_messages_messages_component__ = __webpack_require__(784);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__theme_components_breadcrumb_breadcrumb_component__ = __webpack_require__(780);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__theme_components_back_top_back_top_component__ = __webpack_require__(779);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__theme_components_menu_menu_component__ = __webpack_require__(782);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__theme_components_sidebar_sidebar_component__ = __webpack_require__(790);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__theme_components_navbar_navbar_component__ = __webpack_require__(787);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__theme_components_messages_messages_component__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__theme_components_breadcrumb_breadcrumb_component__ = __webpack_require__(781);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__theme_components_back_top_back_top_component__ = __webpack_require__(780);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__search_search_component__ = __webpack_require__(687);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PagesModule", function() { return PagesModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10196,22 +10196,21 @@ UrlUtility.getAllVehicle = UrlUtility.Domain + 'dashboard/vehicle/?format=json';
 UrlUtility.getGps = UrlUtility.Domain + 'dashboard/gps/';
 UrlUtility.getVehicleById = UrlUtility.Domain + 'dashboard/getvehiclebyid/';
 UrlUtility.saveVehicle = UrlUtility.Domain + 'dashboard/vehicle/';
-UrlUtility.getVehicleRegNo = UrlUtility.Domain + 'dashboard/getregvehicle/';
+UrlUtility.getVehicleRegNo = UrlUtility.Domain + 'dashboard/vehicleforregistration/';
 /** Driver */
 UrlUtility.saveDriver = UrlUtility.Domain + 'dashboard/driver/';
-UrlUtility.getAllDriver = UrlUtility.Domain + 'dashboard/driver/?format=json';
+UrlUtility.getAllDriver = UrlUtility.Domain + 'dashboard/driver/';
 UrlUtility.getDriverById = UrlUtility.Domain + 'dashboard/getdriverbyid/';
 UrlUtility.assignDriverVehicle = UrlUtility.Domain + 'dashboard/assignment/';
-UrlUtility.allDriver = UrlUtility.Domain + 'dashboard/alldriver/';
+UrlUtility.allDriver = UrlUtility.Domain + 'dashboard/driver/';
 UrlUtility.unassignedDriver = UrlUtility.Domain + 'dashboard/unassigneddrivers/';
 /** History */
 UrlUtility.getHistory = UrlUtility.Domain + 'dashboard/gethistory/';
 /** Task */
 UrlUtility.createTask = UrlUtility.Domain + 'dashboard/createtask/';
-UrlUtility.unassignTask = UrlUtility.Domain + 'dashboard/unassignedtask/';
-UrlUtility.unassignVehicle = UrlUtility.Domain + 'dashboard/unassignedvehicle/';
 UrlUtility.assignTask = UrlUtility.Domain + 'dashboard/assigntask/';
-UrlUtility.getAssignTask = UrlUtility.Domain + 'dashboard/getassignedtask/';
+UrlUtility.getAssignTask = UrlUtility.Domain + 'dashboard/taskassignmentdetail/';
+UrlUtility.VehicleforTask = UrlUtility.Domain + 'dashboard/vehiclefortaskassignment/';
 UrlUtility.displayTask = UrlUtility.Domain + 'dashboard/displaytask/';
 UrlUtility.deleteTask = UrlUtility.Domain + 'dashboard/deletetask/';
 /** Reports */
@@ -34232,8 +34231,8 @@ BlankComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-blank',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(843),
-        styles: [__webpack_require__(803)]
+        template: __webpack_require__(844),
+        styles: [__webpack_require__(804)]
     }),
     __metadata("design:paramtypes", [])
 ], BlankComponent);
@@ -34313,7 +34312,7 @@ var PagesComponent = (function () {
             }
             _this.setMapMarkerPosition();
         });
-        __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__["Observable"].interval(30000)
+        __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__["Observable"].interval(15000)
             .subscribe(function (x) {
             if (_this.deviceId != 0) {
                 _this.getdeviceGpsData();
@@ -34417,8 +34416,8 @@ PagesComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-pages',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(875),
-        styles: [__webpack_require__(819)],
+        template: __webpack_require__(876),
+        styles: [__webpack_require__(820)],
         providers: [__WEBPACK_IMPORTED_MODULE_3__app_state__["a" /* AppState */], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"], __WEBPACK_IMPORTED_MODULE_5__pages_mapservice__["a" /* MapService */]]
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__app_state__["a" /* AppState */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__app_state__["a" /* AppState */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common__["Location"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common__["Location"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__pages_mapservice__["a" /* MapService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__pages_mapservice__["a" /* MapService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"]) === "function" && _e || Object])
@@ -34450,7 +34449,7 @@ SearchComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-search',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(880)
+        template: __webpack_require__(881)
     })
 ], SearchComponent);
 
@@ -34464,7 +34463,7 @@ SearchComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sidebar_items__ = __webpack_require__(788);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sidebar_items__ = __webpack_require__(789);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_state__ = __webpack_require__(628);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SidebarService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -34876,7 +34875,8 @@ var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule 
 /* 776 */,
 /* 777 */,
 /* 778 */,
-/* 779 */
+/* 779 */,
+/* 780 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34943,7 +34943,7 @@ BackTopComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-back-top',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        styles: [__webpack_require__(829)],
+        styles: [__webpack_require__(830)],
         template: "\n    <i #backTop class=\"fa fa-angle-up back-to-top\" title=\"Back to Top\"></i>\n  "
     })
 ], BackTopComponent);
@@ -34952,7 +34952,7 @@ var _a;
 //# sourceMappingURL=back-top.component.js.map
 
 /***/ }),
-/* 780 */
+/* 781 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35023,8 +35023,8 @@ BreadcrumbComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-breadcrumb',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        styles: [__webpack_require__(830)],
-        template: __webpack_require__(900)
+        styles: [__webpack_require__(831)],
+        template: __webpack_require__(901)
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__app_config__["a" /* AppConfig */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__app_config__["a" /* AppConfig */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["d" /* Title */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["d" /* Title */]) === "function" && _d || Object])
 ], BreadcrumbComponent);
@@ -35056,13 +35056,13 @@ var _a, _b, _c, _d;
 //# sourceMappingURL=breadcrumb.component.js.map
 
 /***/ }),
-/* 781 */
+/* 782 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu_service__ = __webpack_require__(782);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu_service__ = __webpack_require__(783);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_state__ = __webpack_require__(628);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -35181,8 +35181,8 @@ MenuComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-menu',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(901),
-        styles: [__webpack_require__(831)],
+        template: __webpack_require__(902),
+        styles: [__webpack_require__(832)],
         providers: [__WEBPACK_IMPORTED_MODULE_2__menu_service__["a" /* MenuService */]]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__menu_service__["a" /* MenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__menu_service__["a" /* MenuService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__app_state__["a" /* AppState */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__app_state__["a" /* AppState */]) === "function" && _e || Object])
@@ -35192,12 +35192,12 @@ var _a, _b, _c, _d, _e;
 //# sourceMappingURL=menu.component.js.map
 
 /***/ }),
-/* 782 */
+/* 783 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__menu__ = __webpack_require__(783);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__menu__ = __webpack_require__(784);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -35222,7 +35222,7 @@ MenuService = __decorate([
 //# sourceMappingURL=menu.service.js.map
 
 /***/ }),
-/* 783 */
+/* 784 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35602,12 +35602,12 @@ var menuItems = [
 //# sourceMappingURL=menu.js.map
 
 /***/ }),
-/* 784 */
+/* 785 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__messages_service__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__messages_service__ = __webpack_require__(786);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MessagesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -35633,8 +35633,8 @@ MessagesComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-messages',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        styles: [__webpack_require__(832)],
-        template: __webpack_require__(902),
+        styles: [__webpack_require__(833)],
+        template: __webpack_require__(903),
         providers: [__WEBPACK_IMPORTED_MODULE_1__messages_service__["a" /* MessagesService */]]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__messages_service__["a" /* MessagesService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__messages_service__["a" /* MessagesService */]) === "function" && _a || Object])
@@ -35644,7 +35644,7 @@ var _a;
 //# sourceMappingURL=messages.component.js.map
 
 /***/ }),
-/* 785 */
+/* 786 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35784,7 +35784,7 @@ MessagesService = __decorate([
 //# sourceMappingURL=messages.service.js.map
 
 /***/ }),
-/* 786 */
+/* 787 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35833,8 +35833,8 @@ NavbarComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-navbar',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(903),
-        styles: [__webpack_require__(833)],
+        template: __webpack_require__(904),
+        styles: [__webpack_require__(834)],
         providers: [__WEBPACK_IMPORTED_MODULE_3__sidebar_sidebar_service__["a" /* SidebarService */]]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__app_state__["a" /* AppState */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__app_state__["a" /* AppState */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__sidebar_sidebar_service__["a" /* SidebarService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__sidebar_sidebar_service__["a" /* SidebarService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _c || Object])
@@ -35844,7 +35844,7 @@ var _a, _b, _c;
 //# sourceMappingURL=navbar.component.js.map
 
 /***/ }),
-/* 787 */
+/* 788 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35866,11 +35866,11 @@ var SidebarItem = (function () {
 //# sourceMappingURL=sidebar-item.model.js.map
 
 /***/ }),
-/* 788 */
+/* 789 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sidebar_item_model__ = __webpack_require__(787);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sidebar_item_model__ = __webpack_require__(788);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return sidebarItems; });
 
 var sidebarItems = [
@@ -35923,7 +35923,7 @@ var sidebarItems = [
 //# sourceMappingURL=sidebar-items.js.map
 
 /***/ }),
-/* 789 */
+/* 790 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36037,8 +36037,8 @@ SidebarComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-sidebar',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(904),
-        styles: [__webpack_require__(834)],
+        template: __webpack_require__(905),
+        styles: [__webpack_require__(835)],
         providers: [__WEBPACK_IMPORTED_MODULE_3__sidebar_service__["a" /* SidebarService */]]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__sidebar_service__["a" /* SidebarService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__sidebar_service__["a" /* SidebarService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__app_state__["a" /* AppState */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__app_state__["a" /* AppState */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _e || Object])
@@ -36048,7 +36048,6 @@ var _a, _b, _c, _d, _e;
 //# sourceMappingURL=sidebar.component.js.map
 
 /***/ }),
-/* 790 */,
 /* 791 */,
 /* 792 */,
 /* 793 */,
@@ -36061,7 +36060,8 @@ var _a, _b, _c, _d, _e;
 /* 800 */,
 /* 801 */,
 /* 802 */,
-/* 803 */
+/* 803 */,
+/* 804 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -36078,7 +36078,6 @@ exports.push([module.i, "", ""]);
 module.exports = module.exports.toString();
 
 /***/ }),
-/* 804 */,
 /* 805 */,
 /* 806 */,
 /* 807 */,
@@ -36093,7 +36092,8 @@ module.exports = module.exports.toString();
 /* 816 */,
 /* 817 */,
 /* 818 */,
-/* 819 */
+/* 819 */,
+/* 820 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -36110,7 +36110,6 @@ exports.push([module.i, "/**** Colors (recommended use HEX colors) ****/\n/**** 
 module.exports = module.exports.toString();
 
 /***/ }),
-/* 820 */,
 /* 821 */,
 /* 822 */,
 /* 823 */,
@@ -36119,7 +36118,8 @@ module.exports = module.exports.toString();
 /* 826 */,
 /* 827 */,
 /* 828 */,
-/* 829 */
+/* 829 */,
+/* 830 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -36136,7 +36136,7 @@ exports.push([module.i, "/**** Colors (recommended use HEX colors) ****/\n/**** 
 module.exports = module.exports.toString();
 
 /***/ }),
-/* 830 */
+/* 831 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -36153,7 +36153,7 @@ exports.push([module.i, "/**** Colors (recommended use HEX colors) ****/\n/**** 
 module.exports = module.exports.toString();
 
 /***/ }),
-/* 831 */
+/* 832 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -36170,7 +36170,7 @@ exports.push([module.i, "/**** Colors (recommended use HEX colors) ****/\n/**** 
 module.exports = module.exports.toString();
 
 /***/ }),
-/* 832 */
+/* 833 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -36187,7 +36187,7 @@ exports.push([module.i, "/**** Colors (recommended use HEX colors) ****/\n/**** 
 module.exports = module.exports.toString();
 
 /***/ }),
-/* 833 */
+/* 834 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -36204,7 +36204,7 @@ exports.push([module.i, "/**** Colors (recommended use HEX colors) ****/\n/**** 
 module.exports = module.exports.toString();
 
 /***/ }),
-/* 834 */
+/* 835 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -36221,7 +36221,6 @@ exports.push([module.i, "/**** Colors (recommended use HEX colors) ****/\n/**** 
 module.exports = module.exports.toString();
 
 /***/ }),
-/* 835 */,
 /* 836 */,
 /* 837 */,
 /* 838 */,
@@ -36229,13 +36228,13 @@ module.exports = module.exports.toString();
 /* 840 */,
 /* 841 */,
 /* 842 */,
-/* 843 */
+/* 843 */,
+/* 844 */
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
-/* 844 */,
 /* 845 */,
 /* 846 */,
 /* 847 */,
@@ -36266,23 +36265,23 @@ module.exports = ""
 /* 872 */,
 /* 873 */,
 /* 874 */,
-/* 875 */
+/* 875 */,
+/* 876 */
 /***/ (function(module, exports) {
 
-module.exports = "<ngui-map style=\"height:900px;\" [zoom]=\"zoom\" [center]=\"latlng\">\n    <marker *ngFor=\"let pos of position\" [position]=\"pos.P\" (click)=\"displayMarkerInfo($event, pos.K)\">\n     </marker>\n     <polyline [editable]=\"true\"\n      [path]=\"mapPath\"\n      [geodesic]=\"true\"\n      [strokeColor]=\"'#1583F0'\"\n      [strokeOpacity]=\"5\"\n      [strokeWeight]=\"5\"></polyline>\n      <directions-renderer\n        [suppressMarkers]=\"true\"\n        [draggable]=\"true\"\n        panel=\"#my-panel\"\n        (directions_changed)=\"directionsChanged()\"\n        [directions-request]=\"direction\">\n      </directions-renderer>\n       <info-window id=\"iw\">\n         <div *ngIf=\"marker.display\">\n           <b>Latitude:</b> {{marker.lat}}, <b>Longitude:</b> {{marker.lng}}\n           <br/>\n           <b>Vehicle:</b>{{marker.veh}} \n           <b>Driver:</b>{{marker.driver}}\n           <br/> \n           <b>Speed:</b>{{marker.speed}} kmph \n           <b>Status:</b>{{marker.run}}\n        </div>        \n      </info-window>\n  </ngui-map>\n  \n\n<div class=\"topOnMap\">\t\t\t\t\t\n<az-navbar></az-navbar>\n<div class=\"container-fluid\">         \n    <div class=\"row\"> \n        <az-menu></az-menu>\n        <!--<az-sidebar></az-sidebar>-->\n        <div class=\"main-wrapper\"  [ngClass]=\"{'menu-collapsed': isMenuCollapsed}\"> \n            <div class=\"az-overlay\" *ngIf=\"!isMenuCollapsed\" (click)=\"hideMenu()\"></div>\n\n            <div class=\"main\">\n                <az-breadcrumb></az-breadcrumb>\n                <router-outlet></router-outlet>\n            </div> \n\n          \n\n\n            <footer class=\"footer text-center clearfix\">\n                <div class=\"footer-main pull-left  clearfix\">\n                    <div class=\"copyright pull-left\">&copy; <a class=\"font-weight-bold\" href=\"http://themeseason.com\">ThemeSeason</a> 2016</div>\n                    <ul class=\"share clearfix pull-left\">\n                        <li><a href=\"https://www.facebook.com/themeseason\" target=\"_blank\"><i class=\"socicon socicon-facebook transition\"></i></a></li>\n                        <li><a href=\"https://twitter.com/themeseason\" target=\"_blank\"><i class=\"socicon socicon-twitter transition\"></i></a></li>\n                        <li><a href=\"https://www.instagram.com/themeseason\" target=\"_blank\"><i class=\"socicon socicon-instagram transition\"></i></a></li>\n                        <li><a href=\"https://www.pinterest.com/themeseason\" target=\"_blank\"><i class=\"socicon socicon-pinterest transition\"></i></a></li>              \n                    </ul>\n                </div>\n\n\n                <div class=\"pull-right created\">Created with <i class=\"fa fa-heart\"></i></div>\n                \n            </footer>\n\n            <az-back-top position=\"200\"></az-back-top>\n\n        </div>\n    </div>\n</div>\n</div>\n"
+module.exports = "<ngui-map style=\"height:900px;\" [zoom]=\"zoom\" [center]=\"latlng\">\n    <marker *ngFor=\"let pos of position\" [position]=\"pos.P\" (click)=\"displayMarkerInfo($event, pos.K)\">\n     </marker>\n     <polyline [editable]=\"true\"\n      [path]=\"mapPath\"\n      [geodesic]=\"true\"\n      [strokeColor]=\"'#1583F0'\"\n      [strokeOpacity]=\"5\"\n      [strokeWeight]=\"5\"></polyline>\n      <directions-renderer\n        [suppressMarkers]=\"true\"\n        [draggable]=\"true\"\n        panel=\"#my-panel\"\n        (directions_changed)=\"directionsChanged()\"\n        [directions-request]=\"direction\">\n      </directions-renderer>\n       <info-window id=\"iw\">\n         <div *ngIf=\"marker.display\">\n           <b>Latitude:</b> {{marker.lat}}, <b>Longitude:</b> {{marker.lng}}\n           <br/>\n           <b>Vehicle:</b>{{marker.veh}} \n           <b>Driver:</b>{{marker.driver}}\n           <br/> \n           <b>Speed:</b>{{marker.speed}} kmph \n           <b>Status:</b>{{marker.run}}\n        </div>        \n      </info-window>\n  </ngui-map>\n  \n\n<div class=\"topOnMap\">\t\t\t\t\t\n <az-navbar></az-navbar>\n  <div class=\"container-fluid\">         \n    <div class=\"row\"> \n        <az-menu></az-menu>\n        <!--<az-sidebar></az-sidebar>-->\n        <div class=\"main-wrapper\"  [ngClass]=\"{'menu-collapsed': isMenuCollapsed}\"> \n            <div class=\"az-overlay\" *ngIf=\"!isMenuCollapsed\" (click)=\"hideMenu()\"></div>\n\n            <div class=\"main\">\n                <az-breadcrumb></az-breadcrumb>\n                <router-outlet></router-outlet>\n            </div>          \n\n            <footer class=\"footer text-center clearfix\">\n                <div class=\"footer-main pull-left  clearfix\">\n                    <div class=\"copyright pull-left\">&copy; <a class=\"font-weight-bold\" href=\"http://themeseason.com\">ThemeSeason</a> 2016</div>\n                    <ul class=\"share clearfix pull-left\">\n                        <li><a href=\"https://www.facebook.com/themeseason\" target=\"_blank\"><i class=\"socicon socicon-facebook transition\"></i></a></li>\n                        <li><a href=\"https://twitter.com/themeseason\" target=\"_blank\"><i class=\"socicon socicon-twitter transition\"></i></a></li>\n                        <li><a href=\"https://www.instagram.com/themeseason\" target=\"_blank\"><i class=\"socicon socicon-instagram transition\"></i></a></li>\n                        <li><a href=\"https://www.pinterest.com/themeseason\" target=\"_blank\"><i class=\"socicon socicon-pinterest transition\"></i></a></li>              \n                    </ul>\n                </div>\n\n\n                <div class=\"pull-right created\">Created with <i class=\"fa fa-heart\"></i></div>\n                \n            </footer>\n\n            <az-back-top position=\"200\"></az-back-top>\n\n        </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
-/* 876 */,
 /* 877 */,
 /* 878 */,
 /* 879 */,
-/* 880 */
+/* 880 */,
+/* 881 */
 /***/ (function(module, exports) {
 
 module.exports = "<h4>Search results...</h4>"
 
 /***/ }),
-/* 881 */,
 /* 882 */,
 /* 883 */,
 /* 884 */,
@@ -36301,31 +36300,32 @@ module.exports = "<h4>Search results...</h4>"
 /* 897 */,
 /* 898 */,
 /* 899 */,
-/* 900 */
+/* 900 */,
+/* 901 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"clearfix\">\r\n    <span class=\"text-uppercase pull-left here\"></span>\r\n    <ol class=\"breadcrumb\">        \r\n        <li *ngFor=\"let breadcrumb of breadcrumbs; let i = index;\" class=\"breadcrumb-item text-uppercase\">\r\n            <a  [hidden]=\"i == (breadcrumbs.length - 1)\" [routerLink]=\"[breadcrumb.url]\">{{breadcrumb.name}}</a>          \r\n            <span [hidden]=\"i != (breadcrumbs.length - 1)\"><b>{{breadcrumb.name}}</b></span>\r\n        </li>       \r\n    </ol>\r\n</div>\r\n"
 
 /***/ }),
-/* 901 */
+/* 902 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"sidebar\" [ngClass]=\"{'menu-collapsed': isMenuCollapsed}\" (mouseleave)=\"hoverElemTop=-200\">\n    <ul class=\"nav nav-sidebar flex-column\" perfect-scrollbar>\n        <li *ngFor=\"let item of menuItems\" class=\"sidebar-list-item\">           \n            \n            <a *ngIf=\"!item.routerLink && !item.subMenu\" [attr.href]=\"item.url || ''\" [attr.target]=\"item.target || ''\" (mouseenter)=\"hoverItem($event, item)\"  class=\"sidebar-list-link\">\n                <i class=\"fa {{ item.icon }}\"></i><span>{{ item.title }}</span>\n            </a>\n\n            <a *ngIf=\"item.routerLink && !item.subMenu\" [routerLink]=\"[item.routerLink]\" routerLinkActive=\"active-link\" [routerLinkActiveOptions]=\"{exact:true}\" (click)=\"collapseMenu($event, item)\" (mouseenter)=\"hoverItem($event, item)\" class=\"sidebar-list-link\">\n                <i class=\"fa {{ item.icon }}\"></i><span>{{ item.title }}</span>\n            </a>\n       \n            <a *ngIf=\"item.subMenu\" [attr.href]=\"''\" (click)=\"collapseMenu($event, item)\" (mouseenter)=\"hoverItem($event, item)\" class=\"sidebar-list-link\">\n                <i class=\"fa {{ item.icon }}\"></i><span>{{ item.title }}</span>\n                <b class=\"fa fa-angle-down\"></b>\n            </a>\n\n            <ul *ngIf=\"item.subMenu\" class=\"sidebar-sublist\">\n                <li *ngFor=\"let subitem of item.subMenu\" class=\"sidebar-sublist-item\">            \n\n                    <a *ngIf=\"subitem.subMenu\" [attr.href]=\"''\" (click)=\"collapseMenu($event, item)\" (mouseenter)=\"hoverItem($event, item)\" class=\"sidebar-list-link subitem-submenu-link\">\n                        <span>{{ subitem.title }}</span>\n                        <b class=\"fa fa-angle-down\"></b>\n                    </a>\n\n                    <ul *ngIf=\"subitem.subMenu\" class=\"sidebar-sublist subitem-submenu-list\">\n                        <li *ngFor=\"let subSubitem of subitem.subMenu\" (mouseenter)=\"hoverItem($event, item)\">\n                        <a *ngIf=\"!subSubitem.routerLink\" (mouseenter)=\"hoverItem($event, item)\" [attr.href]=\"subSubitem.url || ''\" [attr.target]=\"subSubitem.target || ''\">\n                            {{ subSubitem.title }}</a>\n                        <a *ngIf=\"subSubitem.routerLink\" (mouseenter)=\"hoverItem($event, item)\" [attr.target]=\"subSubitem.target || ''\" [routerLink]=\"[subSubitem.routerLink]\" routerLinkActive=\"active-link\">\n                            {{ subSubitem.title }}</a>\n                        </li>\n                    </ul>\n\n                    <a *ngIf=\"item.routerLink && !subitem.subMenu\" [routerLink]=\"[subitem.routerLink]\" routerLinkActive=\"active-link\" [routerLinkActiveOptions]=\"{exact:true}\" (click)=\"collapseMenu($event, item)\" (mouseenter)=\"hoverItem($event, item)\">\n                        {{ subitem.title}}\n                    </a>\n\n                    <a *ngIf=\"!item.routerLink && !subitem.subMenu\" [attr.href]=\"subitem.url || ''\" [attr.target]=\"subitem.target || ''\" (mouseenter)=\"hoverItem($event, item)\">\n                        {{ subitem.title}}\n                    </a>\n\n                </li>\n            </ul>\n\n        </li>\n    </ul>\n    <div class=\"sidebar-hover-elem\" [ngStyle]=\"{top: hoverElemTop + 'px', height: hoverElemHeight + 'px'}\" [ngClass]=\"{'show-hover-elem': showHoverElem }\"></div>\n</div>"
 
 /***/ }),
-/* 902 */
+/* 903 */
 /***/ (function(module, exports) {
 
 module.exports = "\r\n<ul class=\"notifications\"> \r\n \r\n    <li class=\"dropdown message-menu\">\r\n        <a href class=\"dropdown-toggle message\" data-toggle=\"dropdown\" aria-expanded=\"false\">\r\n            <i class=\"fa fa-envelope-o\"></i>\r\n            <span>7</span>\r\n            <div class=\"pulsate\"></div>\r\n        </a>\r\n        <div class=\"top-dropdown-menu dropdown-menu\">\r\n            <i class=\"dropdown-arr\"></i>\r\n            <div class=\"header clearfix\">\r\n                <span>Messages</span>\r\n                <a href class=\"transition\">Mark All as Read</a>\r\n                <a href class=\"transition\">Settings</a>\r\n            </div>\r\n            <div class=\"list\" slim-scroll [slimScrollOptions]=\"{height: 250}\">\r\n                <a *ngFor=\"let message of messages\" href class=\"transition\">\r\n                    <img src=\"{{ ( message.image || (message.name | profilePicture)) }}\">                    \r\n                    <div class=\"list-content\">\r\n                        <h3>{{message.name}} <span class=\"pull-right\"><i class=\"fa fa-clock-o\"></i> {{message.time}}</span></h3>\r\n                        <p>{{message.text}}</p>\r\n                    </div>\r\n                </a>\r\n            </div> \r\n            <div class=\"footer\">\r\n                <a href=\"#\" class=\"transition\">View all messages</a>\r\n            </div> \r\n        </div>\r\n    </li>\r\n\r\n    <li class=\"dropdown notification-menu\">\r\n        <a href class=\"dropdown-toggle notification\" data-toggle=\"dropdown\" aria-expanded=\"false\">\r\n            <i class=\"fa fa-bell-o\"></i>\r\n            <span>5</span>\r\n            <div class=\"pulsate\"></div>\r\n        </a>\r\n\r\n        <div class=\"top-dropdown-menu dropdown-menu\">\r\n            <i class=\"dropdown-arr\"></i>\r\n            <div class=\"header clearfix\">\r\n                <span>Notifications</span>\r\n                <a href class=\"transition\">Mark All as Read</a>\r\n                <a href class=\"transition\">Settings</a>\r\n            </div>\r\n            <div class=\"list\" slim-scroll [slimScrollOptions]=\"{height: 250}\"> \r\n                <a *ngFor=\"let notification of notifications\" href class=\"transition\">\r\n                    <img src=\"{{ ( notification.image || (notification.name | profilePicture)) }}\">                    \r\n                    <div class=\"list-content\">\r\n                        <h3>{{notification.name}} <span class=\"pull-right\"> {{notification.time}}</span></h3>\r\n                        <p>{{notification.text}}</p>\r\n                    </div>\r\n                </a>\r\n            </div> \r\n            <div class=\"footer\">\r\n                <a href=\"#\" class=\"transition\">View all notifications</a>\r\n            </div> \r\n        </div> \r\n    </li>\r\n\r\n    <li class=\"dropdown task-menu\">\r\n        <a href class=\"dropdown-toggle task\" data-toggle=\"dropdown\" aria-expanded=\"false\">\r\n            <i class=\"fa fa-tasks\"></i>\r\n            <span>6</span>\r\n            <div class=\"pulsate\"></div>\r\n        </a>\r\n        <div class=\"top-dropdown-menu dropdown-menu\">\r\n            <i class=\"dropdown-arr\"></i>\r\n            <div class=\"header clearfix\">\r\n                <span>Tasks</span>\r\n                <a href class=\"transition\">Mark All as Read</a>\r\n                <a href class=\"transition\">Settings</a>\r\n            </div>\r\n            <div class=\"list\" slim-scroll [slimScrollOptions]=\"{height: 250}\">\r\n                <a *ngFor=\"let task of tasks\" href class=\"transition\">\r\n                    <h3>{{task.text}} <span class=\"pull-right\">{{task.value}}</span></h3>\r\n                    <div class=\"progress progress-sm\">\r\n                        <div class=\"progress-bar bg-{{task.class}}\" role=\"progressbar\" [style.width]=\"task.value\"  aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\r\n                    </div>\r\n                </a>\r\n            </div>\r\n            <div class=\"footer\">\r\n                <a href=\"#\" class=\"transition\">View all tasks</a>\r\n            </div>     \r\n        </div>\r\n    </li>\r\n\r\n</ul>"
 
 /***/ }),
-/* 903 */
+/* 904 */
 /***/ (function(module, exports) {
 
 module.exports = "<nav class=\"nav az-navbar fixed-top\">\r\n    <a class=\"navbar-brand\" href=\"javascript:void(0);\">\r\n        <img src=\"static/assets/eyeway/eyewaylogo.png\" alt=\"\" class=\"hidden-sm-down\"> \r\n        <img src=\"static/assets/eyeway/lmtlogo.gif\" alt=\"\" class=\"hidden-md-up\"> \r\n    </a>\r\n    <div id=\"lines\" class=\"transition\" (click)=\"toggleMenu()\"></div>\r\n    \r\n    <form role=\"search\" class=\"app-search hidden-sm-down\">\r\n        <input type=\"text\" placeholder=\"Search...\" class=\"form-control\">\r\n        <a href=\"javascript:void(0)\"><i class=\"fa fa-search\"></i></a>\r\n    </form>\r\n    <div class=\"user-link\">\r\n     <span class=\"hidden-md-down\">Beta Version By Living Mind Technology</span>\r\n    </div>\r\n    \r\n    <ul class=\"nav right-section\">\r\n        \r\n        <li class=\"nav-item\">\r\n          <div class=\"dropdown float-right user-menu\">\r\n              <a class=\"dropdown-toggle user-link\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-expanded=\"false\">                  \r\n                  <span>Living Mind Tech</span>\r\n              </a>\r\n\r\n              <ul class=\"dropdown-menu\">\r\n                  <li class=\"user-info\">                                    \r\n                      <p>\r\n                          Living Mind Technology\r\n                          <small>Member since Dec. 2016</small>\r\n                      </p>\r\n                  </li>\r\n                  <a class=\"dropdown-item\" routerLink=\"/login\"><i class=\"fa fa-user\"></i>Profile</a>\r\n                  <a class=\"dropdown-item\" routerLink=\"/login\"><i class=\"fa fa-cog\"></i>Settings</a>\r\n                  <a class=\"dropdown-item\" routerLink=\"/login\"><i class=\"fa fa-lock\"></i>Lock screen</a>\r\n                  <div class=\"dropdown-divider\"></div>\r\n                  <a class=\"dropdown-item\" href=\"javascript:void(0);\" (click)=\"logout();\"><i class=\"fa fa-power-off\"></i>Log out</a>\r\n              </ul>\r\n          </div>\r\n        </li>\r\n    </ul>\r\n\r\n</nav>\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
 
 /***/ }),
-/* 904 */
+/* 905 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"sidebar\" [ngClass]=\"{'menu-collapsed': isMenuCollapsed}\" (mouseleave)=\"hoverElemTop=-200\">\n    <div id=\"sidebar-menu\" class=\"menu-wrapper\" perfect-scrollbar></div> \n    <div class=\"sidebar-hover-elem\" [ngStyle]=\"{top: hoverElemTop + 'px', height: hoverElemHeight + 'px'}\" [ngClass]=\"{'show-hover-elem': showHoverElem }\"></div>\n</div>"

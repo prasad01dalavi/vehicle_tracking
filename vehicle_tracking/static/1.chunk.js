@@ -12,12 +12,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular_2_dropdown_multiselect__ = __webpack_require__(362);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_datatable__ = __webpack_require__(621);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_datatable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_datatable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__display_search_pipe__ = __webpack_require__(758);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__display_search_pipe__ = __webpack_require__(759);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__theme_directives_directives_module__ = __webpack_require__(311);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_http__ = __webpack_require__(306);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__newtask_newtask_component__ = __webpack_require__(759);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__assign_assign_component__ = __webpack_require__(754);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__display_display_component__ = __webpack_require__(756);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__newtask_newtask_component__ = __webpack_require__(760);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__assign_assign_component__ = __webpack_require__(755);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__display_display_component__ = __webpack_require__(757);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TaskModule", function() { return TaskModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10019,22 +10019,21 @@ UrlUtility.getAllVehicle = UrlUtility.Domain + 'dashboard/vehicle/?format=json';
 UrlUtility.getGps = UrlUtility.Domain + 'dashboard/gps/';
 UrlUtility.getVehicleById = UrlUtility.Domain + 'dashboard/getvehiclebyid/';
 UrlUtility.saveVehicle = UrlUtility.Domain + 'dashboard/vehicle/';
-UrlUtility.getVehicleRegNo = UrlUtility.Domain + 'dashboard/getregvehicle/';
+UrlUtility.getVehicleRegNo = UrlUtility.Domain + 'dashboard/vehicleforregistration/';
 /** Driver */
 UrlUtility.saveDriver = UrlUtility.Domain + 'dashboard/driver/';
-UrlUtility.getAllDriver = UrlUtility.Domain + 'dashboard/driver/?format=json';
+UrlUtility.getAllDriver = UrlUtility.Domain + 'dashboard/driver/';
 UrlUtility.getDriverById = UrlUtility.Domain + 'dashboard/getdriverbyid/';
 UrlUtility.assignDriverVehicle = UrlUtility.Domain + 'dashboard/assignment/';
-UrlUtility.allDriver = UrlUtility.Domain + 'dashboard/alldriver/';
+UrlUtility.allDriver = UrlUtility.Domain + 'dashboard/driver/';
 UrlUtility.unassignedDriver = UrlUtility.Domain + 'dashboard/unassigneddrivers/';
 /** History */
 UrlUtility.getHistory = UrlUtility.Domain + 'dashboard/gethistory/';
 /** Task */
 UrlUtility.createTask = UrlUtility.Domain + 'dashboard/createtask/';
-UrlUtility.unassignTask = UrlUtility.Domain + 'dashboard/unassignedtask/';
-UrlUtility.unassignVehicle = UrlUtility.Domain + 'dashboard/unassignedvehicle/';
 UrlUtility.assignTask = UrlUtility.Domain + 'dashboard/assigntask/';
-UrlUtility.getAssignTask = UrlUtility.Domain + 'dashboard/getassignedtask/';
+UrlUtility.getAssignTask = UrlUtility.Domain + 'dashboard/taskassignmentdetail/';
+UrlUtility.VehicleforTask = UrlUtility.Domain + 'dashboard/vehiclefortaskassignment/';
 UrlUtility.displayTask = UrlUtility.Domain + 'dashboard/displaytask/';
 UrlUtility.deleteTask = UrlUtility.Domain + 'dashboard/deletetask/';
 /** Reports */
@@ -47610,14 +47609,15 @@ var MapService_1;
 /* 751 */,
 /* 752 */,
 /* 753 */,
-/* 754 */
+/* 754 */,
+/* 755 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assign_service__ = __webpack_require__(755);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assign_service__ = __webpack_require__(756);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__ = __webpack_require__(325);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_httpurl__ = __webpack_require__(309);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AssignComponent; });
@@ -47643,11 +47643,9 @@ var AssignComponent = (function () {
         this.vehicleJson = [];
         this.driverJson = [];
         this.taskSelected = {};
-        this.vehicleSelected = {};
         this.driverSelected = {};
         this.driverflag = "0";
         this.taskvehicleIds = {};
-        this.responseJson = {};
         this.router = router;
         this.assignService = assignService;
         this.toastrService = toastrService;
@@ -47664,12 +47662,6 @@ var AssignComponent = (function () {
             else {
                 _this.taskJson = data["unassigned_task"];
             }
-            if (data["unassigned_vehicle"] == "0") {
-                _this.vehicleJson = [];
-            }
-            else {
-                _this.vehicleJson = data["unassigned_vehicle"];
-            }
             if (data["driver"] == "0") {
                 _this.driverJson = [];
             }
@@ -47678,34 +47670,22 @@ var AssignComponent = (function () {
             }
         });
     };
-    AssignComponent.prototype.getUnassignedTask = function () {
-        var _this = this;
-        this.assignService.getUnassignedTask().subscribe(function (data) {
-            if (data["flag"] == "0") {
-                _this.taskJson = [];
-            }
-            else {
-                _this.taskJson = data;
-            }
-        });
-    };
-    AssignComponent.prototype.getUnassignedVehicle = function () {
-        var _this = this;
-        this.assignService.getUnassignedVehicle().subscribe(function (data) {
-            if (data["flag"] == "0") {
-                _this.vehicleJson = [];
-            }
-            else {
-                _this.vehicleJson = data;
-            }
-        });
-    };
     AssignComponent.prototype.getSelectedTask = function (event) {
         var _this = this;
+        var values = {};
+        values['task_id'] = event;
         this.taskvehicleIds["select_task"] = event;
         this.taskJson.forEach(function (item, index) {
             if (item.id == event) {
                 _this.taskSelected = item;
+            }
+        });
+        this.assignService.getvehiclefortaskassignment(values).subscribe(function (data) {
+            if (data == "") {
+                _this.vehicleJson = [];
+            }
+            else {
+                _this.vehicleJson = data;
             }
         });
     };
@@ -47746,7 +47726,7 @@ AssignComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-layouts',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(883),
+        template: __webpack_require__(884),
         styles: [__webpack_require__(381)],
         providers: [__WEBPACK_IMPORTED_MODULE_3__assign_service__["a" /* AssignService */], __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]]
     }),
@@ -47757,7 +47737,7 @@ var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=assign.component.js.map
 
 /***/ }),
-/* 755 */
+/* 756 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47791,16 +47771,12 @@ var AssignService = (function () {
         return this.http.get(__WEBPACK_IMPORTED_MODULE_4__pages_httpurl__["a" /* UrlUtility */].getAssignTask)
             .map(function (res) { return res.json(); });
     };
-    AssignService.prototype.getUnassignedTask = function () {
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_4__pages_httpurl__["a" /* UrlUtility */].unassignTask)
-            .map(function (res) { return res.json(); });
-    };
-    AssignService.prototype.getUnassignedVehicle = function () {
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_4__pages_httpurl__["a" /* UrlUtility */].unassignVehicle)
-            .map(function (res) { return res.json(); });
-    };
     AssignService.prototype.setTaskVehicle = function (value) {
         return this.http.post(__WEBPACK_IMPORTED_MODULE_4__pages_httpurl__["a" /* UrlUtility */].assignTask, value)
+            .map(function (res) { return res.json(); });
+    };
+    AssignService.prototype.getvehiclefortaskassignment = function (value) {
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_4__pages_httpurl__["a" /* UrlUtility */].VehicleforTask, value)
             .map(function (res) { return res.json(); });
     };
     return AssignService;
@@ -47814,14 +47790,14 @@ var _a;
 //# sourceMappingURL=assign.service.js.map
 
 /***/ }),
-/* 756 */
+/* 757 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__display_service__ = __webpack_require__(757);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__display_service__ = __webpack_require__(758);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__ = __webpack_require__(325);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_httpurl__ = __webpack_require__(309);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DisplayComponent; });
@@ -47938,7 +47914,7 @@ DisplayComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'displaytask',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(884),
+        template: __webpack_require__(885),
         styles: [__webpack_require__(381)],
         providers: [__WEBPACK_IMPORTED_MODULE_3__display_service__["a" /* DisplayService */], __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]]
     }),
@@ -47949,7 +47925,7 @@ var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=display.component.js.map
 
 /***/ }),
-/* 757 */
+/* 758 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48006,7 +47982,7 @@ var _a;
 //# sourceMappingURL=display.service.js.map
 
 /***/ }),
-/* 758 */
+/* 759 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48041,14 +48017,14 @@ SearchPipe = __decorate([
 //# sourceMappingURL=search.pipe.js.map
 
 /***/ }),
-/* 759 */
+/* 760 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__newtask_service__ = __webpack_require__(760);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__newtask_service__ = __webpack_require__(761);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__ = __webpack_require__(325);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_httpurl__ = __webpack_require__(309);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_mapservice__ = __webpack_require__(629);
@@ -48110,8 +48086,8 @@ var NewTaskComponent = (function () {
         this.distance = this.newTask.controls['distance'];
         this.estimated_time = this.newTask.controls['estimated_time'];
         this.priority = this.newTask.controls['priority'];
-        this.newTask.controls['customer_delivery_date_time'].setValue('2017-10-14T12:00:00');
-        this.newTask.controls['planned_start_time'].setValue('2017-10-14T11:00:00');
+        this.newTask.controls['customer_delivery_date_time'].setValue('2018-02-14T12:00:00');
+        this.newTask.controls['planned_start_time'].setValue('2018-02-14T11:00:00');
         this.newTask.controls['priority'].setValue('2');
         this.newTask.controls['actual_start_time'].setValue('0');
         this.newTask.controls['actual_end_time'].setValue('0');
@@ -48230,6 +48206,7 @@ var NewTaskComponent = (function () {
     NewTaskComponent.prototype.pad = function (n) { return ("0" + n).slice(-2); };
     NewTaskComponent.prototype.newTaskSubmit = function (values) {
         var _this = this;
+        this.closeBtn.nativeElement.click();
         if (this.newTask.valid) {
             this.newTask.value["customer_delivery_date_time"] = this.convertDateTimeFormat(this.newTask.value["customer_delivery_date_time"]);
             this.newTask.value["planned_start_time"] = this.convertDateTimeFormat(this.newTask.value["planned_start_time"]);
@@ -48288,7 +48265,7 @@ NewTaskComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-layouts',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(885),
+        template: __webpack_require__(886),
         styles: [__webpack_require__(381)],
         providers: [__WEBPACK_IMPORTED_MODULE_3__newtask_service__["a" /* NewTaskService */], __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */], __WEBPACK_IMPORTED_MODULE_6__pages_mapservice__["a" /* MapService */]]
     }),
@@ -48299,7 +48276,7 @@ var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l;
 //# sourceMappingURL=newtask.component.js.map
 
 /***/ }),
-/* 760 */
+/* 761 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48349,7 +48326,6 @@ var _a;
 //# sourceMappingURL=newtask.service.js.map
 
 /***/ }),
-/* 761 */,
 /* 762 */,
 /* 763 */,
 /* 764 */,
@@ -48471,22 +48447,23 @@ var _a;
 /* 880 */,
 /* 881 */,
 /* 882 */,
-/* 883 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row bottom-30\">\n\n\t<div class=\"col\">\n\t\t<div widget class=\"card\">\n\t\t\t<div class=\"card-header\">\n\t\t\t\t<span>Assign Task</span>\n\t\t\t\t<div class=\"widget-controls\">\n\t\t\t\t\t<a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i\n\t\t\t\t\t\tclass=\"fa fa-chevron-down\"></i></a> <a data-widgster=\"collapse\"\n\t\t\t\t\t\thref=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card-block widget-body\">\n\t\t\t\t<form class=\"form-horizontal\">\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"task_name\" class=\"col-sm-3 form-control-label m-t-5\">Task</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t<select class=\"form-control\" (change)=\"getSelectedTask($event.target.value)\">\n\t\t\t\t\t\t\t<option selected=\"selected\" value=\"0\">-- Select Task --</option>\n\t\t\t\t\t\t\t<option *ngFor=\"let key of taskJson;\" value=\"{{key?.id}}\">{{key?.task_name}}</option>\n\t\t\t\t\t\t</select> \n\t\t\t\t\t\t\n\t\t\t\t\t\t<br />\n\n\t\t\t\t\t\t<div *ngIf=\"(taskSelected | json) != ({} | json)\">\n\t\t\t\t\t\t\t<div class=\"card\">\n\t\t\t\t\t\t\t\t<div class=\"card-block\">\n\t\t\t\t\t\t\t\t\t<p class=\"card-text\">\n\t\t\t\t\t\t\t\t\t\t<b>Task Name:</b> {{taskSelected?.task_name}}\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"card-text\">\n\t\t\t\t\t\t\t\t\t\t<b>Source:</b> {{taskSelected?.source}}\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"card-text\">\n\t\t\t\t\t\t\t\t\t\t<b>Destination:</b> {{taskSelected?.destination}}\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"card-text\">\n\t\t\t\t\t\t\t\t\t\t<b>Planned Start Time:</b> {{taskSelected?.planned_start_time}}\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"card-text\">\n\t\t\t\t\t\t\t\t\t\t<b>Distance:</b> {{taskSelected?.distance}}\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"card-text\">\n\t\t\t\t\t\t\t\t\t\t<b>Estimated Time:</b> {{taskSelected?.estimated_time}}\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t    \n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"task_name\" class=\"col-sm-3 form-control-label m-t-5\">Vehicle</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t<select class=\"form-control\" (change)=\"getSelectedVehicle($event.target.value)\">\n\t\t\t\t\t\t\t<option selected=\"selected\" value=\"0\">-- Select Vehicle --</option>\n\t\t\t\t\t\t\t<option *ngFor=\"let key of vehicleJson;\" value=\"{{key?.id}}\">{{key?.vehicle_registration_number}}</option>\n\t\t\t\t\t\t</select> \n\t\t\t\t\t\t\n\t\t\t\t\t\t<br />\n\n\t\t\t\t\t\t<div *ngIf=\"(driverSelected | json) != ({} | json)\">\n\t\t\t\t\t\t\t<div class=\"card\">\n\t\t\t\t\t\t\t\t<div class=\"card-block\">\n\t\t\t\t\t\t\t\t\t<p class=\"card-text\">\n\t\t\t\t\t\t\t\t\t\t<b>Assigned Driver:</b> {{driverSelected?.first_name}} {{driverSelected?.last_name}}\n\t\t\t\t\t\t\t\t\t</p>\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<div *ngIf=\"driverflag != 0\">\n\t\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t     <select class=\"form-control\" (change)=\"getSelectedDriver($event.target.value)\">\n\t\t\t\t\t\t\t  <option selected=\"selected\" value=\"0\">-- Assign Driver --</option>\n\t\t\t\t\t\t\t  <option *ngFor=\"let key of driverJson;\" value=\"{{key?.driver_id}}\">{{key?.first_name}} {{key?.last_name}}</option>\n\t\t\t\t\t\t    </select> \t\t\t\t\t    \n\t\t\t\t\t      </div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t    \n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\n\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label class=\"col-sm-3 form-control-label m-t-5\"></label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t<button type=\"button\" (click)=\"setTaskVehicle()\"\n\t\t\t\t\t\tclass=\"successbutton\">Assign &nbsp;<i class=\"fa fa-check\"></i></button>\n\t\t\t\t\t  </div>\n\t\t\t\t   </div>\n\t\t\t\t</form>\n\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\n\n"
-
-/***/ }),
+/* 883 */,
 /* 884 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row bottom-30\">\n\n\t<div class=\"col\">\n\t\t<div widget class=\"card\">\n\t\t\t<div class=\"card-header\">\n\t\t\t\t<span>Display Task</span>\n\t\t\t\t<div class=\"widget-controls\">\n\t\t\t\t\t<a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i\n\t\t\t\t\t\tclass=\"fa fa-chevron-down\"></i></a> <a data-widgster=\"collapse\"\n\t\t\t\t\t\thref=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card-block widget-body\">\n\t\t\t\t<div class=\"w-200 pull-right bottom-15\">\n                    <div class=\"input-group input-group-sm\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-search\"></i></span>\n                        <input class=\"form-control\" id=\"table-search-input\" [(ngModel)]=\"searchText\" type=\"text\" placeholder=\"Search Task...\">\n                    </div>\n                 </div>\n\t\t\t\t<div class=\"table-responsive datatable\">\n\t\t\t\t\t<table class=\"table table-striped table-hover table-sm\" [mfData]=\"taskJson  | SearchPipe : searchText\" #mf=\"mfDataTable\" [mfRowsOnPage]=\"10\">\n\t\t\t\t\t\t<thead>\n\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"sr_no\"><b>Sr No.</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"task_name\"><b>Task Name</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle\"><b>Vehicle</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"source\"><b>Source</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"destination\"><b>Destination</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"customer_delivery_date_time\"><b>Delivery</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"distance\"><b>Distance</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"estimated_time\"><b>Estimated Time</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"task_status\"><b>Status</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"id\"><b>Action</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t<tr *ngFor=\"let key of mf.data;let i=index\">\n\t\t\t\t\t\t\t\t<td>{{i+1}}</td>\n\t\t\t\t\t\t\t\t<td><a href=\"javascript:void(0)\" (click)=\"deleteSelectedTask(key)\" data-toggle=\"modal\"\n\t\t\t\t\t\t\t\t\tdata-target=\"#deleteTask\">{{key?.task_name}}</a></td>\n\t\t\t\t\t\t\t\t<td>{{key?.vehicle}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.source}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.destination}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.customer_delivery_date_time}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.distance}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.estimated_time}}</td>\n\t\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"key?.task_status==0\">Unassigned</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"key?.task_status==1\">Assigned</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"key?.task_status==2\">Running</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"key?.task_status==3\">Completed</div>\n\t\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t\t<td><select class=\"form-control\"\n\t\t\t\t\t\t\t\t\t(change)=\"updateTripStatus($event.target.value, key?.id, key?.task_status)\">\n\t\t\t\t\t\t\t\t\t    <option value=\"0\" [selected]=\"true\">-- Select Action --</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"2\" [selected]=\"2==key?.action\">Start</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"3\" [selected]=\"3==key?.action\">Complete</option>\n\t\t\t\t\t\t\t\t</select></td>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t<tr *ngIf=\"(mf.data | SearchPipe : searchText).length === 0\">\n                                  <td colspan=\"100\">\n                                    No matches\n                                  </td>\n                               </tr> \n\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t<tfoot>\n                              <tr>\n                                <td colspan=\"12\">\n                                    <mfBootstrapPaginator [rowsOnPageSet]=\"[10, 25, 50, 100]\"></mfBootstrapPaginator>\n                                </td>\n                            </tr>\n                        </tfoot>\n\t\t\t\t\t</table>\n\t\t\t\t</div>\n\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\n\n<div class=\"modal fade\" id=\"deleteTask\" tabindex=\"-1\" role=\"dialog\"\n\taria-labelledby=\"modal-primary-label\">\n\t<div class=\"modal-dialog\" role=\"document\">\n\t\t<div class=\"modal-content\">\n\t\t\t<div class=\"modal-header state modal-primary\">\n\t\t\t\t<h6 class=\"modal-title\" id=\"modal-primary-label\">Delete Task</h6>\n\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\"\n\t\t\t\t\taria-label=\"Close\" #closeBtn>\n\t\t\t\t\t<span aria-hidden=\"true\">×</span>\n\t\t\t\t</button>\n\t\t\t</div>\n\t\t\t<div class=\"modal-body\">\n\t\t\t  <table class=\"table table-bordered\">\n\t\t\t    <tr> <th>Task Name</th> <td>{{selectedTask.task_name}}</td> </tr>\n\t\t\t    <tr> <th>Vehicle</th> <td>{{selectedTask.vehicle}}</td> </tr>\n\t\t\t    <tr> <th>Source</th> <td>{{selectedTask.source}}</td> </tr>\n\t\t\t    <tr> <th>Destination</th> <td>{{selectedTask.destination}}</td> </tr>\n\t\t\t    <tr> <th>Delivery</th> <td>{{selectedTask.customer_delivery_date_time}}</td> </tr>\n\t\t\t    <tr> <th>Distance</th> <td>{{selectedTask.distance}}</td> </tr>\n\t\t\t    <tr> <th>Estimated Time</th> <td>{{selectedTask.estimated_time}}</td> </tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Status</th>\n\t\t\t\t\t\t<td><div *ngIf=\"selectedTask?.task_status==0\">Unassigned</div>\n\t\t\t\t\t\t\t<div *ngIf=\"selectedTask?.task_status==1\">Assigned</div>\n\t\t\t\t\t\t\t<div *ngIf=\"selectedTask?.task_status==2\">Running</div>\n\t\t\t\t\t\t\t<div *ngIf=\"selectedTask?.task_status==3\">Completed</div></td>\n\t\t\t\t\t</tr>\n\t\t\t\t</table>\n\t\t\t</div>\n\t\t\t<div class=\"modal-footer\">\n\t\t\t\t<button type=\"button\" class=\"primarybutton\" (click)=\"clickForDeleteTask()\">Delete Task &nbsp;<i class=\"fa fa-check\"></i></button>\n\t\t\t\t<button type=\"button\" class=\"secondarybutton\" data-dismiss=\"modal\">Close &nbsp;<i class=\"fa fa-remove\"></i></button>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\n"
+module.exports = "<div class=\"row bottom-30\">\n\n\t<div class=\"col\">\n\t\t<div widget class=\"card\">\n\t\t\t<div class=\"card-header\">\n\t\t\t\t<span>Assign Task</span>\n\t\t\t\t<div class=\"widget-controls\">\n\t\t\t\t\t<a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i\n\t\t\t\t\t\tclass=\"fa fa-chevron-down\"></i></a> <a data-widgster=\"collapse\"\n\t\t\t\t\t\thref=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card-block widget-body\">\n\t\t\t\t<form class=\"form-horizontal\">\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"task_name\" class=\"col-sm-3 form-control-label m-t-5\">Task</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t<select class=\"form-control\" (change)=\"getSelectedTask($event.target.value)\">\n\t\t\t\t\t\t\t<option selected=\"selected\" value=\"0\">-- Select Task --</option>\n\t\t\t\t\t\t\t<option *ngFor=\"let key of taskJson;\" value=\"{{key?.id}}\">{{key?.task_name}}</option>\n\t\t\t\t\t\t</select> \n\t\t\t\t\t\t\n\t\t\t\t\t\t<br />\n\n\t\t\t\t\t\t<div *ngIf=\"(taskSelected | json) != ({} | json)\">\n\t\t\t\t\t\t\t<div class=\"card\">\n\t\t\t\t\t\t\t\t<div class=\"card-block\">\n\t\t\t\t\t\t\t\t\t<p class=\"card-text\">\n\t\t\t\t\t\t\t\t\t\t<b>Task Name:</b> {{taskSelected?.task_name}}\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"card-text\">\n\t\t\t\t\t\t\t\t\t\t<b>Source:</b> {{taskSelected?.source}}\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"card-text\">\n\t\t\t\t\t\t\t\t\t\t<b>Destination:</b> {{taskSelected?.destination}}\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"card-text\">\n\t\t\t\t\t\t\t\t\t\t<b>Planned Start Time:</b> {{taskSelected?.planned_start_time}}\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"card-text\">\n\t\t\t\t\t\t\t\t\t\t<b>Distance:</b> {{taskSelected?.distance}}\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"card-text\">\n\t\t\t\t\t\t\t\t\t\t<b>Estimated Time:</b> {{taskSelected?.estimated_time}}\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t    \n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"task_name\" class=\"col-sm-3 form-control-label m-t-5\">Vehicle</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t<select class=\"form-control\" (change)=\"getSelectedVehicle($event.target.value)\">\n\t\t\t\t\t\t\t<option selected=\"selected\" value=\"0\">-- Select Vehicle --</option>\n\t\t\t\t\t\t\t<option *ngFor=\"let key of vehicleJson;\" value=\"{{key?.id}}\">{{key?.vehicle_registration_number}}</option>\n\t\t\t\t\t\t</select> \n\t\t\t\t\t\t\n\t\t\t\t\t\t<br />\n\n\t\t\t\t\t\t<div *ngIf=\"(driverSelected | json) != ({} | json)\">\n\t\t\t\t\t\t\t<div class=\"card\">\n\t\t\t\t\t\t\t\t<div class=\"card-block\">\n\t\t\t\t\t\t\t\t\t<p class=\"card-text\">\n\t\t\t\t\t\t\t\t\t\t<b>Assigned Driver:</b> {{driverSelected?.first_name}} {{driverSelected?.last_name}}\n\t\t\t\t\t\t\t\t\t</p>\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<div *ngIf=\"driverflag != 0\">\n\t\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t     <select class=\"form-control\" (change)=\"getSelectedDriver($event.target.value)\">\n\t\t\t\t\t\t\t  <option selected=\"selected\" value=\"0\">-- Assign Driver --</option>\n\t\t\t\t\t\t\t  <option *ngFor=\"let key of driverJson;\" value=\"{{key?.driver_id}}\">{{key?.first_name}} {{key?.last_name}}</option>\n\t\t\t\t\t\t    </select> \t\t\t\t\t    \n\t\t\t\t\t      </div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t    \n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\n\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label class=\"col-sm-3 form-control-label m-t-5\"></label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t<button type=\"button\" (click)=\"setTaskVehicle()\"\n\t\t\t\t\t\tclass=\"successbutton\"><i class=\"fa fa-check-square-o\"></i>&nbsp;Assign</button>\n\t\t\t\t\t  </div>\n\t\t\t\t   </div>\n\t\t\t\t</form>\n\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\n\n"
 
 /***/ }),
 /* 885 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row bottom-30\">\n\n\t<div class=\"col-xl-12 col-lg-12 col-12 bottom-30\">\n\t\t<div widget class=\"card\">\n\t\t\t<div class=\"card-header\">\n\t\t\t\t<span>Create Task</span>\n\t\t\t\t<div class=\"widget-controls\">\n\t\t\t\t\t<a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i\n\t\t\t\t\t\tclass=\"fa fa-chevron-down\"></i></a> <a data-widgster=\"collapse\"\n\t\t\t\t\t\thref=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card-block widget-body\">\n\n\t\t\t\t<form [formGroup]=\"newTask\"\n\t\t\t\t\t(ngSubmit)=\"newTaskSubmit(newTask.value)\" class=\"form-horizontal\">\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"task_name\" class=\"col-sm-3 form-control-label m-t-5\">Task</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t<input [formControl]=\"task_name\" class=\"form-control checking-field\" placeholder=\"Task Name\" type=\"text\"> \n\t\t\t\t\t    <span class=\"help-block text-danger\" *ngIf=\"newTask.get('task_name').touched && newTask.get('task_name').hasError('required')\">required</span>\n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"source\" class=\"col-sm-3 form-control-label m-t-5\">Source</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t  <!-- places-auto-complete (place_changed)=\"getsourceLatLong($event)\" [types]=\"['geocode']\"  -->\n\t\t\t\t\t    <input type=\"text\"  class=\"form-control checking-field\" placeholder=\"Source\" #source/>\n\t\t\t\t\t    \n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"destination\" class=\"col-sm-3 form-control-label m-t-5\">Destination</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t <!--  places-auto-complete (place_changed)=\"getdestiLatLong($event)\" [types]=\"['geocode']\"  -->\n\t\t\t\t\t    <input type=\"text\"  class=\"form-control checking-field\" placeholder=\"Destination\" #destination/>\t\t\t\t\t\t\n\t\t\t\t\t   \n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"planned_time\" class=\"col-sm-3 form-control-label m-t-5\">Customer Delivery</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t<input [formControl]=\"customer_delivery_date_time\" class=\"form-control checking-field\"\n\t\t\t\t\t\t\tplaceholder=\"Customer Delivery Date Time\" type=\"datetime-local\" value=\"2017-08-14T13:45:00\"\n\t\t\t\t\t\t\t(input)=\"putPlannedStartTime($event.target.value)\"> \n\t\t\t\t\t\t\t<span class=\"help-block text-danger\" *ngIf=\"newTask.get('customer_delivery_date_time').touched && newTask.get('customer_delivery_date_time').hasError('required')\">required</span>\n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div *ngIf=\"critical_start_time !='' \">\n\t\t\t\t\t  <div class=\"form-group row\">\n\t\t\t\t\t    <label for=\"planned_time\" class=\"col-sm-3 form-control-label m-t-5\">critical start time</label>\n\t\t\t\t\t   <div class=\"col-sm-9\">\n\t\t\t\t\t\t  <b>{{critical_start_time}}</b>\n\t\t\t\t\t   </div>\t\t\n\t\t\t\t\t  </div>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"planned_time\" class=\"col-sm-3 form-control-label m-t-5\">Planned Time</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t<input [formControl]=\"planned_start_time\" class=\"form-control checking-field\"\n\t\t\t\t\t\t\tplaceholder=\"Planned Time\" type=\"datetime-local\" value=\"2017-08-14T13:45:00\"\n\t\t\t\t\t\t\t(input)=\"setOnlyPlannedTime($event.target.value)\"> \t\t\t\t\t\t\t\n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\t\n\t\t\t\t\t\n\t\t\t\t\t<div *ngIf=\"planned_end_time !='' \">\n\t\t\t\t\t  <div class=\"form-group row\">\n\t\t\t\t\t    <label for=\"planned_time\" class=\"col-sm-3 form-control-label m-t-5\">planned end time</label>\n\t\t\t\t\t   <div class=\"col-sm-9\">\n\t\t\t\t\t\t  <b>{{planned_end_time}}</b>\n\t\t\t\t\t   </div>\t\t\n\t\t\t\t\t  </div>\n\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"distance\" class=\"col-sm-3 form-control-label m-t-5\">Distance</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t<input [formControl]=\"distance\" class=\"form-control checking-field\" placeholder=\"Distance\" type=\"text\" readonly=\"readonly\"> \n\t\t\t\t\t    <span class=\"help-block text-danger\" *ngIf=\"newTask.get('distance').touched && newTask.get('distance').hasError('required')\">required</span>\n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"estimated_time\" class=\"col-sm-3 form-control-label m-t-5\">Estimated Time</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t<input [formControl]=\"estimated_time\" class=\"form-control checking-field\" placeholder=\"Estimated Time\" type=\"text\" readonly=\"readonly\"> \n\t\t\t\t\t    <span class=\"help-block text-danger\" *ngIf=\"newTask.get('estimated_time').touched && newTask.get('estimated_time').hasError('required')\">required</span>\n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"estimated_time\" class=\"col-sm-3 form-control-label m-t-5\">Priority</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t<select class=\"form-control\" [formControl]=\"priority\">\n\t\t\t\t\t\t\t<option selected=\"selected\" value=\"0\">-- Select Priority --</option>\n\t\t\t\t\t\t\t<option value=\"0\">Low</option>\n\t\t\t\t\t\t\t<option value=\"1\">Medium</option>\n\t\t\t\t\t\t\t<option value=\"2\">High</option>\n\t\t\t\t\t\t</select> \n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label class=\"col-sm-3 form-control-label m-t-5\"></label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t <button [disabled]=\"!newTask.valid\" class=\"successbutton\" \n\t\t\t\t\t\t  type=\"submit\">Submit &nbsp;<i class=\"fa fa-save\"></i></button>\n\t\t\t\t\t  </div>\n\t\t\t\t   </div>\n\t\t\t\t</form>\n\n\t\t\t\t<div *ngIf=\"sourceFullAddr !='' \">\n\t\t\t\t\t<p><b>Source:</b> {{sourceFullAddr}}</p>\n\t\t\t\t\t<p><b>Destination:</b> {{destiFullAddr}}</p>\n\t\t\t\t</div>\n\t\t\t\t\n\t\t\t\t<!-- <input placeholder=\"search for location\" autocorrect=\"off\" autocapitalize=\"off\" spellcheck=\"off\" type=\"text\" #source [formControl]=\"source\">\n\t\t\t\t<input placeholder=\"search for location\" autocorrect=\"off\" autocapitalize=\"off\" spellcheck=\"off\" type=\"text\" #destination [formControl]=\"destination\"> -->\n\t\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\n\n"
+module.exports = "<div class=\"row bottom-30\">\n\n\t<div class=\"col\">\n\t\t<div widget class=\"card\">\n\t\t\t<div class=\"card-header\">\n\t\t\t\t<span>Display Task</span>\n\t\t\t\t<div class=\"widget-controls\">\n\t\t\t\t\t<a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i\n\t\t\t\t\t\tclass=\"fa fa-chevron-down\"></i></a> <a data-widgster=\"collapse\"\n\t\t\t\t\t\thref=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card-block widget-body\">\n\t\t\t\t<div class=\"w-200 pull-right bottom-15\">\n                    <div class=\"input-group input-group-sm\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-search\"></i></span>\n                        <input class=\"form-control\" id=\"table-search-input\" [(ngModel)]=\"searchText\" type=\"text\" placeholder=\"Search Task...\">\n                    </div>\n                 </div>\n\t\t\t\t<div class=\"table-responsive datatable\">\n\t\t\t\t\t<table class=\"table table-striped table-hover table-sm\" [mfData]=\"taskJson  | SearchPipe : searchText\" #mf=\"mfDataTable\" [mfRowsOnPage]=\"10\">\n\t\t\t\t\t\t<thead>\n\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"sr_no\"><b>Sr No.</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"task_name\"><b>Task Name</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle\"><b>Vehicle</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"source\"><b>Source</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"destination\"><b>Destination</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"customer_delivery_date_time\"><b>Delivery</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"distance\"><b>Distance</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"estimated_time\"><b>Estimated Time</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"task_status\"><b>Status</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"id\"><b>Action</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t<tr *ngFor=\"let key of mf.data;let i=index\">\n\t\t\t\t\t\t\t\t<td>{{i+1}}</td>\n\t\t\t\t\t\t\t\t<td><a href=\"javascript:void(0)\" (click)=\"deleteSelectedTask(key)\" data-toggle=\"modal\"\n\t\t\t\t\t\t\t\t\tdata-target=\"#deleteTask\">{{key?.task_name}}</a></td>\n\t\t\t\t\t\t\t\t<td>{{key?.vehicle}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.source}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.destination}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.customer_delivery_date_time}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.distance}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.estimated_time}}</td>\n\t\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"key?.task_status==0\">Unassigned</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"key?.task_status==1\">Assigned</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"key?.task_status==2\">Running</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"key?.task_status==3\">Completed</div>\n\t\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t\t<td><select class=\"form-control\"\n\t\t\t\t\t\t\t\t\t(change)=\"updateTripStatus($event.target.value, key?.id, key?.task_status)\">\n\t\t\t\t\t\t\t\t\t    <option value=\"0\" [selected]=\"true\">-- Select Action --</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"2\" [selected]=\"2==key?.action\">Start</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"3\" [selected]=\"3==key?.action\">Complete</option>\n\t\t\t\t\t\t\t\t</select></td>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t<tr *ngIf=\"(mf.data | SearchPipe : searchText).length === 0\">\n                                  <td colspan=\"100\">\n                                    No matches\n                                  </td>\n                               </tr> \n\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t<tfoot>\n                              <tr>\n                                <td colspan=\"12\">\n                                    <mfBootstrapPaginator [rowsOnPageSet]=\"[10, 25, 50, 100]\"></mfBootstrapPaginator>\n                                </td>\n                            </tr>\n                        </tfoot>\n\t\t\t\t\t</table>\n\t\t\t\t</div>\n\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\n\n<div class=\"modal fade\" id=\"deleteTask\" tabindex=\"-1\" role=\"dialog\"\n\taria-labelledby=\"modal-primary-label\">\n\t<div class=\"modal-dialog\" role=\"document\">\n\t\t<div class=\"modal-content\">\n\t\t\t<div class=\"modal-header state modal-primary\">\n\t\t\t\t<h6 class=\"modal-title\" id=\"modal-primary-label\">Delete Task</h6>\n\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\"\n\t\t\t\t\taria-label=\"Close\" #closeBtn>\n\t\t\t\t\t<span aria-hidden=\"true\">×</span>\n\t\t\t\t</button>\n\t\t\t</div>\n\t\t\t<div class=\"modal-body\">\n\t\t\t  <table class=\"table table-bordered\">\n\t\t\t    <tr> <th>Task Name</th> <td>{{selectedTask.task_name}}</td> </tr>\n\t\t\t    <tr> <th>Vehicle</th> <td>{{selectedTask.vehicle}}</td> </tr>\n\t\t\t    <tr> <th>Source</th> <td>{{selectedTask.source}}</td> </tr>\n\t\t\t    <tr> <th>Destination</th> <td>{{selectedTask.destination}}</td> </tr>\n\t\t\t    <tr> <th>Planned Start</th> <td>{{selectedTask.planned_start_time}}</td> </tr>\n\t\t\t    <tr> <th>Planned End</th> <td>{{selectedTask.planned_end_time}}</td> </tr>\n\t\t\t    <tr> <th>Delivery</th> <td>{{selectedTask.customer_delivery_date_time}}</td> </tr>\n\t\t\t    <tr> <th>Distance</th> <td>{{selectedTask.distance}}</td> </tr>\n\t\t\t    <tr> <th>Estimated Time</th> <td>{{selectedTask.estimated_time}}</td> </tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Status</th>\n\t\t\t\t\t\t<td><div *ngIf=\"selectedTask?.task_status==0\">Unassigned</div>\n\t\t\t\t\t\t\t<div *ngIf=\"selectedTask?.task_status==1\">Assigned</div>\n\t\t\t\t\t\t\t<div *ngIf=\"selectedTask?.task_status==2\">Running</div>\n\t\t\t\t\t\t\t<div *ngIf=\"selectedTask?.task_status==3\">Completed</div></td>\n\t\t\t\t\t</tr>\n\t\t\t\t</table>\n\t\t\t</div>\n\t\t\t<div class=\"modal-footer\">\n\t\t\t\t<button type=\"button\" class=\"primarybutton\" (click)=\"clickForDeleteTask()\"><i class=\"fa fa-check-square-o\"></i>&nbsp;Delete Task</button>\n\t\t\t\t<button type=\"button\" class=\"secondarybutton\" data-dismiss=\"modal\">Close &nbsp;<i class=\"fa fa-remove\"></i></button>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\n"
+
+/***/ }),
+/* 886 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row bottom-30\">\n\n\t<div class=\"col-xl-12 col-lg-12 col-12 bottom-30\">\n\t\t<div widget class=\"card\">\n\t\t\t<div class=\"card-header\">\n\t\t\t\t<span>Create Task</span>\n\t\t\t\t<div class=\"widget-controls\">\n\t\t\t\t\t<a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i\n\t\t\t\t\t\tclass=\"fa fa-chevron-down\"></i></a> <a data-widgster=\"collapse\"\n\t\t\t\t\t\thref=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card-block widget-body\">\n\n\t\t\t\t<form [formGroup]=\"newTask\"\n\t\t\t\t\t(ngSubmit)=\"newTaskSubmit(newTask.value)\" class=\"form-horizontal\">\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"task_name\" class=\"col-sm-3 form-control-label m-t-5\">Task</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t<input [formControl]=\"task_name\" class=\"form-control checking-field\" placeholder=\"Task Name\" type=\"text\"> \n\t\t\t\t\t    <span class=\"help-block text-danger\" *ngIf=\"newTask.get('task_name').touched && newTask.get('task_name').hasError('required')\">required</span>\n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"source\" class=\"col-sm-3 form-control-label m-t-5\">Source</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t    <input type=\"text\"  class=\"form-control checking-field\" placeholder=\"Source\" #source/>\t\t\t\t\t    \n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"destination\" class=\"col-sm-3 form-control-label m-t-5\">Destination</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t    <input type=\"text\"  class=\"form-control checking-field\" placeholder=\"Destination\" #destination/>\t\t\t\t\t   \n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"planned_time\" class=\"col-sm-3 form-control-label m-t-5\">Customer Delivery</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t<input [formControl]=\"customer_delivery_date_time\" class=\"form-control checking-field\"\n\t\t\t\t\t\t\tplaceholder=\"Customer Delivery Date Time\" type=\"datetime-local\" value=\"2017-08-14T13:45:00\"\n\t\t\t\t\t\t\t(input)=\"putPlannedStartTime($event.target.value)\"> \n\t\t\t\t\t\t\t<span class=\"help-block text-danger\" *ngIf=\"newTask.get('customer_delivery_date_time').touched && newTask.get('customer_delivery_date_time').hasError('required')\">required</span>\n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div *ngIf=\"critical_start_time !='' \">\n\t\t\t\t\t  <div class=\"form-group row\">\n\t\t\t\t\t    <label for=\"planned_time\" class=\"col-sm-3 form-control-label m-t-5\">critical start time</label>\n\t\t\t\t\t   <div class=\"col-sm-9\">\n\t\t\t\t\t\t  <b>{{critical_start_time}}</b>\n\t\t\t\t\t   </div>\t\t\n\t\t\t\t\t  </div>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"planned_time\" class=\"col-sm-3 form-control-label m-t-5\">Planned Time</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t<input [formControl]=\"planned_start_time\" class=\"form-control checking-field\"\n\t\t\t\t\t\t\tplaceholder=\"Planned Time\" type=\"datetime-local\" value=\"2017-08-14T13:45:00\"\n\t\t\t\t\t\t\t(input)=\"setOnlyPlannedTime($event.target.value)\"> \t\t\t\t\t\t\t\n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\t\n\t\t\t\t\t\n\t\t\t\t\t<div *ngIf=\"planned_end_time !='' \">\n\t\t\t\t\t  <div class=\"form-group row\">\n\t\t\t\t\t    <label for=\"planned_time\" class=\"col-sm-3 form-control-label m-t-5\">planned end time</label>\n\t\t\t\t\t   <div class=\"col-sm-9\">\n\t\t\t\t\t\t  <b>{{planned_end_time}}</b>\n\t\t\t\t\t   </div>\t\t\n\t\t\t\t\t  </div>\n\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"distance\" class=\"col-sm-3 form-control-label m-t-5\">Distance</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t<input [formControl]=\"distance\" class=\"form-control checking-field\" placeholder=\"Distance\" type=\"text\" readonly=\"readonly\"> \n\t\t\t\t\t    <span class=\"help-block text-danger\" *ngIf=\"newTask.get('distance').touched && newTask.get('distance').hasError('required')\">required</span>\n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"estimated_time\" class=\"col-sm-3 form-control-label m-t-5\">Estimated Time</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t<input [formControl]=\"estimated_time\" class=\"form-control checking-field\" placeholder=\"Estimated Time\" type=\"text\" readonly=\"readonly\"> \n\t\t\t\t\t    <span class=\"help-block text-danger\" *ngIf=\"newTask.get('estimated_time').touched && newTask.get('estimated_time').hasError('required')\">required</span>\n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label for=\"estimated_time\" class=\"col-sm-3 form-control-label m-t-5\">Priority</label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t<select class=\"form-control\" [formControl]=\"priority\">\n\t\t\t\t\t\t\t<option selected=\"selected\" value=\"0\">-- Select Priority --</option>\n\t\t\t\t\t\t\t<option value=\"0\">Low</option>\n\t\t\t\t\t\t\t<option value=\"1\">Medium</option>\n\t\t\t\t\t\t\t<option value=\"2\">High</option>\n\t\t\t\t\t\t</select> \n\t\t\t\t\t  </div>\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group row\">\n\t\t\t\t\t  <label class=\"col-sm-3 form-control-label m-t-5\"></label>\n\t\t\t\t\t  <div class=\"col-sm-9\">\n\t\t\t\t\t\t <button [disabled]=\"!newTask.valid\" class=\"successbutton\" type=\"button\" data-toggle=\"modal\" data-target=\"#confirmModal\">\n\t\t\t\t\t\t  <i class=\"fa fa-save\"></i>&nbsp;Submit</button>\n\t\t\t\t\t  </div>\n\t\t\t\t   </div>\t\t\t\t\n\n\t\t\t\t  <div *ngIf=\"sourceFullAddr !='' \">\n\t\t\t\t\t<p><b>Source:</b> {{sourceFullAddr}}</p>\n\t\t\t\t\t<p><b>Destination:</b> {{destiFullAddr}}</p>\n\t\t\t\t  </div>\n\n\t\t\t\t  <div class=\"modal fade\" id=\"confirmModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"modal-primary-label\">\n\t\t\t\t\t<div class=\"modal-dialog\" role=\"document\">\n\t\t\t\t\t\t<div class=\"modal-content\">\n\t\t\t\t\t\t\t<div class=\"modal-header state modal-primary\">\n\t\t\t\t\t\t\t\t<h6 class=\"modal-title\" id=\"modal-primary-label\">Confirm</h6>\n\t\t\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" #closeBtn>\n\t\t\t\t\t\t\t\t\t<span aria-hidden=\"true\">×</span>\n\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"modal-body\">Are You Sure to Create New Task?</div>\n\t\t\t\t\t\t\t<div class=\"modal-footer\">\n\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"primarybutton\"><i class=\"fa fa-check-square-o\"></i>&nbsp;OK</button>\n\t\t\t\t\t\t\t\t<button type=\"button\" class=\"secondarybutton\" data-dismiss=\"modal\">\n\t\t\t\t\t\t\t\t\tClose &nbsp;<i class=\"fa fa-remove\"></i>\n\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t </div>\n\t\t\t\t  </div>\n\t\t\t    </form>\n\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\n\n"
 
 /***/ })
 ]));

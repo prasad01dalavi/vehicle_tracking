@@ -8532,22 +8532,21 @@ UrlUtility.getAllVehicle = UrlUtility.Domain + 'dashboard/vehicle/?format=json';
 UrlUtility.getGps = UrlUtility.Domain + 'dashboard/gps/';
 UrlUtility.getVehicleById = UrlUtility.Domain + 'dashboard/getvehiclebyid/';
 UrlUtility.saveVehicle = UrlUtility.Domain + 'dashboard/vehicle/';
-UrlUtility.getVehicleRegNo = UrlUtility.Domain + 'dashboard/getregvehicle/';
+UrlUtility.getVehicleRegNo = UrlUtility.Domain + 'dashboard/vehicleforregistration/';
 /** Driver */
 UrlUtility.saveDriver = UrlUtility.Domain + 'dashboard/driver/';
-UrlUtility.getAllDriver = UrlUtility.Domain + 'dashboard/driver/?format=json';
+UrlUtility.getAllDriver = UrlUtility.Domain + 'dashboard/driver/';
 UrlUtility.getDriverById = UrlUtility.Domain + 'dashboard/getdriverbyid/';
 UrlUtility.assignDriverVehicle = UrlUtility.Domain + 'dashboard/assignment/';
-UrlUtility.allDriver = UrlUtility.Domain + 'dashboard/alldriver/';
+UrlUtility.allDriver = UrlUtility.Domain + 'dashboard/driver/';
 UrlUtility.unassignedDriver = UrlUtility.Domain + 'dashboard/unassigneddrivers/';
 /** History */
 UrlUtility.getHistory = UrlUtility.Domain + 'dashboard/gethistory/';
 /** Task */
 UrlUtility.createTask = UrlUtility.Domain + 'dashboard/createtask/';
-UrlUtility.unassignTask = UrlUtility.Domain + 'dashboard/unassignedtask/';
-UrlUtility.unassignVehicle = UrlUtility.Domain + 'dashboard/unassignedvehicle/';
 UrlUtility.assignTask = UrlUtility.Domain + 'dashboard/assigntask/';
-UrlUtility.getAssignTask = UrlUtility.Domain + 'dashboard/getassignedtask/';
+UrlUtility.getAssignTask = UrlUtility.Domain + 'dashboard/taskassignmentdetail/';
+UrlUtility.VehicleforTask = UrlUtility.Domain + 'dashboard/vehiclefortaskassignment/';
 UrlUtility.displayTask = UrlUtility.Domain + 'dashboard/displaytask/';
 UrlUtility.deleteTask = UrlUtility.Domain + 'dashboard/deletetask/';
 /** Reports */
@@ -9122,7 +9121,7 @@ MailComposeComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-mail-compose',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(868)
+        template: __webpack_require__(869)
     })
 ], MailComposeComponent);
 
@@ -9187,7 +9186,7 @@ MailDetailComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-mail-detail',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(869)
+        template: __webpack_require__(870)
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__mail_service__["a" /* MailService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__mail_service__["a" /* MailService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _c || Object])
 ], MailDetailComponent);
@@ -9335,7 +9334,7 @@ MailListComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-mail-list',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(870)
+        template: __webpack_require__(871)
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__mail_service__["a" /* MailService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__mail_service__["a" /* MailService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__app_state__["a" /* AppState */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__app_state__["a" /* AppState */]) === "function" && _d || Object])
 ], MailListComponent);
@@ -9421,8 +9420,8 @@ MailComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-mail',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(871),
-        styles: [__webpack_require__(815)],
+        template: __webpack_require__(872),
+        styles: [__webpack_require__(816)],
         providers: [__WEBPACK_IMPORTED_MODULE_2__mail_service__["a" /* MailService */]]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__mail_service__["a" /* MailService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__mail_service__["a" /* MailService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__app_state__["a" /* AppState */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__app_state__["a" /* AppState */]) === "function" && _d || Object])
@@ -9433,7 +9432,7 @@ var _a, _b, _c, _d;
 
 /***/ }),
 
-/***/ 815:
+/***/ 816:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -9451,28 +9450,28 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 868:
+/***/ 869:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"card-block compose\">\n   \n    <form method=\"get\" action=\"#\">\n        <div class=\"form-group\">\n            <input type=\"text\" class=\"form-control\" placeholder=\"To\">\n        </div>\n        <div class=\"form-group\">\n            <input type=\"text\" class=\"form-control\" placeholder=\"Cc / Bcc\">\n        </div>\n        <div class=\"form-group\">\n            <input type=\"text\" class=\"form-control\" placeholder=\"Subject\">\n        </div>\n        <div class=\"form-group\">\n            <textarea class=\"form-control\" placeholder=\"Message\" rows=\"10\"></textarea>\n        </div>\n        <div class=\"form-group pull-right\">\n            <a [routerLink]=\"['../mail-list/inbox']\" class=\"btn btn-secondary\">Cancel</a>\n            <button class=\"btn btn-main\" type=\"submit\">Send</button>            \n        </div>\n    </form>\n\n </div>\n \n"
 
 /***/ }),
 
-/***/ 869:
+/***/ 870:
 /***/ (function(module, exports) {
 
 module.exports = "<div *ngIf=\"mail\">  \n    <div class=\"card-block\">\n        <div class=\"detail-header clearfix\">\n            <a href=\"#\" class=\"text-muted pull-right\"><i class=\"fa fa-print\"></i></a>\n            <h4 class=\"pull-left\">{{mail.subject}}</h4>\n        </div>\n        <hr/>\n\n        <div class=\"detail-content bottom-15 clearfix\">\n            <div class=\"avatar pull-left\">\n                <i class=\"fa fa-user\" aria-hidden=\"true\"></i>\n            </div>\n            <div class=\"pull-left\">\n                <strong>{{mail.sender}}</strong>\n                <span *ngIf=\"mail.senderMail\" class=\"email\">&lt;{{mail.senderMail}}&gt;</span><br>\n                <span class=\"receiver\">to me</span>\n            </div>\n\n            <div class=\"pull-right\">\n                <span class=\"mail-date\"> {{mail.date}} </span>\n                <div class=\"btn-group\">\n                    <button class=\"btn btn-sm btn-secondary\"><i class=\"fa fa-reply\"></i> Reply</button>\n                    <button class=\"btn btn-sm btn-secondary dropdown-toggle\" data-toggle=\"dropdown\"></button>\n                    <ul class=\"dropdown-menu pull-xs-right\">\n                        <li><a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-reply reply-btn\"></i> Reply</a></li>\n                        <li><a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-arrow-right reply-btn\"></i> Forward</a></li>\n                        <li><a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-print\"></i> Print</a></li>\n                        <li class=\"dropdown-divider\"></li>\n                        <li><a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-ban\"></i> Spam</a></li>\n                        <li><a class=\"dropdown-item\" href=\"javascript:void(0)\" (click)=\"trash(mail.id)\"><i class=\"glyphicon glyphicon-trash\"></i> Delete</a></li>\n                    </ul>\n                </div>\n            </div>\n        </div>\n        <div [innerHTML]=\"mail.body\"></div>\n\n        <div class=\"mail-attachments\" *ngIf=\"mail.attachments.length > 0\">\n            <hr/>\n            <div class=\"row\">\n                <div class=\"col-sm-6\">                    \n                    <p>\n                        <strong>{{mail.attachments.length}} attachments</strong> &nbsp;-&nbsp; \n                        <a href=\"#\">Download all attachments</a>&nbsp;&nbsp;&nbsp;\n                        <a href=\"#\">View all Images</a>\n                    </p>\n                    <section *ngFor=\"let attachment of mail.attachments; let i = index\" class=\"attachment\">\n                        <img src=\"{{attachment}}\" alt=\"\">\n                        <h5 class=\"title\">image-{{i + 1}}.jpg</h5>\n                        <p>\n                            457K  &nbsp;&nbsp;\n                            <a href=\"#\">View</a> &nbsp;&nbsp;\n                            <a href=\"#\">Download</a>\n                        </p>\n                    </section>\n                </div>\n            </div>\n        </div>\n\n    </div>\n</div>\n"
 
 /***/ }),
 
-/***/ 870:
+/***/ 871:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"table-header\">\n     <div class=\"abc-checkbox inbox-checkbox\">    \n        <input id=\"toggle-all\" type=\"checkbox\" [(ngModel)]=\"isAllSelected\" (click)=\"toggleAll()\">      \n        <label for=\"toggle-all\"></label>\n    </div>\n    <div class=\"w-200 pull-right\">\n         <input class=\"form-control form-control-sm\" id=\"table-search-input\" [(ngModel)]=\"searchText\" type=\"text\" placeholder=\"Search mail...\">\n    </div>\n</div>\n<div class=\"table-responsive\">\n    <table class=\"table inbox-table\">\n        <tbody>\n            <tr *ngFor=\"let mail of mails | async | MailSearch : searchText\" [ngClass]=\"{'unread': mail.unread, 'selected': mail.selected}\">\n                <td class=\"mail-checkbox\">\n                    <div class=\"abc-checkbox inbox-checkbox\">\n                        <input id=\"checkbox{{mail.id}}\" type=\"checkbox\" [(ngModel)]=\"mail.selected\" (ngModelChange)=\"toggleOne()\">                      \n                        <label attr.for=\"checkbox{{mail.id}}\"></label>\n                    </div>\n                </td>\n                <td class=\"mail-star\" *ngIf=\"router.url != '/pages/mail/mail-list/trash'\">\n                    <i class=\"fa\" [ngClass]=\"{'fa-star': mail.starred, 'fa-star-o': !mail.starred}\" (click)=\"changeStarStatus(mail)\"></i>\n                </td>           \n                <td (click)=\"goToDetail(mail)\" class=\"sender\">{{ mail.sender }}</td>\n                <td (click)=\"goToDetail(mail)\" class=\"subject\" [innerHTML]=\"mail.subject\"></td>\n                <td (click)=\"goToDetail(mail)\" class=\"attachment\"><i *ngIf=\"mail.attachment\" class=\"fa fa-paperclip\"></i></td>\n                <td (click)=\"goToDetail(mail)\" class=\"date\">{{mail.date}}</td>\n            </tr>\n        </tbody>\n    </table>\n</div>"
 
 /***/ }),
 
-/***/ 871:
+/***/ 872:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"inbox-container\">\n    <div class=\"row\">\n        <div class=\"col-sm-3 col-md-2\">\n            <div class=\"input-group input-group-sm\">\n                <div class=\"input-group-btn\">\n                    <button aria-expanded=\"false\" aria-haspopup=\"true\" class=\"btn btn-main dropdown-toggle\" data-toggle=\"dropdown\" type=\"button\">\n                            Mail\n                    </button>\n                    <div class=\"dropdown-menu\">\n                        <a class=\"dropdown-item\" href=\"javascript:void(0);\">Mail</a>\n                        <a class=\"dropdown-item\" href=\"javascript:void(0);\">Contacts</a>\n                        <a class=\"dropdown-item\" href=\"javascript:void(0);\">Tasks</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"col-sm-9 col-md-10\">\n            <div class=\"b-btn\" [style.display]=\"(id || !type) ? 'inline-block' : 'none'\" data-toggle=\"tooltip\" data-placement=\"top\" data-animation=\"false\" title=\"Back to {{type}}\">               \n                <button (click)=\"getBack()\" type=\"button\" class=\"btn btn-secondary btn-sm\">\n                    <i class=\"fa fa-arrow-left\"></i>\n                </button>\n            </div> \n            <div class=\"b-btn\" *ngIf=\"id\" data-toggle=\"tooltip\" data-placement=\"top\" data-animation=\"false\" title=\"Archive\">               \n                <button type=\"button\" class=\"btn btn-secondary btn-sm\">\n                    <i class=\"fa fa-archive\"></i>\n                </button>\n            </div> \n            <div class=\"b-btn\" *ngIf=\"id\" data-toggle=\"tooltip\" data-placement=\"top\" data-animation=\"false\" title=\"Report Spam\">               \n                <button type=\"button\" class=\"btn btn-secondary btn-sm\">\n                    <i class=\"fa fa-exclamation-circle\"></i>\n                </button>\n            </div> \n            <div class=\"b-btn\" *ngIf=\"id\" data-toggle=\"tooltip\" data-placement=\"top\" data-animation=\"false\" title=\"Delete\">               \n                <button (click)=\"trash()\" type=\"button\" class=\"btn btn-secondary btn-sm\">\n                    <i class=\"fa fa-trash\"></i>\n                </button>\n            </div> \n         \n            <div class=\"b-btn\" [style.display]=\"(router.url == '/pages/mail/mail-compose' || id) ? 'none' : 'inline-block'\" data-toggle=\"tooltip\" data-placement=\"top\" data-animation=\"false\" title=\"Refresh\">\n                <button type=\"button\" class=\"btn btn-secondary btn-sm\"><span class=\"fa fa-refresh\"></span></button>\n            </div> \n            <div class=\"b-btn\" [style.display]=\"(router.url == '/pages/mail/mail-compose') ? 'none' : 'inline-block'\">\n                <div class=\"input-group input-group-sm d-inline\">\n                    <div class=\"input-group-btn d-inline\">\n                        <button aria-expanded=\"false\" aria-haspopup=\"true\" class=\"btn btn-secondary dropdown-toggle\" data-toggle=\"dropdown\" type=\"button\">\n                                More\n                        </button>\n                        <div class=\"dropdown-menu m-t-15\">\n                            <a class=\"dropdown-item\" href=\"javascript:void(0);\" (click)=\"setAsRead()\">Mark as read</a>\n                            <a class=\"dropdown-item\" href=\"javascript:void(0);\" (click)=\"setAsUnRead()\">Mark as unread</a>\n                            <a class=\"dropdown-item\" href=\"javascript:void(0);\" (click)=\"deleteCheckedMail()\">Delete</a>\n                        </div>\n                    </div>\n                </div>\n            </div> \n            <div class=\"pull-right\">\n                <span class=\"inbox-paging\"><b>1</b>–<b>50</b> of <b>277</b></span>\n                <div class=\"input-group input-group-sm d-inline\">\n                    <div class=\"input-group-btn d-inline\">\n                        <button type=\"button\" class=\"btn btn-secondary\">\n                            <span class=\"fa fa-chevron-left\"></span>\n                        </button>\n                        <button type=\"button\" class=\"btn btn-secondary\">\n                            <span class=\"fa fa-chevron-right\"></span>\n                        </button>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <hr />\n\n    <div class=\"row\">\n        <div class=\"col-sm-3 col-md-2\">\n            <a [routerLink]=\"['mail-compose']\" class=\"btn btn-danger btn-sm btn-block\" role=\"button\">COMPOSE</a>\n            <hr />\n            <ul class=\"nav flex-column\">\n                <li class=\"nav-item\"><a [routerLink]=\"['mail-list/inbox']\"><span class=\"badge badge-pill badge-main pull-right\">7</span> Inbox </a></li>\n                <li class=\"nav-item\"><a [routerLink]=\"['mail-list/starred']\">Starred</a></li>                \n                <li class=\"nav-item\"><a [routerLink]=\"['mail-list/sent']\">Sent Mail</a></li>\n                <li class=\"nav-item\"><a [routerLink]=\"['mail-list/drafts']\"><span class=\"badge badge-pill badge-main pull-right\">2</span>Drafts</a></li>           \n                <li class=\"nav-item\"><a [routerLink]=\"['mail-list/trash']\">Trash</a></li>\n            </ul>\n            <hr/>\n            <ul class=\"nav flex-column\">\n                <li class=\"nav-item\">\n                    <a data-toggle=\"collapse\" href=\"#circles\" aria-expanded=\"false\" aria-controls=\"circles\"><i class=\"fa fa-caret-down pull-right\"></i> Circles </a>                  \n                    <div class=\"collapse\" id=\"circles\">\n                       <ul class=\"nav flex-column\">\n                          <li class=\"nav-item\"><a href=\"#\"><i class=\"fa fa-circle-o text-muted pull-right\"></i> Friends </a></li>\n                          <li class=\"nav-item\"><a href=\"#\"><i class=\"fa fa-circle-o text-muted pull-right\"></i> Family </a></li>\n                          <li class=\"nav-item\"><a href=\"#\"><i class=\"fa fa-circle-o text-muted pull-right\"></i> Work </a></li>\n                       </ul>\n                    </div>                   \n                </li>\n                <li class=\"nav-item\"><a href=\"#\">Notes</a></li>\n                <li class=\"nav-item\"><a href=\"#\">Personal</a></li>\n                <li class=\"nav-item\"><a href=\"#\">Travel</a></li>                   \n                <li class=\"nav-item\">\n                    <a data-toggle=\"collapse\" href=\"#more\" aria-expanded=\"false\" aria-controls=\"more\"><i class=\"fa fa-caret-down pull-right\"></i> More </a>                  \n                    <div class=\"collapse\" id=\"more\">\n                        <ul class=\"nav flex-column\">\n                            <li class=\"nav-item\"><a href=\"#\"><i class=\"fa fa-circle text-danger pull-right\"></i> Chats </a></li>\n                            <li class=\"nav-item\"><a href=\"#\"><i class=\"fa fa-circle text-white pull-right\"></i> Spam </a></li>\n                            <li class=\"nav-item\"><a href=\"#\"><i class=\"fa fa-circle pull-right\"></i> Trash </a></li>\n                        </ul>\n                    </div>                   \n                </li>\n            </ul>          \n        </div>\n        <div class=\"col-sm-9 col-md-10\">\n            <div class=\"inbox-body\">\n                <router-outlet></router-outlet>\n            </div>            \n        </div>\n    </div>\n\n    <hr />\n\n\n</div>\n\n"

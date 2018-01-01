@@ -12,11 +12,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular_2_dropdown_multiselect__ = __webpack_require__(362);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_datatable__ = __webpack_require__(621);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_datatable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_datatable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__display_search_pipe__ = __webpack_require__(776);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__display_search_pipe__ = __webpack_require__(777);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__theme_directives_directives_module__ = __webpack_require__(311);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_http__ = __webpack_require__(306);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__display_display_component__ = __webpack_require__(774);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__register_register_component__ = __webpack_require__(777);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__display_display_component__ = __webpack_require__(775);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__register_register_component__ = __webpack_require__(778);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VehicleModule", function() { return VehicleModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10009,22 +10009,21 @@ UrlUtility.getAllVehicle = UrlUtility.Domain + 'dashboard/vehicle/?format=json';
 UrlUtility.getGps = UrlUtility.Domain + 'dashboard/gps/';
 UrlUtility.getVehicleById = UrlUtility.Domain + 'dashboard/getvehiclebyid/';
 UrlUtility.saveVehicle = UrlUtility.Domain + 'dashboard/vehicle/';
-UrlUtility.getVehicleRegNo = UrlUtility.Domain + 'dashboard/getregvehicle/';
+UrlUtility.getVehicleRegNo = UrlUtility.Domain + 'dashboard/vehicleforregistration/';
 /** Driver */
 UrlUtility.saveDriver = UrlUtility.Domain + 'dashboard/driver/';
-UrlUtility.getAllDriver = UrlUtility.Domain + 'dashboard/driver/?format=json';
+UrlUtility.getAllDriver = UrlUtility.Domain + 'dashboard/driver/';
 UrlUtility.getDriverById = UrlUtility.Domain + 'dashboard/getdriverbyid/';
 UrlUtility.assignDriverVehicle = UrlUtility.Domain + 'dashboard/assignment/';
-UrlUtility.allDriver = UrlUtility.Domain + 'dashboard/alldriver/';
+UrlUtility.allDriver = UrlUtility.Domain + 'dashboard/driver/';
 UrlUtility.unassignedDriver = UrlUtility.Domain + 'dashboard/unassigneddrivers/';
 /** History */
 UrlUtility.getHistory = UrlUtility.Domain + 'dashboard/gethistory/';
 /** Task */
 UrlUtility.createTask = UrlUtility.Domain + 'dashboard/createtask/';
-UrlUtility.unassignTask = UrlUtility.Domain + 'dashboard/unassignedtask/';
-UrlUtility.unassignVehicle = UrlUtility.Domain + 'dashboard/unassignedvehicle/';
 UrlUtility.assignTask = UrlUtility.Domain + 'dashboard/assigntask/';
-UrlUtility.getAssignTask = UrlUtility.Domain + 'dashboard/getassignedtask/';
+UrlUtility.getAssignTask = UrlUtility.Domain + 'dashboard/taskassignmentdetail/';
+UrlUtility.VehicleforTask = UrlUtility.Domain + 'dashboard/vehiclefortaskassignment/';
 UrlUtility.displayTask = UrlUtility.Domain + 'dashboard/displaytask/';
 UrlUtility.deleteTask = UrlUtility.Domain + 'dashboard/deletetask/';
 /** Reports */
@@ -47567,14 +47566,15 @@ module.exports = function(module) {
 /* 771 */,
 /* 772 */,
 /* 773 */,
-/* 774 */
+/* 774 */,
+/* 775 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__display_service__ = __webpack_require__(775);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__display_service__ = __webpack_require__(776);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__ = __webpack_require__(325);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_httpurl__ = __webpack_require__(309);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DisplayComponent; });
@@ -47694,7 +47694,7 @@ DisplayComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'display',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(898),
+        template: __webpack_require__(899),
         styles: [__webpack_require__(381)],
         providers: [__WEBPACK_IMPORTED_MODULE_3__display_service__["a" /* VehicleService */], __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]]
     }),
@@ -47705,7 +47705,7 @@ var _a, _b, _c, _d, _e;
 //# sourceMappingURL=display.component.js.map
 
 /***/ }),
-/* 775 */
+/* 776 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47762,7 +47762,7 @@ var _a;
 //# sourceMappingURL=display.service.js.map
 
 /***/ }),
-/* 776 */
+/* 777 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47797,14 +47797,14 @@ SearchPipe = __decorate([
 //# sourceMappingURL=search.pipe.js.map
 
 /***/ }),
-/* 777 */
+/* 778 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service_component__ = __webpack_require__(778);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service_component__ = __webpack_require__(779);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__ = __webpack_require__(325);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -47852,6 +47852,7 @@ var RegisterComponent = (function () {
     };
     RegisterComponent.prototype.onSubmit = function (values) {
         var _this = this;
+        this.closeBtn.nativeElement.click();
         if (this.vehicleForm.valid) {
             this.vehicleService.saveVehicle(values).subscribe(function (data) {
                 if (data["flag"] == 1) {
@@ -47873,22 +47874,26 @@ var RegisterComponent = (function () {
     };
     return RegisterComponent;
 }());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('closeBtn'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
+], RegisterComponent.prototype, "closeBtn", void 0);
 RegisterComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'vehiclereg',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(899),
+        template: __webpack_require__(900),
         styles: [__webpack_require__(381)],
         providers: [__WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* VehicleService */], __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* VehicleService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* VehicleService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* VehicleService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* VehicleService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]) === "function" && _e || Object])
 ], RegisterComponent);
 
-var _a, _b, _c, _d;
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=register.component.js.map
 
 /***/ }),
-/* 778 */
+/* 779 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47937,7 +47942,6 @@ var _a;
 //# sourceMappingURL=service.component.js.map
 
 /***/ }),
-/* 779 */,
 /* 780 */,
 /* 781 */,
 /* 782 */,
@@ -48056,16 +48060,17 @@ var _a;
 /* 895 */,
 /* 896 */,
 /* 897 */,
-/* 898 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n\n\t<div class=\"col-xl-12 col-lg-6 col-12 bottom-30\">\n\t\t<div widget class=\"card\">\n\t\t\t<div class=\"card-header\">\n\t\t\t\t<span>Vehicle</span>\n\t\t\t\t<div class=\"widget-controls\">\n\t\t\t\t\t<a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i\n\t\t\t\t\t\tclass=\"fa fa-chevron-down\"></i></a> <a data-widgster=\"collapse\"\n\t\t\t\t\t\thref=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card-block widget-body\">\n\t\t\t\n\t\t\t  <div class=\"w-200 pull-right bottom-15\">\n                    <div class=\"input-group input-group-sm\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-search\"></i></span>\n                        <input class=\"form-control\" id=\"table-search-input\" [(ngModel)]=\"searchText\" type=\"text\" placeholder=\"Search Vehicle...\">\n                    </div>\n                 </div>\n\t\t\t\t<div class=\"table-responsive datatable\">\n\t\t\t\t\t<table class=\"table table-striped table-hover table-sm\" [mfData]=\"vehicleJson  | SearchPipe : searchText\" #mf=\"mfDataTable\" [mfRowsOnPage]=\"10\">\n\t\t\t\t\t\t<thead>\n\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"sr_no\"><b>Sr No.</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle\"><b>Vehicle</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle_make\"><b>Vehicle Make</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle_type\"><b>Type</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle_tonnage\"><b>Tonnage</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle_available_time\"><b>Availability</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle_id\"><b>Assigned Driver</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t<tr *ngFor=\"let key of mf.data;let i=index\">\n\t\t\t\t\t\t\t\t<td>{{i+1}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.vehicle}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.vehicle_make}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.vehicle_type}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.vehicle_tonnage}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.vehicle_available_time}}</td>\n\t\t\t\t\t\t\t\t<td><select class=\"form-control\"\n\t\t\t\t\t\t\t\t\t(change)=\"assignVehicleDriverSubmit($event.target.value, key?.vehicle_id)\">\n\t\t\t\t\t\t\t\t\t\t<option value=\"0\">-- Select Driver --</option>\n\t\t\t\t\t\t\t\t\t\t<option *ngFor=\"let d of driverJson;\" value=\"{{d?.driver_id}}\"\n\t\t\t\t\t\t\t\t\t\t\t[selected]=\"key?.vehicle_id==d?.assigned_vehicle_id\">{{d?.first_name}}\n\t\t\t\t\t\t\t\t\t\t\t{{d?.last_name}}</option>\n\t\t\t\t\t\t\t\t</select></td>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<td><a href=\"javascript:void(0)\" class=\"linkbutton\"\n\t\t\t\t\t\t\t\t\t(click)=\"selectedVehicle(key)\" data-toggle=\"modal\"\n\t\t\t\t\t\t\t\t\tdata-target=\"#updateVehicle\">Edit</a></td>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t<tr *ngIf=\"(mf.data | SearchPipe : searchText).length === 0\">\n                                  <td colspan=\"100\">\n                                    No matches\n                                  </td>\n                               </tr>\n\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t<tfoot>\n                              <tr>\n                                <td colspan=\"12\">\n                                    <mfBootstrapPaginator [rowsOnPageSet]=\"[10, 25, 50, 100]\"></mfBootstrapPaginator>\n                                </td>\n                            </tr>\n                        </tfoot>\n\t\t\t\t\t</table>\n\t\t\t\t</div>\n\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n<div class=\"modal fade\" id=\"updateVehicle\" tabindex=\"-1\" role=\"dialog\"\n\taria-labelledby=\"modal-primary-label\">\n\t<div class=\"modal-dialog\" role=\"document\">\n\t\t<div class=\"modal-content\">\n\t\t <form [formGroup]=\"vehicleForm\"\n\t\t\t\t\t(ngSubmit)=\"onUpdateVehicle(vehicleForm.value)\" class=\" text-left\">\n\t\t\t<div class=\"modal-header state modal-primary\">\n\t\t\t\t<h6 class=\"modal-title\" id=\"modal-primary-label\">\n\t\t\t\t\tUpdate Vehicle\n\t\t\t\t</h6>\n\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\"\n\t\t\t\t\taria-label=\"Close\" #closeBtn>\n\t\t\t\t\t<span aria-hidden=\"true\">×</span>\n\t\t\t\t</button>\n\t\t\t</div>\n\t\t\t<div class=\"modal-body\">\t\t\t    \n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"select_registration_number\" type=\"hidden\">\n\t\t\t\t\t\t<input [formControl]=\"vehicle_id\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" type=\"text\" readonly=\"readonly\">\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"vehicle_make\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Vehicle Name\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleForm.get('vehicle_make').touched && vehicleForm.get('vehicle_make').hasError('required')\">Vehicle\n\t\t\t\t\t\t\tName is required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"vehicle_type\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Vehicle Type\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleForm.get('vehicle_type').touched && vehicleForm.get('vehicle_type').hasError('required')\">Vehicle\n\t\t\t\t\t\t\tType is required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"vehicle_tonnage\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Vehicle Tunnage\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleForm.get('vehicle_tonnage').touched && vehicleForm.get('vehicle_tonnage').hasError('required')\">Vehicle\n\t\t\t\t\t\t\tTunnage is required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"vehicle_available_time\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Vehicle Availability in Hrs\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleForm.get('vehicle_available_time').touched && vehicleForm.get('vehicle_available_time').hasError('required')\">Vehicle\n\t\t\t\t\t\t\tAvailability is required</span>\n\t\t\t\t\t</div>\n\t\t\t</div>\t\n\t\t\t<div class=\"modal-footer\">\n\t\t\t\t<button type=\"submit\" class=\"primarybutton\" [disabled]=\"!vehicleForm.valid\">Update &nbsp;<i class=\"fa fa-check\"></i></button>\n\t\t\t\t<button type=\"button\" class=\"secondarybutton\" data-dismiss=\"modal\">Close &nbsp;<i class=\"fa fa-remove\"></i></button>\n\t\t\t</div>\t\n\t\t\t</form>\t\n\t\t</div>\n\t</div>\n</div>"
-
-/***/ }),
+/* 898 */,
 /* 899 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n\n\t<div class=\"col-xl-12 col-lg-6 col-12 bottom-30\">\n\t\t<div widget class=\"card\">\n\t\t\t<div class=\"card-header\">\n\t\t\t\t<span>Vehicle Registration</span>\n\t\t\t\t<div class=\"widget-controls\">\t\t\t\t\t\t\n\t\t\t\t\t<a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i class=\"fa fa-chevron-down\"></i></a>\n                    <a data-widgster=\"collapse\" href=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>  \n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card-block widget-body\">\n\n\t\t\t\t<form [formGroup]=\"vehicleForm\"\n\t\t\t\t\t(ngSubmit)=\"onSubmit(vehicleForm.value)\" class=\" text-left\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<select class=\"form-control\"\n\t\t\t\t\t\t\t[formControl]=\"select_registration_number\">\n\t\t\t\t\t\t\t<option value=\"0\">-- Select Vehicle Registration No --</option>\n\t\t\t\t\t\t\t<option *ngFor=\"let key of vehicleRegistration;\"\n\t\t\t\t\t\t\t\tvalue=\"{{key?.id}}\">{{key?.vehicle_registration_number}}</option>\n\t\t\t\t\t\t</select>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"vehicle_make\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Vehicle Name\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleForm.get('vehicle_make').touched && vehicleForm.get('vehicle_make').hasError('required')\">Vehicle\n\t\t\t\t\t\t\tName is required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"vehicle_type\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Vehicle Type\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleForm.get('vehicle_type').touched && vehicleForm.get('vehicle_type').hasError('required')\">Vehicle\n\t\t\t\t\t\t\tType is required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"vehicle_tonnage\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Vehicle Tunnage\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleForm.get('vehicle_tonnage').touched && vehicleForm.get('vehicle_tonnage').hasError('required')\">Vehicle\n\t\t\t\t\t\t\tTunnage is required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"vehicle_available_time\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Vehicle Availability in Hrs\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleForm.get('vehicle_available_time').touched && vehicleForm.get('vehicle_available_time').hasError('required')\">Vehicle\n\t\t\t\t\t\t\tAvailability is required</span>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<button [disabled]=\"!vehicleForm.valid\"\n\t\t\t\t\t\t\tclass=\"successbutton\" type=\"submit\">Submit &nbsp;<i class=\"fa fa-save\"></i></button>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n"
+module.exports = "<div class=\"row\">\n\n\t<div class=\"col-xl-12 col-lg-6 col-12 bottom-30\">\n\t\t<div widget class=\"card\">\n\t\t\t<div class=\"card-header\">\n\t\t\t\t<span>Vehicle</span>\n\t\t\t\t<div class=\"widget-controls\">\n\t\t\t\t\t<a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i\n\t\t\t\t\t\tclass=\"fa fa-chevron-down\"></i></a> <a data-widgster=\"collapse\"\n\t\t\t\t\t\thref=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card-block widget-body\">\n\t\t\t\n\t\t\t  <div class=\"w-200 pull-right bottom-15\">\n                    <div class=\"input-group input-group-sm\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-search\"></i></span>\n                        <input class=\"form-control\" id=\"table-search-input\" [(ngModel)]=\"searchText\" type=\"text\" placeholder=\"Search Vehicle...\">\n                    </div>\n                 </div>\n\t\t\t\t<div class=\"table-responsive datatable\">\n\t\t\t\t\t<table class=\"table table-striped table-hover table-sm\" [mfData]=\"vehicleJson  | SearchPipe : searchText\" #mf=\"mfDataTable\" [mfRowsOnPage]=\"10\">\n\t\t\t\t\t\t<thead>\n\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"sr_no\"><b>Sr No.</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle\"><b>Vehicle</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle_make\"><b>Vehicle Make</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle_type\"><b>Type</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle_tonnage\"><b>Tonnage</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle_available_time\"><b>Availability</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle_id\"><b>Assigned Driver</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t<tr *ngFor=\"let key of mf.data;let i=index\">\n\t\t\t\t\t\t\t\t<td>{{i+1}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.vehicle}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.vehicle_make}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.vehicle_type}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.vehicle_tonnage}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.vehicle_available_time}}</td>\n\t\t\t\t\t\t\t\t<td><select class=\"form-control\"\n\t\t\t\t\t\t\t\t\t(change)=\"assignVehicleDriverSubmit($event.target.value, key?.vehicle_id)\">\n\t\t\t\t\t\t\t\t\t\t<option value=\"0\">-- Select Driver --</option>\n\t\t\t\t\t\t\t\t\t\t<option *ngFor=\"let d of driverJson;\" value=\"{{d?.driver_id}}\"\n\t\t\t\t\t\t\t\t\t\t\t[selected]=\"key?.vehicle_id==d?.assigned_vehicle_id\">{{d?.first_name}}\n\t\t\t\t\t\t\t\t\t\t\t{{d?.last_name}}</option>\n\t\t\t\t\t\t\t\t</select></td>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<td><a href=\"javascript:void(0)\" class=\"linkbutton\"\n\t\t\t\t\t\t\t\t\t(click)=\"selectedVehicle(key)\" data-toggle=\"modal\"\n\t\t\t\t\t\t\t\t\tdata-target=\"#updateVehicle\">Edit</a></td>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t<tr *ngIf=\"(mf.data | SearchPipe : searchText).length === 0\">\n                                  <td colspan=\"100\">\n                                    No matches\n                                  </td>\n                               </tr>\n\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t<tfoot>\n                              <tr>\n                                <td colspan=\"12\">\n                                    <mfBootstrapPaginator [rowsOnPageSet]=\"[10, 25, 50, 100]\"></mfBootstrapPaginator>\n                                </td>\n                            </tr>\n                        </tfoot>\n\t\t\t\t\t</table>\n\t\t\t\t</div>\n\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n<div class=\"modal fade\" id=\"updateVehicle\" tabindex=\"-1\" role=\"dialog\"\n\taria-labelledby=\"modal-primary-label\">\n\t<div class=\"modal-dialog\" role=\"document\">\n\t\t<div class=\"modal-content\">\n\t\t <form [formGroup]=\"vehicleForm\"\n\t\t\t\t\t(ngSubmit)=\"onUpdateVehicle(vehicleForm.value)\" class=\" text-left\">\n\t\t\t<div class=\"modal-header state modal-primary\">\n\t\t\t\t<h6 class=\"modal-title\" id=\"modal-primary-label\">\n\t\t\t\t\tUpdate Vehicle\n\t\t\t\t</h6>\n\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\"\n\t\t\t\t\taria-label=\"Close\" #closeBtn>\n\t\t\t\t\t<span aria-hidden=\"true\">×</span>\n\t\t\t\t</button>\n\t\t\t</div>\n\t\t\t<div class=\"modal-body\">\t\t\t    \n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"select_registration_number\" type=\"hidden\">\n\t\t\t\t\t\t<input [formControl]=\"vehicle_id\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" type=\"text\" readonly=\"readonly\">\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"vehicle_make\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Vehicle Name\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleForm.get('vehicle_make').touched && vehicleForm.get('vehicle_make').hasError('required')\">Vehicle\n\t\t\t\t\t\t\tName is required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"vehicle_type\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Vehicle Type\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleForm.get('vehicle_type').touched && vehicleForm.get('vehicle_type').hasError('required')\">Vehicle\n\t\t\t\t\t\t\tType is required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"vehicle_tonnage\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Vehicle Tunnage\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleForm.get('vehicle_tonnage').touched && vehicleForm.get('vehicle_tonnage').hasError('required')\">Vehicle\n\t\t\t\t\t\t\tTunnage is required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"vehicle_available_time\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Vehicle Availability in Hrs\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleForm.get('vehicle_available_time').touched && vehicleForm.get('vehicle_available_time').hasError('required')\">Vehicle\n\t\t\t\t\t\t\tAvailability is required</span>\n\t\t\t\t\t</div>\n\t\t\t</div>\t\n\t\t\t<div class=\"modal-footer\">\n\t\t\t\t<button type=\"submit\" class=\"primarybutton\" [disabled]=\"!vehicleForm.valid\"><i class=\"fa fa-check-square-o\"></i>&nbsp;Update</button>\n\t\t\t\t<button type=\"button\" class=\"secondarybutton\" data-dismiss=\"modal\">Close &nbsp;<i class=\"fa fa-remove\"></i></button>\n\t\t\t</div>\t\n\t\t\t</form>\t\n\t\t</div>\n\t</div>\n</div>"
+
+/***/ }),
+/* 900 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n\n\t<div class=\"col-xl-12 col-lg-6 col-12 bottom-30\">\n\t\t<div widget class=\"card\">\n\t\t\t<div class=\"card-header\">\n\t\t\t\t<span>Vehicle Registration</span>\n\t\t\t\t<div class=\"widget-controls\">\t\t\t\t\t\t\n\t\t\t\t\t<a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i class=\"fa fa-chevron-down\"></i></a>\n                    <a data-widgster=\"collapse\" href=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>  \n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card-block widget-body\">\n\n\t\t\t\t<form [formGroup]=\"vehicleForm\"\n\t\t\t\t\t(ngSubmit)=\"onSubmit(vehicleForm.value)\" class=\" text-left\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<select class=\"form-control\"\n\t\t\t\t\t\t\t[formControl]=\"select_registration_number\">\n\t\t\t\t\t\t\t<option value=\"0\">-- Select Vehicle Registration No --</option>\n\t\t\t\t\t\t\t<option *ngFor=\"let key of vehicleRegistration;\"\n\t\t\t\t\t\t\t\tvalue=\"{{key?.id}}\">{{key?.vehicle_registration_number}}</option>\n\t\t\t\t\t\t</select>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"vehicle_make\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Vehicle Name\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleForm.get('vehicle_make').touched && vehicleForm.get('vehicle_make').hasError('required')\">Vehicle\n\t\t\t\t\t\t\tName is required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"vehicle_type\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Vehicle Type\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleForm.get('vehicle_type').touched && vehicleForm.get('vehicle_type').hasError('required')\">Vehicle\n\t\t\t\t\t\t\tType is required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"vehicle_tonnage\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Vehicle Tunnage\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleForm.get('vehicle_tonnage').touched && vehicleForm.get('vehicle_tonnage').hasError('required')\">Vehicle\n\t\t\t\t\t\t\tTunnage is required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"vehicle_available_time\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Vehicle Availability in Hrs\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleForm.get('vehicle_available_time').touched && vehicleForm.get('vehicle_available_time').hasError('required')\">Vehicle\n\t\t\t\t\t\t\tAvailability is required</span>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<button [disabled]=\"!vehicleForm.valid\" class=\"successbutton\" type=\"button\" data-toggle=\"modal\" data-target=\"#confirmModal\">\n\t\t\t\t\t\t\t<i class=\"fa fa-save\"></i>&nbsp;Submit</button>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"modal fade\" id=\"confirmModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"modal-primary-label\">\n\t\t\t\t\t  <div class=\"modal-dialog\" role=\"document\">\n\t\t\t\t\t\t<div class=\"modal-content\">\n\t\t\t\t\t\t\t<div class=\"modal-header state modal-primary\">\n\t\t\t\t\t\t\t\t<h6 class=\"modal-title\" id=\"modal-primary-label\">Confirm</h6>\n\t\t\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" #closeBtn>\n\t\t\t\t\t\t\t\t\t<span aria-hidden=\"true\">×</span>\n\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"modal-body\">Are You Sure to Register New Vehicle?</div>\n\t\t\t\t\t\t\t<div class=\"modal-footer\">\n\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"primarybutton\"><i class=\"fa fa-check-square-o\"></i>&nbsp;OK</button>\n\t\t\t\t\t\t\t\t<button type=\"button\" class=\"secondarybutton\" data-dismiss=\"modal\">\n\t\t\t\t\t\t\t\t\tClose &nbsp;<i class=\"fa fa-remove\"></i>\n\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t  </div>\n\t\t\t\t    </div>\n\t\t\t\t    \n\t\t\t\t</form>\n\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n"
 
 /***/ })
 ]));

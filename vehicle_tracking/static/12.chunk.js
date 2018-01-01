@@ -14674,7 +14674,7 @@ ErrorPageComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-layouts',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(857),
+        template: __webpack_require__(858),
         providers: [__WEBPACK_IMPORTED_MODULE_3_ngx_toastr__["b" /* ToastrService */]]
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3_ngx_toastr__["b" /* ToastrService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ngx_toastr__["b" /* ToastrService */]) === "function" && _d || Object])
@@ -14685,7 +14685,7 @@ var _a, _b, _c, _d;
 
 /***/ }),
 
-/***/ 857:
+/***/ 858:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\">\n\n\t<div class=\"col-xl-12 col-lg-6 col-12 bottom-30\">\n\t\t<div widget class=\"card\">\n\t\t\t<div class=\"card-header\">\n\t\t\t\t<span>Will Soon</span>\n\t\t\t\t<div class=\"widget-controls\"> \n                    <a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i class=\"fa fa-chevron-down\"></i></a>\n                    <a data-widgster=\"collapse\" href=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>                                  \n                </div> \t\n\t\t\t</div>\n\t\t\t<div class=\"card-block widget-body\">\n\n\t\t\t\t Page Under Development\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\n"

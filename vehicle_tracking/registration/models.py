@@ -91,9 +91,9 @@ class Task(models.Model):  # This table contains task related details
 class TaskAssignment(models.Model):  # This table contains assigned vehicle to the task
     created_at = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated_at = models.DateTimeField(auto_now_add=False, auto_now=True)
-    select_task = models.OneToOneField("Task", null=True)
-    # We can assign any registered vehicle in DeviceActivation Table
-    assign_vehicle = models.OneToOneField("DeviceActivation", null=True)
+    select_task = models.ForeignKey("Task", null=True)
+    # We can assign any registered vehicle in DeviceActivation Table which is free for that time slot of task
+    assign_vehicle = models.ForeignKey("DeviceActivation", null=True)
 
     def __str__(self):
         return str(self.select_task)
@@ -108,6 +108,7 @@ class CustomerRegistration(models.Model):  # This table contains Customer detail
     phone_number = models.CharField(max_length=10, null=True)
     company = models.CharField(max_length=255)
     fleet_size = models.CharField(max_length=5, null=True)
+    # username and password will be used by customer to see the fleet they own
     username = models.CharField(max_length=10, null=True)
     password = models.CharField(max_length=10, null=True)
 

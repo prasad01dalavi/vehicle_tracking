@@ -6307,8 +6307,8 @@ RegisterComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-register',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(876),
-        styles: [__webpack_require__(820)]
+        template: __webpack_require__(877),
+        styles: [__webpack_require__(821)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"]) === "function" && _b || Object])
 ], RegisterComponent);
@@ -6333,7 +6333,7 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 820:
+/***/ 821:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -6351,7 +6351,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 876:
+/***/ 877:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"register-container\">\n    <div class=\"col-xl-4 col-md-6 col-10 offset-xl-4 offset-md-3 offset-1\">\n        <div class=\"card\">\n            <div class=\"card-block text-center\">\n                <h2 class=\"card-title\">Sign up to Azimuth</h2>\n                <a routerLink=\"/login\" class=\"btn btn-link transition bottom-15\">Already have an account? Sign in!</a>\n                 \n                <form [formGroup]=\"form\" (ngSubmit)=\"onSubmit(form.value)\" class=\"text-left\">\n                    <div class=\"form-group\">\n                        <input [formControl]=\"name\" class=\"form-control checking-field\" placeholder=\"Full Name\" type=\"text\"> \n                        <span class=\"help-block\" *ngIf=\"form.get('name').touched\">\n                            <span class=\"text-danger\" *ngIf=\"form.get('name').hasError('required')\">Full Name is required</span>\n                            <span class=\"text-danger\" *ngIf=\"form.get('name').hasError('minlength')\">Minimum of 3 characters</span>\n                        </span>       \n                    </div>\n                    <div class=\"form-group\">\n                        <input [formControl]=\"email\" class=\"form-control checking-field\" placeholder=\"Email\" type=\"text\"> \n                        <span class=\"help-block\" *ngIf=\"form.get('email').touched\">\n                            <span class=\"text-danger\" *ngIf=\"form.get('email').hasError('required')\">Email is required</span>\n                            <span class=\"text-danger\" *ngIf=\"form.get('email').hasError('invalidEmail')\">Invalid email address</span>\n                        </span> \n                    </div>\n                    <div class=\"form-group\">\n                        <input [formControl]=\"password\" class=\"form-control checking-field\" placeholder=\"Password\" type=\"password\" minlength=\"6\">\n                         <span class=\"help-block\" *ngIf=\"form.get('password').touched\">\n                            <span class=\"text-danger\" *ngIf=\"form.get('password').hasError('required')\">Password is required</span>\n                            <span class=\"text-danger\" *ngIf=\"form.get('password').hasError('minlength')\">Password isn't long enough, minimum of 6 characters</span>\n                        </span>                     \n                    </div>\n                    <div class=\"form-group\">\n                        <input [formControl]=\"confirmPassword\" class=\"form-control checking-field\" placeholder=\"Confirm Password\" type=\"password\">\n                        <span class=\"help-block\" *ngIf=\"form.get('confirmPassword').touched\">\n                            <span class=\"text-danger\" *ngIf=\"form.get('confirmPassword').hasError('required')\">Confirm Password is required</span>\n                            <span class=\"text-danger\" *ngIf=\"form.get('confirmPassword').hasError('mismatchedPasswords')\">Passwords do not match</span>\n                        </span> \n                    </div>\n                    <div class=\"form-group\">\n                        <p class=\"terms\">By creating an account, you agree our <a class=\"btn btn-link transition terms\" href=\"javascript:void(0);\">Terms & Privacy Policy</a></p>                  \n                    </div>             \n                    <div class=\"form-group\">\n                        <button [disabled]=\"!form.valid\" class=\"btn btn-main btn-block\" type=\"submit\">Sign up</button>\n                    </div>\n                </form>  \n               \n            </div>\n        </div>\n    </div>\n</div>\n"

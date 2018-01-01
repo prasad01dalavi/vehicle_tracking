@@ -10084,22 +10084,21 @@ UrlUtility.getAllVehicle = UrlUtility.Domain + 'dashboard/vehicle/?format=json';
 UrlUtility.getGps = UrlUtility.Domain + 'dashboard/gps/';
 UrlUtility.getVehicleById = UrlUtility.Domain + 'dashboard/getvehiclebyid/';
 UrlUtility.saveVehicle = UrlUtility.Domain + 'dashboard/vehicle/';
-UrlUtility.getVehicleRegNo = UrlUtility.Domain + 'dashboard/getregvehicle/';
+UrlUtility.getVehicleRegNo = UrlUtility.Domain + 'dashboard/vehicleforregistration/';
 /** Driver */
 UrlUtility.saveDriver = UrlUtility.Domain + 'dashboard/driver/';
-UrlUtility.getAllDriver = UrlUtility.Domain + 'dashboard/driver/?format=json';
+UrlUtility.getAllDriver = UrlUtility.Domain + 'dashboard/driver/';
 UrlUtility.getDriverById = UrlUtility.Domain + 'dashboard/getdriverbyid/';
 UrlUtility.assignDriverVehicle = UrlUtility.Domain + 'dashboard/assignment/';
-UrlUtility.allDriver = UrlUtility.Domain + 'dashboard/alldriver/';
+UrlUtility.allDriver = UrlUtility.Domain + 'dashboard/driver/';
 UrlUtility.unassignedDriver = UrlUtility.Domain + 'dashboard/unassigneddrivers/';
 /** History */
 UrlUtility.getHistory = UrlUtility.Domain + 'dashboard/gethistory/';
 /** Task */
 UrlUtility.createTask = UrlUtility.Domain + 'dashboard/createtask/';
-UrlUtility.unassignTask = UrlUtility.Domain + 'dashboard/unassignedtask/';
-UrlUtility.unassignVehicle = UrlUtility.Domain + 'dashboard/unassignedvehicle/';
 UrlUtility.assignTask = UrlUtility.Domain + 'dashboard/assigntask/';
-UrlUtility.getAssignTask = UrlUtility.Domain + 'dashboard/getassignedtask/';
+UrlUtility.getAssignTask = UrlUtility.Domain + 'dashboard/taskassignmentdetail/';
+UrlUtility.VehicleforTask = UrlUtility.Domain + 'dashboard/vehiclefortaskassignment/';
 UrlUtility.displayTask = UrlUtility.Domain + 'dashboard/displaytask/';
 UrlUtility.deleteTask = UrlUtility.Domain + 'dashboard/deletetask/';
 /** Reports */
@@ -17933,8 +17932,8 @@ var HistoryComponent = (function () {
         this.start = this.vehicleHistory.controls['start'];
         this.end = this.vehicleHistory.controls['end'];
         this.vehicleHistory.controls['device_id'].setValue('0');
-        this.vehicleHistory.controls['start'].setValue('2017-08-14T00:00:00');
-        this.vehicleHistory.controls['end'].setValue('2017-08-20T23:59:00');
+        this.vehicleHistory.controls['start'].setValue('2018-02-14T06:02:00');
+        this.vehicleHistory.controls['end'].setValue('2018-03-20T23:59:00');
     }
     HistoryComponent.prototype.ngOnInit = function () {
         this.getVehicle();
@@ -17981,7 +17980,7 @@ HistoryComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-layouts',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(866),
+        template: __webpack_require__(867),
         styles: [__webpack_require__(381)],
         providers: [__WEBPACK_IMPORTED_MODULE_3__history_service__["a" /* HistoryService */], __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */], __WEBPACK_IMPORTED_MODULE_5__pages_mapservice__["a" /* MapService */]]
     }),
@@ -18043,10 +18042,10 @@ var _a;
 
 /***/ }),
 
-/***/ 866:
+/***/ 867:
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <ngui-map  [zoom]=\"zoom\" [center]=\"latlngitude\" style=\"width: 1650px;height: 850px;margin-left:-30px;\">\n    <polyline [editable]=\"true\"\n      [path]=\"mapPath\"\n      [geodesic]=\"true\"\n      [strokeColor]=\"'#1583F0'\"\n      [strokeOpacity]=\"5\"\n      [strokeWeight]=\"5\"></polyline>\n  </ngui-map>\n<div style=\"position: absolute;top: 5px;left: 2;width: 20%;\">\t\n -->\n<div class=\"row\">\n\n\t<div class=\"col-xl-12 col-lg-12 col-12 bottom-30\">\n\t\t<div widget class=\"card\">\n\t\t\t<div class=\"card-header\">\n\t\t\t\t<span>Vehicle History</span>\n\t\t\t\t<div class=\"widget-controls\">\n\t\t\t\t\t<a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i\n\t\t\t\t\t\tclass=\"fa fa-chevron-down\"></i></a> <a data-widgster=\"collapse\"\n\t\t\t\t\t\thref=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card-block widget-body\">\n\n\t\t\t\t<form [formGroup]=\"vehicleHistory\"\n\t\t\t\t\t(ngSubmit)=\"onSubmit(vehicleHistory.value)\" class=\" text-left\">\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t  <select class=\"form-control\" [formControl]=\"device_id\">\n\t\t\t\t\t\t\t<option selected=\"selected\" value=\"0\">-- Select Vehicle --</option>\n\t\t\t\t\t\t\t<option *ngFor=\"let key of vehicleJson;\" value=\"{{key?.device_imei}}\">{{key?.vehicle}}</option>\n\t\t\t\t\t  </select> \n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"start\" class=\"form-control checking-field\"\n\t\t\t\t\t\t\tplaceholder=\"Start Date\" type=\"datetime-local\"\n\t\t\t\t\t\t\tvalue=\"2017-08-14T13:45:00\"> <span\n\t\t\t\t\t\t\tclass=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleHistory.get('start').touched && vehicleHistory.get('start').hasError('required')\">Start\n\t\t\t\t\t\t\tDate required</span>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"end\" class=\"form-control checking-field\"\n\t\t\t\t\t\t\tplaceholder=\"End Date\" type=\"datetime-local\"\n\t\t\t\t\t\t\tvalue=\"2017-08-14T13:45:00\"> <span\n\t\t\t\t\t\t\tclass=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleHistory.get('end').touched && vehicleHistory.get('end').hasError('required')\">End\n\t\t\t\t\t\t\tDate required</span>\n\t\t\t\t\t</div>\n\n\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<button [disabled]=\"!vehicleHistory.valid\"\n\t\t\t\t\t\t\tclass=\"successbutton\" type=\"submit\">Submit &nbsp;<i class=\"fa fa-check\"></i></button>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\n"
+module.exports = "<!-- <ngui-map  [zoom]=\"zoom\" [center]=\"latlngitude\" style=\"width: 1650px;height: 850px;margin-left:-30px;\">\n    <polyline [editable]=\"true\"\n      [path]=\"mapPath\"\n      [geodesic]=\"true\"\n      [strokeColor]=\"'#1583F0'\"\n      [strokeOpacity]=\"5\"\n      [strokeWeight]=\"5\"></polyline>\n  </ngui-map>\n<div style=\"position: absolute;top: 5px;left: 2;width: 20%;\">\t\n -->\n<div class=\"row\">\n\n\t<div class=\"col-xl-12 col-lg-12 col-12 bottom-30\">\n\t\t<div widget class=\"card\">\n\t\t\t<div class=\"card-header\">\n\t\t\t\t<span>Vehicle History</span>\n\t\t\t\t<div class=\"widget-controls\">\n\t\t\t\t\t<a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i\n\t\t\t\t\t\tclass=\"fa fa-chevron-down\"></i></a> <a data-widgster=\"collapse\"\n\t\t\t\t\t\thref=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card-block widget-body\">\n\n\t\t\t\t<form [formGroup]=\"vehicleHistory\"\n\t\t\t\t\t(ngSubmit)=\"onSubmit(vehicleHistory.value)\" class=\" text-left\">\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t  <select class=\"form-control\" [formControl]=\"device_id\">\n\t\t\t\t\t\t\t<option selected=\"selected\" value=\"0\">-- Select Vehicle --</option>\n\t\t\t\t\t\t\t<option *ngFor=\"let key of vehicleJson;\" value=\"{{key?.device_imei}}\">{{key?.vehicle}}</option>\n\t\t\t\t\t  </select> \n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"start\" class=\"form-control checking-field\"\n\t\t\t\t\t\t\tplaceholder=\"Start Date\" type=\"datetime-local\"\n\t\t\t\t\t\t\tvalue=\"2018-02-14T06:02:00\"> <span\n\t\t\t\t\t\t\tclass=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleHistory.get('start').touched && vehicleHistory.get('start').hasError('required')\">Start\n\t\t\t\t\t\t\tDate required</span>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"end\" class=\"form-control checking-field\"\n\t\t\t\t\t\t\tplaceholder=\"End Date\" type=\"datetime-local\"\n\t\t\t\t\t\t\tvalue=\"2018-03-20T23:59:00\"> <span\n\t\t\t\t\t\t\tclass=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"vehicleHistory.get('end').touched && vehicleHistory.get('end').hasError('required')\">End\n\t\t\t\t\t\t\tDate required</span>\n\t\t\t\t\t</div>\n\n\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<button [disabled]=\"!vehicleHistory.valid\"\n\t\t\t\t\t\t\tclass=\"successbutton\" type=\"submit\"><i class=\"fa fa-save\"></i>&nbsp;Submit</button>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\n"
 
 /***/ })
 

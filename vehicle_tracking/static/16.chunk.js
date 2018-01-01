@@ -7375,8 +7375,8 @@ LoginComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'az-login',
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(867),
-        styles: [__webpack_require__(814), __webpack_require__(381)],
+        template: __webpack_require__(868),
+        styles: [__webpack_require__(815), __webpack_require__(381)],
         providers: [__WEBPACK_IMPORTED_MODULE_3_ngx_toastr__["b" /* ToastrService */]]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_ngx_toastr__["b" /* ToastrService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ngx_toastr__["b" /* ToastrService */]) === "function" && _c || Object])
@@ -7393,7 +7393,7 @@ var _a, _b, _c;
 
 /***/ }),
 
-/***/ 814:
+/***/ 815:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -7411,7 +7411,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 867:
+/***/ 868:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"login-container\">\n    <div class=\"col-xl-4 col-md-6 col-10 offset-xl-4 offset-md-3 offset-1\">\n        <div class=\"card\">\n            <div class=\"card-block text-center\">\n                <h2 class=\"card-title\">Sign in to EyeWay</h2>                \n\n                <form [formGroup]=\"form\" (ngSubmit)=\"onSubmit(form.value)\" class=\" text-left\">\n                    <div class=\"form-group\">\n                        <input [formControl]=\"userid\" class=\"form-control checking-field\" placeholder=\"User Id\" type=\"text\">                      \n                        <span class=\"help-block text-danger\" *ngIf=\"form.get('userid').touched && form.get('userid').hasError('required')\">User Id is required</span>                                                     \n                    </div>\n                    <div class=\"form-group\">\n                        <input [formControl]=\"password\" class=\"form-control checking-field\" placeholder=\"Password\" type=\"password\">\n                        <span class=\"help-block text-danger\" *ngIf=\"form.get('password').touched && form.get('password').hasError('required')\">Password is required</span>                              \n                        <span class=\"help-block text-danger\" *ngIf=\"form.get('password').touched && form.get('password').hasError('minlength')\">Password isn't long enough, minimum of 6 characters</span>\n                    </div>\n                    <div class=\"form-group\">\n                        <label class=\"custom-control custom-checkbox\">\n                            <input class=\"custom-control-input checkbox-main\" type=\"checkbox\">\n                            <span class=\"custom-control-indicator\"></span>\n                            <span class=\"custom-control-description align-middle\">Keep me signed in.</span>\n                        </label>\n                        <a class=\"btn btn-link forgot transition pull-right\" href=\"javascript:void(0);\">Forgot password?</a>                     \n                    </div>\n                    <div class=\"form-group\">\n                        <button [disabled]=\"!form.valid\" class=\"primarybutton btn-main btn-block\" type=\"submit\">Sign in</button>\n                    </div>\n                </form>\n\n            </div>\n        </div>\n    </div>\n</div>\n\n"

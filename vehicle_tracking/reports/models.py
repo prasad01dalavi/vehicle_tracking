@@ -17,8 +17,8 @@ class Trip(models.Model):
     km_covered = models.CharField(max_length=100, null=True)
     current_location = models.CharField(max_length=255, null=True)
     remaining_time = models.CharField(max_length=100, null=True)
-    estimated_reach_time = models.CharField(max_length=100, null=True)
-    time_lag = models.CharField(max_length=100, null=True)
+    estimated_reach_time = models.CharField(max_length=100, null=True)   # not in use
+    time_lag = models.CharField(max_length=100, null=True)               # not is use
 
     def __str__(self):
         return str(self.task)

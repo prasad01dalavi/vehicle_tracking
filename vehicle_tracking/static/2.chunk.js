@@ -1,5 +1,5 @@
-webpackJsonp([2,25],Array(269).concat([
-/* 269 */
+webpackJsonp([2,25],Array(280).concat([
+/* 280 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12,14 +12,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular_2_dropdown_multiselect__ = __webpack_require__(362);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_datatable__ = __webpack_require__(621);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_datatable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_datatable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__display_search_pipe__ = __webpack_require__(710);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__theme_directives_directives_module__ = __webpack_require__(311);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_http__ = __webpack_require__(306);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__register_register_component__ = __webpack_require__(712);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__display_display_component__ = __webpack_require__(709);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__update_update_component__ = __webpack_require__(715);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__vehicletask_search_pipe__ = __webpack_require__(746);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__vehicleutilization_search_pipe__ = __webpack_require__(749);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__theme_directives_directives_module__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__realtimestatus_realtimestatus_component__ = __webpack_require__(744);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__vehicletask_vehicletask_component__ = __webpack_require__(748);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__vehicleutilization_vehicleutilization_component__ = __webpack_require__(751);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DriverModule", function() { return DriverModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReportsModule", function() { return ReportsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -39,18 +40,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
-    { path: '', redirectTo: 'display', pathMatch: 'full' },
-    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_10__register_register_component__["a" /* RegisterComponent */], data: { breadcrumb: 'Registration' } },
-    { path: 'display', component: __WEBPACK_IMPORTED_MODULE_11__display_display_component__["a" /* DisplayComponent */], data: { breadcrumb: 'Display' } },
-    { path: 'update', component: __WEBPACK_IMPORTED_MODULE_12__update_update_component__["a" /* UpdateComponent */], data: { breadcrumb: 'Update' } }
+    { path: '', redirectTo: 'realtimestatus', pathMatch: 'full' },
+    { path: 'realtimestatus', component: __WEBPACK_IMPORTED_MODULE_11__realtimestatus_realtimestatus_component__["a" /* RealtimeComponent */], data: { breadcrumb: 'RealTime Status' } },
+    { path: 'vehicletask', component: __WEBPACK_IMPORTED_MODULE_12__vehicletask_vehicletask_component__["a" /* VehicleTaskComponent */], data: { breadcrumb: 'Vehicle Task Report' } },
+    { path: 'vehicleutilization', component: __WEBPACK_IMPORTED_MODULE_13__vehicleutilization_vehicleutilization_component__["a" /* VehicleUtilization */], data: { breadcrumb: 'Vehicle Utilization' } }
 ];
-var DriverModule = (function () {
-    function DriverModule() {
+var ReportsModule = (function () {
+    function ReportsModule() {
     }
-    return DriverModule;
+    return ReportsModule;
 }());
-DriverModule = __decorate([
+ReportsModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         imports: [
             __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
@@ -58,34 +60,24 @@ DriverModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_4__angular_forms__["ReactiveFormsModule"],
             __WEBPACK_IMPORTED_MODULE_5_angular_2_dropdown_multiselect__["a" /* MultiselectDropdownModule */],
             __WEBPACK_IMPORTED_MODULE_6_angular2_datatable__["DataTableModule"],
-            __WEBPACK_IMPORTED_MODULE_8__theme_directives_directives_module__["a" /* DirectivesModule */],
+            __WEBPACK_IMPORTED_MODULE_9__theme_directives_directives_module__["a" /* DirectivesModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */].forChild(routes),
-            __WEBPACK_IMPORTED_MODULE_9__angular_http__["a" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_10__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_3__agm_core__["a" /* AgmCoreModule */]
         ],
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_10__register_register_component__["a" /* RegisterComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__display_display_component__["a" /* DisplayComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__update_update_component__["a" /* UpdateComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__display_search_pipe__["a" /* SearchPipe */]
+            __WEBPACK_IMPORTED_MODULE_11__realtimestatus_realtimestatus_component__["a" /* RealtimeComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__vehicletask_vehicletask_component__["a" /* VehicleTaskComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__vehicleutilization_vehicleutilization_component__["a" /* VehicleUtilization */],
+            __WEBPACK_IMPORTED_MODULE_7__vehicletask_search_pipe__["a" /* SearchPipe */],
+            __WEBPACK_IMPORTED_MODULE_8__vehicleutilization_search_pipe__["a" /* UtilizationPipe */]
         ]
     })
-], DriverModule);
+], ReportsModule);
 
-//# sourceMappingURL=driver.module.js.map
+//# sourceMappingURL=reports.module.js.map
 
 /***/ }),
-/* 270 */,
-/* 271 */,
-/* 272 */,
-/* 273 */,
-/* 274 */,
-/* 275 */,
-/* 276 */,
-/* 277 */,
-/* 278 */,
-/* 279 */,
-/* 280 */,
 /* 281 */,
 /* 282 */,
 /* 283 */,
@@ -10029,22 +10021,21 @@ UrlUtility.getAllVehicle = UrlUtility.Domain + 'dashboard/vehicle/?format=json';
 UrlUtility.getGps = UrlUtility.Domain + 'dashboard/gps/';
 UrlUtility.getVehicleById = UrlUtility.Domain + 'dashboard/getvehiclebyid/';
 UrlUtility.saveVehicle = UrlUtility.Domain + 'dashboard/vehicle/';
-UrlUtility.getVehicleRegNo = UrlUtility.Domain + 'dashboard/getregvehicle/';
+UrlUtility.getVehicleRegNo = UrlUtility.Domain + 'dashboard/vehicleforregistration/';
 /** Driver */
 UrlUtility.saveDriver = UrlUtility.Domain + 'dashboard/driver/';
-UrlUtility.getAllDriver = UrlUtility.Domain + 'dashboard/driver/?format=json';
+UrlUtility.getAllDriver = UrlUtility.Domain + 'dashboard/driver/';
 UrlUtility.getDriverById = UrlUtility.Domain + 'dashboard/getdriverbyid/';
 UrlUtility.assignDriverVehicle = UrlUtility.Domain + 'dashboard/assignment/';
-UrlUtility.allDriver = UrlUtility.Domain + 'dashboard/alldriver/';
+UrlUtility.allDriver = UrlUtility.Domain + 'dashboard/driver/';
 UrlUtility.unassignedDriver = UrlUtility.Domain + 'dashboard/unassigneddrivers/';
 /** History */
 UrlUtility.getHistory = UrlUtility.Domain + 'dashboard/gethistory/';
 /** Task */
 UrlUtility.createTask = UrlUtility.Domain + 'dashboard/createtask/';
-UrlUtility.unassignTask = UrlUtility.Domain + 'dashboard/unassignedtask/';
-UrlUtility.unassignVehicle = UrlUtility.Domain + 'dashboard/unassignedvehicle/';
 UrlUtility.assignTask = UrlUtility.Domain + 'dashboard/assigntask/';
-UrlUtility.getAssignTask = UrlUtility.Domain + 'dashboard/getassignedtask/';
+UrlUtility.getAssignTask = UrlUtility.Domain + 'dashboard/taskassignmentdetail/';
+UrlUtility.VehicleforTask = UrlUtility.Domain + 'dashboard/vehiclefortaskassignment/';
 UrlUtility.displayTask = UrlUtility.Domain + 'dashboard/displaytask/';
 UrlUtility.deleteTask = UrlUtility.Domain + 'dashboard/deletetask/';
 /** Reports */
@@ -35730,23 +35721,7 @@ exports.QueueScheduler = QueueScheduler;
 //# sourceMappingURL=QueueScheduler.js.map
 
 /***/ }),
-/* 381 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(8)(false);
-// imports
-
-
-// module
-exports.push([module.i, ".completer-limit /deep/ .completer-dropdown {\r\n  overflow-y: auto;\r\n  max-height: 20rem;\r\n}\r\n\r\n/** info button */\r\n.mybutton{\r\n\tdisplay: inline-block;\r\n    border-radius: 3px;\r\n    border: 1px solid #248dad;\r\n    background-color: transparent;\r\n    padding: 4px 10px;\r\n    cursor: pointer;\r\n    color: #248dad;\r\n}\r\n.mybutton:HOVER {\r\n\tcolor: #ffffff;\r\n\tbackground-color: #248dad;\r\n}\r\n\r\n.mybutton:DISABLED {\r\n\tbackground-color: transparent;\r\n\tcolor: #5bc0de;\r\n    cursor: not-allowed;\r\n}\r\n\r\n/** success button */\r\n.successbutton{\r\n\tdisplay: inline-block;\r\n    border-radius: 3px;\r\n    border: 1px solid #2d922d;\r\n    background-color: transparent;\r\n    padding: 4px 10px;\r\n    cursor: pointer;\r\n    color: #2d922d;\r\n}\r\n.successbutton:HOVER {\r\n\tcolor: #ffffff;\r\n\tbackground-color: #2d922d;\r\n}\r\n\r\n.successbutton:DISABLED {\r\n\tbackground-color: transparent;\r\n\tcolor: #73d573;\r\n    cursor: not-allowed;\r\n}\r\n\r\n/** primary button */\r\n.primarybutton{\r\n\tdisplay: inline-block;\r\n    border-radius: 3px;\r\n    border: 1px solid #0275d8;\r\n    background-color: transparent;\r\n    padding: 4px 10px;\r\n    cursor: pointer;\r\n    color: #0275d8;\r\n}\r\n.primarybutton:HOVER {\r\n\tcolor: #ffffff;\r\n\tbackground-color: rgba(2, 74, 136, 0.8);\r\n}\r\n\r\n.primarybutton:DISABLED {\r\n\tbackground-color: transparent;\r\n\tcolor: #0275d8;\r\n    cursor: not-allowed;\r\n}\r\n\r\n/** secondary button */\r\n.secondarybutton{\r\n\tdisplay: inline-block;\r\n    border-radius: 3px;\r\n    border: 1px solid #ccc;\r\n    background-color: transparent;\r\n    padding: 4px 10px;\r\n    cursor: pointer;\r\n    color: #292b2c;\r\n}\r\n.secondarybutton:HOVER {\r\n\tcolor: #292b2c;\r\n\tbackground-color: #e6e5e5;\r\n\tborder-color: #adadad;\r\n}\r\n\r\n.secondarybutton:DISABLED {\r\n\tbackground-color: transparent;\r\n\tcolor: #ccc;\r\n    cursor: not-allowed;\r\n}\r\n\r\n/** link button */\r\n.linkbutton{\r\n    border-radius: 0;\r\n    border-color: transparent;\r\n    background-color: transparent;\r\n    cursor: pointer;\r\n    color: #0275d8;\r\n}\r\n.linkbutton:HOVER {\r\n\ttext-decoration: underline;\r\n}\r\n\r\n.linkbutton:DISABLED {\r\n\tbackground-color: transparent;\r\n\tcolor: #0275d8;\r\n    cursor: not-allowed;\r\n}\r\n\r\n/** link Success */\r\n.linksuccess{\r\n    border-radius: 0;\r\n    border-color: transparent;\r\n    background-color: transparent;\r\n    cursor: pointer;\r\n    color: #2d922d;\r\n}\r\n.linksuccess:HOVER {\r\n\ttext-decoration: underline;\r\n}\r\n\r\n.linksuccess:DISABLED {\r\n\tbackground-color: transparent;\r\n\tcolor: #2d922d;\r\n    cursor: not-allowed;\r\n}\r\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
+/* 381 */,
 /* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -47522,525 +47497,13 @@ module.exports = function(module) {
 /* 706 */,
 /* 707 */,
 /* 708 */,
-/* 709 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service_component__ = __webpack_require__(711);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__ = __webpack_require__(325);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_httpurl__ = __webpack_require__(309);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DisplayComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-var DisplayComponent = (function () {
-    function DisplayComponent(router, fb, displayService, toastrService) {
-        this.driverJson = [];
-        this.router = router;
-        this.displayService = displayService;
-        this.toastrService = toastrService;
-        this.driverForm = fb.group({
-            'driver_id': [''],
-            'first_name': ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required],
-            'last_name': ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required],
-            'address': ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required],
-            'phone_number': ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required],
-            'driver_card_id': ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required]
-        });
-        this.driver_id = this.driverForm.controls['driver_id'];
-        this.first_name = this.driverForm.controls['first_name'];
-        this.last_name = this.driverForm.controls['last_name'];
-        this.address = this.driverForm.controls['address'];
-        this.phone_number = this.driverForm.controls['phone_number'];
-        this.driver_card_id = this.driverForm.controls['driver_card_id'];
-    }
-    DisplayComponent.prototype.ngOnInit = function () {
-        this.getDriver();
-    };
-    DisplayComponent.prototype.getDriver = function () {
-        var _this = this;
-        this.displayService.getDriver().subscribe(function (data) {
-            _this.driverJson = data;
-        });
-    };
-    DisplayComponent.prototype.selectedDriver = function (key) {
-        this.driverForm.controls['driver_id'].setValue(key.driver_id);
-        this.driverForm.controls['first_name'].setValue(key.first_name);
-        this.driverForm.controls['last_name'].setValue(key.last_name);
-        this.driverForm.controls['address'].setValue(key.address);
-        this.driverForm.controls['phone_number'].setValue(key.phone_number);
-        this.driverForm.controls['driver_card_id'].setValue(key.driver_card_id);
-    };
-    DisplayComponent.prototype.onDriverUpdate = function (values) {
-        var _this = this;
-        this.displayService.saveDriver(values).subscribe(function (data) {
-            if (data["flag"] == "1") {
-                _this.closeBtn.nativeElement.click();
-                _this.updateDriverJson();
-                _this.toastrService.success('Driver Successfully Updated!');
-            }
-            else {
-                _this.toastrService.error(__WEBPACK_IMPORTED_MODULE_5__pages_httpurl__["a" /* UrlUtility */].errMsg);
-            }
-        });
-    };
-    DisplayComponent.prototype.updateDriverJson = function () {
-        var _this = this;
-        this.driverJson.forEach(function (item, index) {
-            if (item.driver_id == _this.driverForm.controls['driver_id'].value) {
-                _this.driverJson[index]["first_name"] = _this.driverForm.controls['first_name'].value;
-                _this.driverJson[index]["last_name"] = _this.driverForm.controls['last_name'].value;
-                _this.driverJson[index]["address"] = _this.driverForm.controls['address'].value;
-                _this.driverJson[index]["phone_number"] = _this.driverForm.controls['phone_number'].value;
-                _this.driverJson[index]["driver_card_id"] = _this.driverForm.controls['driver_card_id'].value;
-            }
-        });
-    };
-    return DisplayComponent;
-}());
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('closeBtn'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
-], DisplayComponent.prototype, "closeBtn", void 0);
-DisplayComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'displaydriver',
-        encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(852),
-        styles: [__webpack_require__(381)],
-        providers: [__WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* DisplayService */], __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]]
-    }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* DisplayService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* DisplayService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]) === "function" && _e || Object])
-], DisplayComponent);
-
-var _a, _b, _c, _d, _e;
-//# sourceMappingURL=display.component.js.map
-
-/***/ }),
-/* 710 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPipe; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var SearchPipe = (function () {
-    function SearchPipe() {
-    }
-    SearchPipe.prototype.transform = function (value, args) {
-        var searchText = new RegExp(args, 'ig');
-        if (value) {
-            return value.filter(function (person) {
-                if (person.first_name) {
-                    return person.first_name.search(searchText) !== -1;
-                }
-            });
-        }
-    };
-    return SearchPipe;
-}());
-SearchPipe = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({ name: 'SearchPipe' })
-], SearchPipe);
-
-//# sourceMappingURL=search.pipe.js.map
-
-/***/ }),
-/* 711 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(306);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch__ = __webpack_require__(326);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(322);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_httpurl__ = __webpack_require__(309);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DisplayService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var DisplayService = (function () {
-    function DisplayService(http) {
-        this.http = http;
-    }
-    DisplayService.prototype.getDriver = function () {
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_4__pages_httpurl__["a" /* UrlUtility */].getAllDriver)
-            .map(function (res) { return res.json(); });
-    };
-    DisplayService.prototype.getAssignedVehicle = function () {
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_4__pages_httpurl__["a" /* UrlUtility */].assignDriverVehicle)
-            .map(function (res) { return res.json(); });
-    };
-    DisplayService.prototype.saveDriver = function (value) {
-        return this.http.post(__WEBPACK_IMPORTED_MODULE_4__pages_httpurl__["a" /* UrlUtility */].saveDriver, value)
-            .map(function (res) { return res.json(); });
-    };
-    return DisplayService;
-}());
-DisplayService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
-], DisplayService);
-
-var _a;
-//# sourceMappingURL=service.component.js.map
-
-/***/ }),
-/* 712 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service_component__ = __webpack_require__(713);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__ = __webpack_require__(325);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_httpurl__ = __webpack_require__(309);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
-/* unused harmony export emailValidator */
-/* unused harmony export matchingPasswords */
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-var RegisterComponent = (function () {
-    function RegisterComponent(router, fb, driverService, toastrService) {
-        this.profile = [];
-        this.vehicleJson = [];
-        this.driverJson = [];
-        this.driverDetails = {};
-        this.driverIdValue = {};
-        this.driverVehicleId = {};
-        this.router = router;
-        this.toastrService = toastrService;
-        this.driverService = driverService;
-        this.driverForm = fb.group({
-            'first_name': ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required],
-            'last_name': ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required],
-            'address': ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required],
-            'phone_number': ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required],
-            'driver_card_id': ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required]
-        });
-        this.first_name = this.driverForm.controls['first_name'];
-        this.last_name = this.driverForm.controls['last_name'];
-        this.address = this.driverForm.controls['address'];
-        this.phone_number = this.driverForm.controls['phone_number'];
-        this.driver_card_id = this.driverForm.controls['driver_card_id'];
-    }
-    RegisterComponent.prototype.ngOnInit = function () {
-    };
-    RegisterComponent.prototype.onSubmit = function (values) {
-        var _this = this;
-        if (this.driverForm.valid) {
-            this.driverService.saveDriver(values).subscribe(function (data) {
-                if (data["flag"] == "1") {
-                    _this.driverForm.reset();
-                    _this.toastrService.success('Driver Successfully Registered!');
-                }
-                else {
-                    _this.toastrService.error(__WEBPACK_IMPORTED_MODULE_5__pages_httpurl__["a" /* UrlUtility */].errMsg);
-                }
-            });
-        }
-    };
-    return RegisterComponent;
-}());
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('closeBtn'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
-], RegisterComponent.prototype, "closeBtn", void 0);
-RegisterComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'driverreg',
-        encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(853),
-        styles: [__webpack_require__(381)],
-        providers: [__WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* DriverService */], __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]]
-    }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* DriverService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* DriverService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]) === "function" && _e || Object])
-], RegisterComponent);
-
-function emailValidator(control) {
-    var emailRegexp = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/;
-    if (control.value && !emailRegexp.test(control.value)) {
-        return { invalidEmail: true };
-    }
-}
-function matchingPasswords(passwordKey, passwordConfirmationKey) {
-    return function (group) {
-        var password = group.controls[passwordKey];
-        var passwordConfirmation = group.controls[passwordConfirmationKey];
-        if (password.value !== passwordConfirmation.value) {
-            return passwordConfirmation.setErrors({ mismatchedPasswords: true });
-        }
-    };
-}
-var _a, _b, _c, _d, _e;
-//# sourceMappingURL=register.component.js.map
-
-/***/ }),
-/* 713 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(306);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch__ = __webpack_require__(326);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(322);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_httpurl__ = __webpack_require__(309);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DriverService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var DriverService = (function () {
-    function DriverService(http) {
-        this.http = http;
-    }
-    DriverService.prototype.saveDriver = function (value) {
-        return this.http.post(__WEBPACK_IMPORTED_MODULE_4__pages_httpurl__["a" /* UrlUtility */].saveDriver, value)
-            .map(function (res) { return res.json(); });
-    };
-    return DriverService;
-}());
-DriverService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
-], DriverService);
-
-var _a;
-//# sourceMappingURL=service.component.js.map
-
-/***/ }),
-/* 714 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(306);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch__ = __webpack_require__(326);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(322);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_httpurl__ = __webpack_require__(309);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DriverService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var DriverService = (function () {
-    function DriverService(http) {
-        this.http = http;
-    }
-    DriverService.prototype.getDriver = function () {
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_4__pages_httpurl__["a" /* UrlUtility */].allDriver)
-            .map(function (res) { return res.json(); });
-    };
-    DriverService.prototype.saveDriver = function (value) {
-        return this.http.post(__WEBPACK_IMPORTED_MODULE_4__pages_httpurl__["a" /* UrlUtility */].saveDriver, value)
-            .map(function (res) { return res.json(); });
-    };
-    return DriverService;
-}());
-DriverService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
-], DriverService);
-
-var _a;
-//# sourceMappingURL=service.component.js.map
-
-/***/ }),
-/* 715 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service_component__ = __webpack_require__(714);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__ = __webpack_require__(325);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_httpurl__ = __webpack_require__(309);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UpdateComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-var UpdateComponent = (function () {
-    function UpdateComponent(router, fb, driverService, toastrService) {
-        this.driverJson = [];
-        this.selectDriver = {};
-        this.router = router;
-        this.toastrService = toastrService;
-        this.driverService = driverService;
-        this.driverForm = fb.group({
-            'driver_id': [''],
-            'first_name': ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required],
-            'last_name': ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required],
-            'address': ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required],
-            'phone_number': ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required],
-            'driver_card_id': ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required],
-            'active': ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required]
-        });
-        this.driver_id = this.driverForm.controls['driver_id'];
-        this.first_name = this.driverForm.controls['first_name'];
-        this.last_name = this.driverForm.controls['last_name'];
-        this.address = this.driverForm.controls['address'];
-        this.phone_number = this.driverForm.controls['phone_number'];
-        this.driver_card_id = this.driverForm.controls['driver_card_id'];
-        this.active = this.driverForm.controls['active'];
-    }
-    UpdateComponent.prototype.ngOnInit = function () {
-        this.getDriver();
-    };
-    UpdateComponent.prototype.getDriver = function () {
-        var _this = this;
-        this.driverService.getDriver().subscribe(function (data) {
-            _this.driverJson = data;
-        });
-    };
-    UpdateComponent.prototype.getSelectedDriver = function (key) {
-        var _this = this;
-        this.driverJson.forEach(function (item, index) {
-            if (item.driver_id == key) {
-                _this.selectDriver = item;
-                _this.driverForm.controls['driver_id'].setValue(item.driver_id);
-                _this.driverForm.controls['first_name'].setValue(item.first_name);
-                _this.driverForm.controls['last_name'].setValue(item.last_name);
-                _this.driverForm.controls['address'].setValue(item.address);
-                _this.driverForm.controls['phone_number'].setValue(item.phone_number);
-                _this.driverForm.controls['driver_card_id'].setValue(item.driver_card_id);
-                _this.driverForm.controls['active'].setValue(item.active);
-            }
-        });
-    };
-    UpdateComponent.prototype.onDriverUpdate = function (values) {
-        var _this = this;
-        if (this.driverForm.valid) {
-            this.driverService.saveDriver(values).subscribe(function (data) {
-                if (data["flag"] == "1") {
-                    _this.updateDriverJson();
-                    _this.toastrService.success('Driver Successfully Updated!');
-                    _this.selectDriver = {};
-                }
-                else {
-                    _this.toastrService.error(__WEBPACK_IMPORTED_MODULE_5__pages_httpurl__["a" /* UrlUtility */].errMsg);
-                }
-            });
-        }
-    };
-    UpdateComponent.prototype.updateDriverJson = function () {
-        var _this = this;
-        this.driverJson.forEach(function (item, index) {
-            if (item.driver_id == _this.driverForm.controls['driver_id'].value) {
-                _this.driverJson[index]["first_name"] = _this.driverForm.controls['first_name'].value;
-                _this.driverJson[index]["last_name"] = _this.driverForm.controls['last_name'].value;
-                _this.driverJson[index]["address"] = _this.driverForm.controls['address'].value;
-                _this.driverJson[index]["phone_number"] = _this.driverForm.controls['phone_number'].value;
-                _this.driverJson[index]["driver_card_id"] = _this.driverForm.controls['driver_card_id'].value;
-                _this.driverJson[index]["active"] = _this.driverForm.controls['active'].value;
-            }
-        });
-    };
-    return UpdateComponent;
-}());
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('closeBtn'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
-], UpdateComponent.prototype, "closeBtn", void 0);
-UpdateComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'driverupdate',
-        encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-        template: __webpack_require__(854),
-        styles: [__webpack_require__(381)],
-        providers: [__WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* DriverService */], __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]]
-    }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* DriverService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* DriverService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]) === "function" && _e || Object])
-], UpdateComponent);
-
-var _a, _b, _c, _d, _e;
-//# sourceMappingURL=update.component.js.map
-
-/***/ }),
+/* 709 */,
+/* 710 */,
+/* 711 */,
+/* 712 */,
+/* 713 */,
+/* 714 */,
+/* 715 */,
 /* 716 */,
 /* 717 */,
 /* 718 */,
@@ -48069,14 +47532,517 @@ var _a, _b, _c, _d, _e;
 /* 741 */,
 /* 742 */,
 /* 743 */,
-/* 744 */,
-/* 745 */,
-/* 746 */,
-/* 747 */,
-/* 748 */,
-/* 749 */,
-/* 750 */,
-/* 751 */,
+/* 744 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service_component__ = __webpack_require__(745);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__ = __webpack_require__(325);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RealtimeComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var RealtimeComponent = (function () {
+    function RealtimeComponent(router, fb, realtimeService, toastrService) {
+        this.realtimeService = realtimeService;
+        this.taskJson = [];
+        this.selectedTask = {};
+        this.tripJson = {};
+        this.driverJson = {};
+        this.vehicleJson = {};
+        this.vehicleno = "";
+        this.router = router;
+        this.toastrService = toastrService;
+    }
+    RealtimeComponent.prototype.ngOnInit = function () {
+        this.getRealtimeReport();
+    };
+    RealtimeComponent.prototype.getRealtimeReport = function () {
+        var _this = this;
+        this.realtimeService.getRealtimeReport().subscribe(function (data) {
+            if (data["flag"] == "0") {
+                _this.taskJson = [];
+            }
+            else {
+                _this.taskJson = data;
+                _this.getEstimatedReachTime();
+            }
+        });
+    };
+    RealtimeComponent.prototype.getEstimatedReachTime = function () {
+        var _this = this;
+        this.taskJson.forEach(function (item, index) {
+            if (item.estimated_reach_value == 0) {
+                _this.taskJson[index].estimated_reach_datetime = '';
+            }
+            else {
+                var mydate = new Date().setSeconds(item.estimated_reach_value);
+                var final = new Date(mydate);
+                var m = _this.pad(final.getMonth() + 1);
+                var edatetime = final.getFullYear() + "-" + m + "-" + _this.pad(final.getDate()) + "T" + _this.pad(final.getHours()) + ":" + _this.pad(final.getMinutes());
+                _this.taskJson[index].estimated_reach_datetime = _this.pad(final.getDate()) + "-" + m + "-" + final.getFullYear() + " " + _this.pad(final.getHours()) + ":" + _this.pad(final.getMinutes());
+                var date1 = Date.parse(_this.convertDateFormat(item.planned_end_time));
+                var date2 = Date.parse(edatetime);
+                var diffInMs = date1 - date2;
+                var diffInHours = diffInMs / 1000 / 60 / 60;
+                _this.taskJson[index].estimated_timeleg = Math.floor(diffInHours);
+            }
+        });
+    };
+    RealtimeComponent.prototype.pad = function (n) { return ("0" + n).slice(-2); };
+    RealtimeComponent.prototype.convertDateFormat = function (datevalue) {
+        var _a = datevalue.split(' '), date = _a[0], time = _a[1];
+        var _b = date.split('-'), dd = _b[0], mm = _b[1], yy = _b[2];
+        var _c = time.split(':'), hh = _c[0], min = _c[1];
+        var newdate = yy + '-' + mm + '-' + dd + 'T' + hh + ':' + min;
+        return newdate;
+    };
+    RealtimeComponent.prototype.getTripStatus = function (task) {
+        var _this = this;
+        this.selectedTask = task;
+        var values = {};
+        values["task_id"] = task.id;
+        this.realtimeService.getTripbyTaskid(values).subscribe(function (data) {
+            if (data["flag"] == "0") {
+                _this.tripJson = {};
+                _this.toastrService.error("Trip Not Started");
+            }
+            else {
+                _this.tripJson = JSON.parse(data["Trip"]);
+                _this.driverJson = JSON.parse(data["Driver"]);
+                _this.vehicleJson = JSON.parse(data["vehicle"]);
+                _this.vehicleno = data["vehicle_number"];
+                _this.getDistanceAndDuration();
+            }
+        });
+    };
+    RealtimeComponent.prototype.prevStep = function () {
+        this.tripJson = {};
+    };
+    RealtimeComponent.prototype.getDistanceAndDuration = function () {
+        var _this = this;
+        this.realtimeService.googleMapDistanceAndDuration(this.selectedTask.source_lat_long, this.tripJson.current_lat_long).subscribe(function (response) {
+            if (response.status == 'OK' && response.rows[0].elements[0].status != "ZERO_RESULTS") {
+                var distance = response.rows[0].elements[0].distance.text;
+                _this.tripJson["km_covered"] = distance;
+            }
+            _this.getRemainingDuration();
+        });
+    };
+    RealtimeComponent.prototype.getRemainingDuration = function () {
+        var _this = this;
+        this.realtimeService.googleMapDistanceAndDuration(this.tripJson.current_lat_long, this.selectedTask.destination_lat_long).subscribe(function (response) {
+            if (response.status == 'OK' && response.rows[0].elements[0].status != "ZERO_RESULTS") {
+                var duration = response.rows[0].elements[0].duration.text;
+                _this.tripJson["remaining_time"] = duration;
+            }
+            _this.getPlaceName();
+        });
+    };
+    RealtimeComponent.prototype.getPlaceName = function () {
+        var _this = this;
+        this.realtimeService.googleMapFindPlaceName(this.tripJson.current_lat_long).subscribe(function (response) {
+            _this.tripJson["current_location"] = response.results[0].formatted_address;
+        });
+    };
+    return RealtimeComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('closeBtn'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
+], RealtimeComponent.prototype, "closeBtn", void 0);
+RealtimeComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'driver',
+        encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
+        template: __webpack_require__(878),
+        providers: [__WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* RealTimeService */], __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* RealTimeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* RealTimeService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]) === "function" && _e || Object])
+], RealtimeComponent);
+
+var _a, _b, _c, _d, _e;
+//# sourceMappingURL=realtimestatus.component.js.map
+
+/***/ }),
+/* 745 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(322);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_httpurl__ = __webpack_require__(309);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RealTimeService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var RealTimeService = (function () {
+    function RealTimeService(http) {
+        this.http = http;
+    }
+    RealTimeService.prototype.getRealtimeReport = function () {
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_4__pages_httpurl__["a" /* UrlUtility */].RealtimeReport)
+            .map(function (res) { return res.json(); });
+    };
+    RealTimeService.prototype.getTripbyTaskid = function (value) {
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_4__pages_httpurl__["a" /* UrlUtility */].TripByTask, value)
+            .map(function (res) { return res.json(); });
+    };
+    RealTimeService.prototype.googleMapDistanceAndDuration = function (source, desti) {
+        var Url = "http://maps.googleapis.com/maps/api/distancematrix/json?origins=" + source + "&destinations=" + desti + "&key=AIzaSyBA82OpQywT7YA4_iRTOaCWDnHBUZJCEfk";
+        return this.http.get(Url)
+            .map(function (res) { return res.json(); });
+    };
+    RealTimeService.prototype.googleMapFindPlaceName = function (latlong) {
+        var Url = "http://maps.googleapis.com/maps/api/geocode/json?latlng=" + latlong + "&sensor=true";
+        return this.http.get(Url)
+            .map(function (res) { return res.json(); });
+    };
+    return RealTimeService;
+}());
+RealTimeService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], RealTimeService);
+
+var _a;
+//# sourceMappingURL=service.component.js.map
+
+/***/ }),
+/* 746 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPipe; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var SearchPipe = (function () {
+    function SearchPipe() {
+    }
+    SearchPipe.prototype.transform = function (value, args) {
+        var searchText = new RegExp(args, 'ig');
+        if (value) {
+            return value.filter(function (person) {
+                if (person.task_name) {
+                    return person.task_name.search(searchText) !== -1;
+                }
+            });
+        }
+    };
+    return SearchPipe;
+}());
+SearchPipe = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({ name: 'SearchPipe' })
+], SearchPipe);
+
+//# sourceMappingURL=search.pipe.js.map
+
+/***/ }),
+/* 747 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(322);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_httpurl__ = __webpack_require__(309);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RealTimeService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var RealTimeService = (function () {
+    function RealTimeService(http) {
+        this.http = http;
+    }
+    RealTimeService.prototype.getVehicletaskReport = function (value) {
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_4__pages_httpurl__["a" /* UrlUtility */].VehicletaskReport, value)
+            .map(function (res) { return res.json(); });
+    };
+    RealTimeService.prototype.getVehicle = function () {
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_4__pages_httpurl__["a" /* UrlUtility */].getAllVehicle)
+            .map(function (res) { return res.json(); });
+    };
+    return RealTimeService;
+}());
+RealTimeService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], RealTimeService);
+
+var _a;
+//# sourceMappingURL=service.component.js.map
+
+/***/ }),
+/* 748 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service_component__ = __webpack_require__(747);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__ = __webpack_require__(325);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VehicleTaskComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var VehicleTaskComponent = (function () {
+    function VehicleTaskComponent(router, fb, realtimeService, toastrService) {
+        this.realtimeService = realtimeService;
+        this.taskJson = [];
+        this.vehicleJson = [];
+        this.efficiency = {};
+        this.taskTimeAnalysis = {};
+        this.router = router;
+        this.toastrService = toastrService;
+    }
+    VehicleTaskComponent.prototype.ngOnInit = function () {
+        this.getVehicle();
+    };
+    VehicleTaskComponent.prototype.getVehicle = function () {
+        var _this = this;
+        this.realtimeService.getVehicle().subscribe(function (data) {
+            _this.vehicleJson = data["fleet_status"];
+        });
+    };
+    VehicleTaskComponent.prototype.getVehicletaskReport = function (key) {
+        var _this = this;
+        var value = {};
+        value["vehicle_id"] = key;
+        this.realtimeService.getVehicletaskReport(value).subscribe(function (data) {
+            if (data["flag"] == "0") {
+                _this.taskJson = [];
+                _this.efficiency = {};
+                _this.taskTimeAnalysis = {};
+                _this.toastrService.error('Data Not Found!');
+            }
+            else {
+                _this.taskJson = data["vehicle_task"];
+                _this.efficiency = data["vehicle_efficiency"];
+                _this.taskTimeAnalysis = data["vehicle_task_time_analysis"];
+            }
+        });
+    };
+    return VehicleTaskComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('closeBtn'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
+], VehicleTaskComponent.prototype, "closeBtn", void 0);
+VehicleTaskComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'vehicletask',
+        encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
+        template: __webpack_require__(879),
+        providers: [__WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* RealTimeService */], __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* RealTimeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* RealTimeService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]) === "function" && _e || Object])
+], VehicleTaskComponent);
+
+var _a, _b, _c, _d, _e;
+//# sourceMappingURL=vehicletask.component.js.map
+
+/***/ }),
+/* 749 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UtilizationPipe; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var UtilizationPipe = (function () {
+    function UtilizationPipe() {
+    }
+    UtilizationPipe.prototype.transform = function (value, args) {
+        var searchText = new RegExp(args, 'ig');
+        if (value) {
+            return value.filter(function (person) {
+                if (person.vehicle_number) {
+                    return person.vehicle_number.search(searchText) !== -1;
+                }
+            });
+        }
+    };
+    return UtilizationPipe;
+}());
+UtilizationPipe = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({ name: 'SearchPipe' })
+], UtilizationPipe);
+
+//# sourceMappingURL=search.pipe.js.map
+
+/***/ }),
+/* 750 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(322);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_httpurl__ = __webpack_require__(309);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RealTimeService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var RealTimeService = (function () {
+    function RealTimeService(http) {
+        this.http = http;
+    }
+    RealTimeService.prototype.vehicleUtilization = function () {
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_4__pages_httpurl__["a" /* UrlUtility */].VehicleUtilization)
+            .map(function (res) { return res.json(); });
+    };
+    return RealTimeService;
+}());
+RealTimeService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], RealTimeService);
+
+var _a;
+//# sourceMappingURL=service.component.js.map
+
+/***/ }),
+/* 751 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service_component__ = __webpack_require__(750);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__ = __webpack_require__(325);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VehicleUtilization; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var VehicleUtilization = (function () {
+    function VehicleUtilization(router, fb, realtimeService, toastrService) {
+        this.realtimeService = realtimeService;
+        this.taskJson = [];
+        this.router = router;
+        this.toastrService = toastrService;
+    }
+    VehicleUtilization.prototype.ngOnInit = function () {
+        this.vehicleUtilization();
+    };
+    VehicleUtilization.prototype.vehicleUtilization = function () {
+        var _this = this;
+        this.realtimeService.vehicleUtilization().subscribe(function (data) {
+            _this.taskJson = data;
+        });
+    };
+    return VehicleUtilization;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('closeBtn'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
+], VehicleUtilization.prototype, "closeBtn", void 0);
+VehicleUtilization = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'vehicleutilization',
+        encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
+        template: __webpack_require__(880),
+        providers: [__WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* RealTimeService */], __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* RealTimeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_component__["a" /* RealTimeService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]) === "function" && _e || Object])
+], VehicleUtilization);
+
+var _a, _b, _c, _d, _e;
+//# sourceMappingURL=vehicleutilization.component.js.map
+
+/***/ }),
 /* 752 */,
 /* 753 */,
 /* 754 */,
@@ -48177,22 +48143,48 @@ var _a, _b, _c, _d, _e;
 /* 849 */,
 /* 850 */,
 /* 851 */,
-/* 852 */
+/* 852 */,
+/* 853 */,
+/* 854 */,
+/* 855 */,
+/* 856 */,
+/* 857 */,
+/* 858 */,
+/* 859 */,
+/* 860 */,
+/* 861 */,
+/* 862 */,
+/* 863 */,
+/* 864 */,
+/* 865 */,
+/* 866 */,
+/* 867 */,
+/* 868 */,
+/* 869 */,
+/* 870 */,
+/* 871 */,
+/* 872 */,
+/* 873 */,
+/* 874 */,
+/* 875 */,
+/* 876 */,
+/* 877 */,
+/* 878 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n\t<div class=\"col-xl-12 col-lg-6 col-12 bottom-30\">\r\n\t\t<div widget class=\"card bottom-30\">\r\n\t\t\t<div class=\"card-header\">\r\n\t\t\t\t<span>Display Driver</span>\r\n\t\t\t\t<div class=\"widget-controls\">\r\n\t\t\t\t\t<a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i\r\n\t\t\t\t\t\tclass=\"fa fa-chevron-down\"></i></a> <a data-widgster=\"collapse\"\r\n\t\t\t\t\t\thref=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"card-block widget-body\">\r\n\t\t\t  \r\n\t\t\t  <div class=\"w-200 pull-right bottom-15\">\r\n                    <div class=\"input-group input-group-sm\">\r\n                        <span class=\"input-group-addon\"><i class=\"fa fa-search\"></i></span>\r\n                        <input class=\"form-control\" id=\"table-search-input\" [(ngModel)]=\"searchText\" type=\"text\" placeholder=\"Search Driver...\">\r\n                    </div>\r\n                 </div>\r\n\t\t\t\t<div class=\"table-responsive datatable\">\r\n\t\t\t\t\t<table class=\"table table-striped table-hover table-sm\" [mfData]=\"driverJson  | SearchPipe : searchText\" #mf=\"mfDataTable\" [mfRowsOnPage]=\"10\">\r\n\t\t\t\t\t\t<thead>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"sr_bo\"><b>Sr No.</b></mfDefaultSorter></th>\r\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"first_name\"><b>Name</b></mfDefaultSorter></th>\r\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"phone_number\"><b>Mobile</b></mfDefaultSorter></th>\r\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"address\"><b>Address</b></mfDefaultSorter></th>\r\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"driver_card_id\"><b>Card Id</b></mfDefaultSorter></th>\r\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"assigned_vehicle\"><b>Assigned Vehicle</b></mfDefaultSorter></th>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t</thead>\r\n\t\t\t\t\t\t<tbody>\r\n\t\t\t\t\t\t\t<tr *ngFor=\"let key of mf.data;let i=index\">\r\n\t\t\t\t\t\t\t\t<td>{{i+1}}</td>\r\n\t\t\t\t\t\t\t\t<td>{{key?.first_name}} {{key?.last_name}}</td>\r\n\t\t\t\t\t\t\t\t<td>{{key?.phone_number}}</td>\r\n\t\t\t\t\t\t\t\t<td>{{key?.address}}</td>\r\n\t\t\t\t\t\t\t\t<td>{{key?.driver_card_id}}</td>\r\n\t\t\t\t\t\t\t\t<td>{{key?.assigned_vehicle}}</td>\r\n\t\t\t\t\t\t\t\t<td><a href=\"javascript:void(0)\" class=\"linkbutton\"\r\n\t\t\t\t\t\t\t\t\t(click)=\"selectedDriver(key)\" data-toggle=\"modal\"\r\n\t\t\t\t\t\t\t\t\tdata-target=\"#updatedriver\">Edit</a></td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t<tr *ngIf=\"(mf.data | SearchPipe : searchText).length === 0\">\r\n                                  <td colspan=\"100\">\r\n                                    No matches\r\n                                  </td>\r\n                               </tr> \r\n\t\t\t\t\t\t</tbody>\r\n\t\t\t\t\t\t<tfoot>\r\n                              <tr>\r\n                                <td colspan=\"12\">\r\n                                    <mfBootstrapPaginator [rowsOnPageSet]=\"[10, 25, 50, 100]\"></mfBootstrapPaginator>\r\n                                </td>\r\n                            </tr>\r\n                        </tfoot>\r\n\t\t\t\t\t</table>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n\r\n<div class=\"modal fade\" id=\"updatedriver\" tabindex=\"-1\" role=\"dialog\"\r\n\taria-labelledby=\"modal-primary-label\">\r\n\t<div class=\"modal-dialog\" role=\"document\">\r\n\t\t<div class=\"modal-content\">\r\n\t\t  <form [formGroup]=\"driverForm\"\r\n\t\t\t\t(ngSubmit)=\"onDriverUpdate(driverForm.value)\" class=\" text-left\">\r\n\t\t\t<div class=\"modal-header state modal-primary\">\r\n\t\t\t\t<h6 class=\"modal-title\" id=\"modal-primary-label\">\r\n\t\t\t\t\t<i class=\"fa fa-user\"></i>Update Driver\r\n\t\t\t\t</h6>\r\n\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\"\r\n\t\t\t\t\taria-label=\"Close\" #closeBtn>\r\n\t\t\t\t\t<span aria-hidden=\"true\">×</span>\r\n\t\t\t\t</button>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"modal-body\">\r\n\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t   <input [formControl]=\"driver_id\" type=\"hidden\">\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t<input [formControl]=\"first_name\"\r\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"First Name\"\r\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\r\n\t\t\t\t\t\t\t*ngIf=\"driverForm.get('first_name').touched && driverForm.get('first_name').hasError('required')\">First\r\n\t\t\t\t\t\t\tName is required</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t<input [formControl]=\"last_name\"\r\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Last Name\"\r\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\r\n\t\t\t\t\t\t\t*ngIf=\"driverForm.get('last_name').touched && driverForm.get('last_name').hasError('required')\">Last\r\n\t\t\t\t\t\t\tName is required</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t<input [formControl]=\"address\" class=\"form-control checking-field\"\r\n\t\t\t\t\t\t\tplaceholder=\"Address\" type=\"text\"> <span\r\n\t\t\t\t\t\t\tclass=\"help-block text-danger\"\r\n\t\t\t\t\t\t\t*ngIf=\"driverForm.get('address').touched && driverForm.get('address').hasError('required')\">Address\r\n\t\t\t\t\t\t\tis required</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t<input [formControl]=\"phone_number\"\r\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Mobile\"\r\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\r\n\t\t\t\t\t\t\t*ngIf=\"driverForm.get('phone_number').touched && driverForm.get('phone_number').hasError('required')\">Mobile\r\n\t\t\t\t\t\t\tis required</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t<input [formControl]=\"driver_card_id\"\r\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Driver Card Id\"\r\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\r\n\t\t\t\t\t\t\t*ngIf=\"driverForm.get('driver_card_id').touched && driverForm.get('driver_card_id').hasError('required')\">Driver\r\n\t\t\t\t\t\t\tCard id is required</span>\r\n\t\t\t\t\t</div>\t\t\t\t\t\r\n\t\t\t</div>\r\n\t\t\t<div class=\"modal-footer\">\r\n\t\t\t\t<button type=\"submit\" class=\"primarybutton\" [disabled]=\"!driverForm.valid\">Update &nbsp;<i class=\"fa fa-check\"></i></button>\r\n\t\t\t\t<button type=\"button\" class=\"secondarybutton\" data-dismiss=\"modal\">Close &nbsp;<i class=\"fa fa-remove\"></i></button>\r\n\t\t\t</div>\t\r\n\t\t\t</form>\t\t\r\n\t\t</div>\r\n\t</div>\r\n</div>"
+module.exports = "<div class=\"row\">\n\n\t<div class=\"col-xl-12 col-lg-6 col-12 bottom-30\">\n\t\t<div widget class=\"card\">\n\t\t\t<div class=\"card-header\">\n\t\t\t\t<span>Real Time Status</span>\n\t\t\t\t<div class=\"widget-controls\">\n\t\t\t\t\t<a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i\n\t\t\t\t\t\tclass=\"fa fa-chevron-down\"></i></a> <a data-widgster=\"collapse\"\n\t\t\t\t\t\thref=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card-block widget-body\">\n\t\t\t     <div class=\"w-200 pull-right bottom-15\">\n                    <div class=\"input-group input-group-sm\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-search\"></i></span>\n                        <input class=\"form-control\" id=\"table-search-input\" [(ngModel)]=\"searchText\" type=\"text\" placeholder=\"Search Vehicle...\">\n                    </div>\n                 </div> \n\t\t\t\t\t<div class=\"table-responsive datatable\">\n\t\t\t\t\t\t<table class=\"table table-striped table-hover table-sm\" [mfData]=\"taskJson  | SearchPipe : searchText\" #mf=\"mfDataTable\" [mfRowsOnPage]=\"10\">\n\t\t\t\t\t\t\t<thead>\n\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"Sr No.\"><b>Sr No.</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle_number\"><b>Vehicle_Number</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"model\"><b>Model</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"driver\"><b>Driver</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"from\"><b>Source</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"to\"><b>Destination</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"start_time\"><b>Actual_Start_Time</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"planned_end_time\"><b>Planned_End_Time</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"distance\"><b>Total KM</b></mfDefaultSorter></th>\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"running_status\"><b>Running Status</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"km_covered\"><b>KM Covered</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"current_location\"><b>Current Location</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"remaining_time\"><b>Remaining Time</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"estimated_reach_time\"><b>Estimated Reach time</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"time_leg\"><b>Time Lag</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t\t<tr *ngFor=\"let key of mf.data;let i=index\">\n\t\t\t\t\t\t\t\t\t<td>{{i+1}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.vehicle_number}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.model}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.driver}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.from}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.to}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.start_time | date: 'dd-M-y H:mm'}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.planned_end_time}}</td>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<td>{{key?.distance}}</td>\n\t\t\t\t\t\t\t\t\t<td><div *ngIf=\"key?.running_status=='0'\"><font color=\"red\" style=\"font-weight: bold;\">Idle</font></div>\n\t\t\t\t\t\t\t\t\t    <div *ngIf=\"key?.running_status=='1'\"><font color=\"green\" style=\"font-weight: bold;\">Running</font></div></td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.distance_covered}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.current_location}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.remaining_time}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.estimated_reach_datetime}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.estimated_timeleg}}</td>\n\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t<tr *ngIf=\"(mf.data | SearchPipe : searchText).length === 0\">\n                                  <td colspan=\"100\">\n                                    No matches\n                                  </td>\n                               </tr> \n\t\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t\t<tfoot>\n                              <tr>\n                                <td colspan=\"12\">\n                                    <mfBootstrapPaginator [rowsOnPageSet]=\"[10, 25, 50, 100]\"></mfBootstrapPaginator>\n                                </td>\n                            </tr>\n                          </tfoot>\n\t\t\t\t\t\t</table>\n\t\t\t\t\t</div>\t\t\t\t\n\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n"
 
 /***/ }),
-/* 853 */
+/* 879 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n\n\t<div class=\"col-xl-12 col-lg-6 col-12 bottom-30\">\n\t\t<div widget class=\"card\">\n\t\t\t<div class=\"card-header\">\n\t\t\t\t<span>Driver Registration</span>\n\t\t\t\t<div class=\"widget-controls\">\t\t\t\t\t\t\n\t\t\t\t\t<a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i class=\"fa fa-chevron-down\"></i></a>\n                    <a data-widgster=\"collapse\" href=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>  \n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card-block widget-body\">\n\n\t\t\t\t<form [formGroup]=\"driverForm\"\n\t\t\t\t\t(ngSubmit)=\"onSubmit(driverForm.value)\" class=\" text-left\">\n\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"first_name\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"First Name\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"driverForm.get('first_name').touched && driverForm.get('first_name').hasError('required')\">First\n\t\t\t\t\t\t\tName is required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"last_name\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Last Name\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"driverForm.get('last_name').touched && driverForm.get('last_name').hasError('required')\">Last\n\t\t\t\t\t\t\tName is required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"address\" class=\"form-control checking-field\"\n\t\t\t\t\t\t\tplaceholder=\"Address\" type=\"text\"> <span\n\t\t\t\t\t\t\tclass=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"driverForm.get('address').touched && driverForm.get('address').hasError('required')\">Address\n\t\t\t\t\t\t\tis required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"phone_number\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Mobile\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"driverForm.get('phone_number').touched && driverForm.get('phone_number').hasError('required')\">Mobile\n\t\t\t\t\t\t\tis required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"driver_card_id\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Driver Card Id\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"driverForm.get('driver_card_id').touched && driverForm.get('driver_card_id').hasError('required')\">Driver\n\t\t\t\t\t\t\tCard id is required</span>\n\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<button [disabled]=\"!driverForm.valid\"\n\t\t\t\t\t\t\tclass=\"successbutton\" type=\"submit\">Submit &nbsp;<i class=\"fa fa-save\"></i></button>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\n\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n"
+module.exports = "<div class=\"row\">\n\n\t<div class=\"col-xl-12 col-lg-6 col-12 bottom-30\">\n\t\t<div widget class=\"card\">\n\t\t\t<div class=\"card-header\">\n\t\t\t\t<span>Vehicle Task Report</span>\n\t\t\t\t<div class=\"widget-controls\">\n\t\t\t\t\t<a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i\n\t\t\t\t\t\tclass=\"fa fa-chevron-down\"></i></a> <a data-widgster=\"collapse\"\n\t\t\t\t\t\thref=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card-block widget-body\">\n\t\t\t        <div class=\"col-xl-6 col-lg-6 col-12 bottom-30\">\n\t\t\t\t\t  <select class=\"form-control\" (change)=\"getVehicletaskReport($event.target.value)\">\n\t\t\t\t\t\t\t<option selected=\"selected\" value=\"0\">-- Select Vehicle --</option>\n\t\t\t\t\t\t\t<option *ngFor=\"let key of vehicleJson;\" value=\"{{key?.vehicle_id}}\">{{key?.vehicle}}</option>\n\t\t\t\t\t  </select> \n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t   <div *ngIf=\"taskJson!=''\">\t\n\t\t\t\t   \n\t\t\t\t      <div class=\"w-200 pull-right bottom-15\">\n                        <div class=\"input-group input-group-sm\">\n                          <span class=\"input-group-addon\"><i class=\"fa fa-search\"></i></span>\n                          <input class=\"form-control\" id=\"table-search-input\" [(ngModel)]=\"searchText\" type=\"text\" placeholder=\"Search Task...\">\n                       </div>\n                     </div> \t\t\n\t\t\t\t\t<div class=\"table-responsive datatable\">\n\t\t\t\t\t\t<table class=\"table table-striped table-hover table-sm\" [mfData]=\"taskJson  | SearchPipe : searchText\" #mf=\"mfDataTable\" [mfRowsOnPage]=\"10\">\n\t\t\t\t\t\t\t<thead>\n\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle_number\"><b>Sr No.</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle_number\"><b>Task Name</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"model\"><b>Model</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"driver\"><b>Driver</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"start_date_time\"><b>Start Date</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"source\"><b>Source</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"destination\"><b>Destination</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"estimated_travel_time\"><b>Time Planned Hr</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"actual_time_taken\"><b>Time Taken Hr</b></mfDefaultSorter></th>\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"delay\"><b>Delay</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"km_run\"><b>KM Run</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t\t<tr *ngFor=\"let key of mf.data;let i=index\">\n\t\t\t\t\t\t\t\t\t<td>{{i+1}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.task_name}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.model}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.driver}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.start_date_time}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.source}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.destination}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.estimated_travel_time}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.actual_time_taken}}</td>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<td>{{key?.delay}}</td>\n\t\t\t\t\t\t\t\t\t<td>{{key?.km_run}}</td>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t<tr *ngIf=\"(mf.data | SearchPipe : searchText).length === 0\">\n                                  <td colspan=\"100\">\n                                    No matches\n                                  </td>\n                               </tr> \n\t\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t\t<tfoot>\n                              <tr>\n                                <td colspan=\"12\">\n                                    <mfBootstrapPaginator [rowsOnPageSet]=\"[10, 25, 50, 100]\"></mfBootstrapPaginator>\n                                </td>\n                            </tr>\n                          </tfoot>\n\t\t\t\t\t\t</table>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t <div class=\"col-xl-4 col-lg-6 col-12 bottom-30\">\n\t\t\t\t\t   <div class=\"card\">\n\t\t\t\t\t\t\t<div class=\"card-block\">\n\t\t\t\t\t\t\t\t<table class=\"table table-bordered\">\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Vehicle Available Time</th><td>{{efficiency?.vehicle_available_time}}</td>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Vehicle Run Hour</th><td>{{efficiency?.vehicle_run_time}}</td>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Vehicle Hour Efficiency</th><td>{{efficiency?.efficiency_percentage}}</td>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t</table>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t </div>\n\t\t\t\t\t \n\t\t\t\t\t <div class=\"col-xl-3 col-lg-6 col-12 bottom-30\">\n\t\t\t\t\t   <div class=\"card\">\n\t\t\t\t\t\t\t<div class=\"card-block\">\n\t\t\t\t\t\t\t\t<table class=\"table table-bordered\">\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Total No of Tasks</th><td>{{taskTimeAnalysis?.total_tasks}}</td>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>On time</th><td>{{taskTimeAnalysis?.on_time}}</td>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Before time</th><td>{{taskTimeAnalysis?.before_time}}</td>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Delay</th><td>{{taskTimeAnalysis?.delayed}}</td>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Delay Hrs</th><td>{{taskTimeAnalysis?.delay_hrs}}</td>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Delay task in(%)</th><td>{{taskTimeAnalysis?.delayed_task_percentage}}</td>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t</table>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t </div>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n"
 
 /***/ }),
-/* 854 */
+/* 880 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n\n\t<div class=\"col-xl-12 col-lg-6 col-12 bottom-30\">\n\t\t<div widget class=\"card\">\n\t\t\t<div class=\"card-header\">\n\t\t\t\t<span>Update Driver</span>\n\t\t\t\t<div class=\"widget-controls\">\t\t\t\t\t\t\n\t\t\t\t\t<a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i class=\"fa fa-chevron-down\"></i></a>\n                    <a data-widgster=\"collapse\" href=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>  \n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card-block widget-body\">\n\t\t\t\n\t\t\t      <div class=\"col-xl-8 col-lg-6 col-12 bottom-30\">\n\t\t\t\t\t  <select class=\"form-control\" (change)=\"getSelectedDriver($event.target.value)\">\n\t\t\t\t\t\t\t<option selected=\"selected\" value=\"0\">-- Select Driver --</option>\n\t\t\t\t\t\t\t<option *ngFor=\"let key of driverJson;\" value=\"{{key?.driver_id}}\">{{key?.first_name}} {{key?.last_name}}</option>\n\t\t\t\t\t  </select> \n\t\t\t\t </div>\n\t\t\t\t\t\n\t\t\t <div *ngIf=\"(selectDriver | json) != ({} | json)\">\n\t\t\t\t<form [formGroup]=\"driverForm\"\n\t\t\t\t\t(ngSubmit)=\"onDriverUpdate(driverForm.value)\" class=\" text-left\">\n\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t    <input [formControl]=\"driver_id\" type=\"hidden\">\n\t\t\t\t\t\t<input [formControl]=\"first_name\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"First Name\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"driverForm.get('first_name').touched && driverForm.get('first_name').hasError('required')\">First\n\t\t\t\t\t\t\tName is required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"last_name\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Last Name\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"driverForm.get('last_name').touched && driverForm.get('last_name').hasError('required')\">Last\n\t\t\t\t\t\t\tName is required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"address\" class=\"form-control checking-field\"\n\t\t\t\t\t\t\tplaceholder=\"Address\" type=\"text\"> <span\n\t\t\t\t\t\t\tclass=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"driverForm.get('address').touched && driverForm.get('address').hasError('required')\">Address\n\t\t\t\t\t\t\tis required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"phone_number\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Mobile\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"driverForm.get('phone_number').touched && driverForm.get('phone_number').hasError('required')\">Mobile\n\t\t\t\t\t\t\tis required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<input [formControl]=\"driver_card_id\"\n\t\t\t\t\t\t\tclass=\"form-control checking-field\" placeholder=\"Driver Card Id\"\n\t\t\t\t\t\t\ttype=\"text\"> <span class=\"help-block text-danger\"\n\t\t\t\t\t\t\t*ngIf=\"driverForm.get('driver_card_id').touched && driverForm.get('driver_card_id').hasError('required')\">Driver\n\t\t\t\t\t\t\tCard id is required</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<select class=\"form-control\" [formControl]=\"active\">\n\t\t\t\t\t\t\t<option value=\"1\">Active</option>\n\t\t\t\t\t\t\t<option value=\"0\">InActive</option>\n\t\t\t\t\t  </select>\n\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<button [disabled]=\"!driverForm.valid\"\n\t\t\t\t\t\t\tclass=\"successbutton\" type=\"submit\">Submit &nbsp;<i class=\"fa fa-save\"></i></button>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t  </div>\t\n\n\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n"
+module.exports = "<div class=\"row\">\n\n\t<div class=\"col-xl-12 col-lg-6 col-12 bottom-30\">\n\t\t<div widget class=\"card\">\n\t\t\t<div class=\"card-header\">\n\t\t\t\t<span>Vehicle Utilization</span>\n\t\t\t\t<div class=\"widget-controls\">\n\t\t\t\t\t<a data-widgster=\"expand\" href=\"#\" class=\"transition\"><i\n\t\t\t\t\t\tclass=\"fa fa-chevron-down\"></i></a> <a data-widgster=\"collapse\"\n\t\t\t\t\t\thref=\"#\" class=\"transition\"><i class=\"fa fa-chevron-up\"></i></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card-block widget-body\">\n\t\t\t   <div class=\"w-200 pull-right bottom-15\">\n                    <div class=\"input-group input-group-sm\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-search\"></i></span>\n                        <input class=\"form-control\" id=\"table-search-input\" [(ngModel)]=\"searchText\" type=\"text\" placeholder=\"Search Vehicle...\">\n                    </div>\n                 </div> \n\t\t\t\t<div class=\"table-responsive datatable\">\n\t\t\t\t\t<table class=\"table table-striped table-hover table-sm\" [mfData]=\"taskJson  | SearchPipe : searchText\" #mf=\"mfDataTable\" [mfRowsOnPage]=\"10\">\n\t\t\t\t\t\t<thead>\n\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"sr_no\"><b>Sr No.</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle_number\"><b>Vehicle No</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"model\"><b>Model</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"total_tasks\"><b>Total No Of Task</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"on_time\"><b>On time</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"before_time\"><b>Before time</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"delayed\"><b>Delay</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"delayed_hrs\"><b>Delay Hrs</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"delayed_task_percentage\"><b>Delay task in %</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"km_run\"><b>KM Run</b></mfDefaultSorter></th>\n\t\t\t\t\t\t\t\t<th><mfDefaultSorter by=\"vehicle_hr_efficiency\"><b>Vehicle Hour Efficiency</b></mfDefaultSorter></th>\n\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t<tr *ngFor=\"let key of mf.data;let i=index\">\n\t\t\t\t\t\t\t\t<td>{{i+1}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.vehicle_number}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.model}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.total_tasks}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.on_time}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.before_time}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.delayed}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.delayed_hrs}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.delayed_task_percentage}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.km_run}}</td>\n\t\t\t\t\t\t\t\t<td>{{key?.vehicle_hr_efficiency}}</td>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t<tr *ngIf=\"(mf.data | SearchPipe : searchText).length === 0\">\n                                  <td colspan=\"100\">\n                                    No matches\n                                  </td>\n                               </tr> \n\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t<tfoot>\n                              <tr>\n                                <td colspan=\"12\">\n                                    <mfBootstrapPaginator [rowsOnPageSet]=\"[10, 25, 50, 100]\"></mfBootstrapPaginator>\n                                </td>\n                            </tr>\n                          </tfoot>\n\t\t\t\t\t</table>\n\t\t\t\t</div>\n\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n"
 
 /***/ })
 ]));
