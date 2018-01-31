@@ -9,7 +9,12 @@ How much time will it take to complete the task assigned to it and much more thi
 This helps the manager to decide which vehicle is not giving its best, I mean how many task are completed on time, before time or completed with delay.
 The next report is about Vehicle Utilization. It gives the % of the time for which it has been used or else manager can sell it if it not being used efficiently.
 
-Login Screen of application:
+Dashboard of application:
 <p align="center">
-  <img src="login_screen.png" width=900 height=550>
+  <img src="dashbaord.png" width=900 height=550>
+</p>
+
+Creating New Task:
+<p align="center">
+  <img src="new_task.png" width=900 height=550>
 </p>
