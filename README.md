@@ -19,4 +19,4 @@ Creating New Task:
   <img src="new_task.png" width=900 height=550>
 </p>
 
-Note: Screenshots has been taken after deployment of project on AWS EC2 Instance but the code contains local server data
+Note: Screenshots are taken after deployment of project on AWS EC2 Instance but the code contains local server data
