@@ -11,7 +11,7 @@ The next report is about Vehicle Utilization. It gives the % of the time for whi
 
 Dashboard:
 <p align="center">
-  <img src="dashbaord_screen.png" width=900 height=550>
+  <img src="dashboard_screen.png" width=900 height=550>
 </p>
 
 Creating New Task:
