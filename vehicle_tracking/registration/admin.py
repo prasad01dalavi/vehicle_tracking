@@ -5,7 +5,7 @@ from django.contrib.admin.models import LogEntry    # This is for removing recen
 
 from models import Vehicle, Driver, Assignment, Task, TaskAssignment, CustomerRegistration, DeviceActivation
 
-# LogEntry.objects.all().delete()     # This will clear the recent activities in admin
+LogEntry.objects.all().delete()     # This will clear the recent activities in admin
 
 
 class CustomerRegistrationAdmin(admin.ModelAdmin):
