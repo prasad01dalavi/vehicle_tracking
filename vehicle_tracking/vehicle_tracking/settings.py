@@ -90,6 +90,7 @@ WSGI_APPLICATION = 'vehicle_tracking.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
+<<<<<<< HEAD
      'default': {
           'ENGINE': 'django.db.backends.mysql',
           'NAME': 'vehicle_tracking',
@@ -102,6 +103,12 @@ DATABASES = {
   #      'ENGINE': 'django.db.backends.sqlite3',         # Using SQLite3 django DB for Testing purpose only
   #      'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
   # }
+=======
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',         # Using SQLite3 django DB for Testing purpose only
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+>>>>>>> 893da40bef800c7059dd5072e89fa782db24b110
 }
 
 # Password validation
